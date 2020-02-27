@@ -1,0 +1,2461 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Adjective01" xml:space="preserve">
+    <value>MOTION</value>
+  </data>
+  <data name="Adjective02" xml:space="preserve">
+    <value>BLOODY</value>
+  </data>
+  <data name="Adjective03" xml:space="preserve">
+    <value>STALKING</value>
+  </data>
+  <data name="Adjective04" xml:space="preserve">
+    <value>PRIDE</value>
+  </data>
+  <data name="Adjective05" xml:space="preserve">
+    <value>MERCY</value>
+  </data>
+  <data name="Adjective06" xml:space="preserve">
+    <value>IRON</value>
+  </data>
+  <data name="Adjective07" xml:space="preserve">
+    <value>SERPENT</value>
+  </data>
+  <data name="Adjective08" xml:space="preserve">
+    <value>RISING</value>
+  </data>
+  <data name="Adjective09" xml:space="preserve">
+    <value>BURNING</value>
+  </data>
+  <data name="Adjective10" xml:space="preserve">
+    <value>SOARING</value>
+  </data>
+  <data name="Adjective11" xml:space="preserve">
+    <value>SKULL</value>
+  </data>
+  <data name="Adjective12" xml:space="preserve">
+    <value>MOON</value>
+  </data>
+  <data name="Adjective13" xml:space="preserve">
+    <value>TALON</value>
+  </data>
+  <data name="Adjective14" xml:space="preserve">
+    <value>JOG</value>
+  </data>
+  <data name="Adjective15" xml:space="preserve">
+    <value>FALLING</value>
+  </data>
+  <data name="Adjective16" xml:space="preserve">
+    <value>ARMORED</value>
+  </data>
+  <data name="Adjective17" xml:space="preserve">
+    <value>DARK</value>
+  </data>
+  <data name="Adjective18" xml:space="preserve">
+    <value>LONE</value>
+  </data>
+  <data name="Adjective19" xml:space="preserve">
+    <value>HOWLING</value>
+  </data>
+  <data name="Adjective20" xml:space="preserve">
+    <value>BLACK</value>
+  </data>
+  <data name="Adjective21" xml:space="preserve">
+    <value>WHITE</value>
+  </data>
+  <data name="Adjective22" xml:space="preserve">
+    <value>DIVINE</value>
+  </data>
+  <data name="Adjective23" xml:space="preserve">
+    <value>PLUNDER</value>
+  </data>
+  <data name="Adjective24" xml:space="preserve">
+    <value>PEARL</value>
+  </data>
+  <data name="Adjective25" xml:space="preserve">
+    <value>FIRE</value>
+  </data>
+  <data name="Adjective26" xml:space="preserve">
+    <value>BINDING</value>
+  </data>
+  <data name="Adjective27" xml:space="preserve">
+    <value>TAILED</value>
+  </data>
+  <data name="Adjective28" xml:space="preserve">
+    <value>PRONG</value>
+  </data>
+  <data name="Adjective29" xml:space="preserve">
+    <value>DEEP</value>
+  </data>
+  <data name="Adjective30" xml:space="preserve">
+    <value>EMERALD</value>
+  </data>
+  <data name="Adjective31" xml:space="preserve">
+    <value>JADE</value>
+  </data>
+  <data name="Adjective32" xml:space="preserve">
+    <value>STONE</value>
+  </data>
+  <data name="Adjective33" xml:space="preserve">
+    <value>OPAL</value>
+  </data>
+  <data name="Adjective34" xml:space="preserve">
+    <value>CRUSHING</value>
+  </data>
+  <data name="Adjective35" xml:space="preserve">
+    <value>HAMMER</value>
+  </data>
+  <data name="Animal01" xml:space="preserve">
+    <value>SUN</value>
+  </data>
+  <data name="Animal02" xml:space="preserve">
+    <value>JAGUAR</value>
+  </data>
+  <data name="Animal03" xml:space="preserve">
+    <value>SHADOW</value>
+  </data>
+  <data name="Animal04" xml:space="preserve">
+    <value>PUMA</value>
+  </data>
+  <data name="Animal05" xml:space="preserve">
+    <value>EAGLE</value>
+  </data>
+  <data name="Animal06" xml:space="preserve">
+    <value>LIZARD</value>
+  </data>
+  <data name="Animal07" xml:space="preserve">
+    <value>CROCODILE</value>
+  </data>
+  <data name="Animal08" xml:space="preserve">
+    <value>DEMON</value>
+  </data>
+  <data name="Animal09" xml:space="preserve">
+    <value>HERON</value>
+  </data>
+  <data name="Animal10" xml:space="preserve">
+    <value>VULTURE</value>
+  </data>
+  <data name="Animal11" xml:space="preserve">
+    <value>WIND</value>
+  </data>
+  <data name="Animal12" xml:space="preserve">
+    <value>CLAW</value>
+  </data>
+  <data name="Animal13" xml:space="preserve">
+    <value>COYOTE</value>
+  </data>
+  <data name="Animal14" xml:space="preserve">
+    <value>JEWEL</value>
+  </data>
+  <data name="Animal15" xml:space="preserve">
+    <value>BUFFALO</value>
+  </data>
+  <data name="Animal16" xml:space="preserve">
+    <value>STORM</value>
+  </data>
+  <data name="Animal17" xml:space="preserve">
+    <value>RABBIT</value>
+  </data>
+  <data name="Animal18" xml:space="preserve">
+    <value>REED</value>
+  </data>
+  <data name="Animal19" xml:space="preserve">
+    <value>OCELOT</value>
+  </data>
+  <data name="Animal20" xml:space="preserve">
+    <value>DRAGON</value>
+  </data>
+  <data name="Animal21" xml:space="preserve">
+    <value>CONDOR</value>
+  </data>
+  <data name="Animal22" xml:space="preserve">
+    <value>LIGHTNING</value>
+  </data>
+  <data name="Animal23" xml:space="preserve">
+    <value>SHARK</value>
+  </data>
+  <data name="Animal24" xml:space="preserve">
+    <value>SNAKE</value>
+  </data>
+  <data name="Animal25" xml:space="preserve">
+    <value>WOLF</value>
+  </data>
+  <data name="Animal26" xml:space="preserve">
+    <value>BEAR</value>
+  </data>
+  <data name="Animal27" xml:space="preserve">
+    <value>BOAR</value>
+  </data>
+  <data name="Animal28" xml:space="preserve">
+    <value>STORK</value>
+  </data>
+  <data name="Animal29" xml:space="preserve">
+    <value>RAY</value>
+  </data>
+  <data name="Animal30" xml:space="preserve">
+    <value>PAW</value>
+  </data>
+  <data name="Animal31" xml:space="preserve">
+    <value>ROYALE</value>
+  </data>
+  <data name="Animal32" xml:space="preserve">
+    <value>RAM</value>
+  </data>
+  <data name="Animal33" xml:space="preserve">
+    <value>MANDALA</value>
+  </data>
+  <data name="Animal34" xml:space="preserve">
+    <value>RAVEN</value>
+  </data>
+  <data name="Animal35" xml:space="preserve">
+    <value>WHALE</value>
+  </data>
+  <data name="Animal36" xml:space="preserve">
+    <value>BLADE</value>
+  </data>
+  <data name="Animal37" xml:space="preserve">
+    <value>SPIDER</value>
+  </data>
+  <data name="Animal38" xml:space="preserve">
+    <value>HEART</value>
+  </data>
+  <data name="Animal39" xml:space="preserve">
+    <value>VENOM</value>
+  </data>
+  <data name="Animal40" xml:space="preserve">
+    <value>MANTIS</value>
+  </data>
+  <data name="Animal41" xml:space="preserve">
+    <value>GLORY</value>
+  </data>
+  <data name="Animal42" xml:space="preserve">
+    <value>WRATH</value>
+  </data>
+  <data name="Animal43" xml:space="preserve">
+    <value>THUNDER</value>
+  </data>
+  <data name="copyright" xml:space="preserve">
+    <value>Copyright 2010 Blendo Games. All rights reserved.</value>
+  </data>
+  <data name="DirForward" xml:space="preserve">
+    <value>FORWARD</value>
+  </data>
+  <data name="DirUp" xml:space="preserve">
+    <value>UP</value>
+  </data>
+  <data name="MenuCancel" xml:space="preserve">
+    <value>CANCEL</value>
+  </data>
+  <data name="MenuCommandMenu" xml:space="preserve">
+    <value>COMMAND MENU</value>
+  </data>
+  <data name="MenuConfirm" xml:space="preserve">
+    <value>CONFIRM</value>
+  </data>
+  <data name="MenuConfirmPitch" xml:space="preserve">
+    <value>CONFIRM PITCH</value>
+  </data>
+  <data name="MenuConfirmPlanar" xml:space="preserve">
+    <value>CONFIRM PLANAR MOVE</value>
+  </data>
+  <data name="MenuConfirmPriorityTarget" xml:space="preserve">
+    <value>CONFIRM PRIORITY TARGET</value>
+  </data>
+  <data name="MenuConfirmRoll" xml:space="preserve">
+    <value>CONFIRM ROLL</value>
+  </data>
+  <data name="MenuConfirmVertical" xml:space="preserve">
+    <value>CONFIRM VERTICAL MOVE</value>
+  </data>
+  <data name="MenuConfirmYaw" xml:space="preserve">
+    <value>CONFIRM YAW</value>
+  </data>
+  <data name="MenuDone" xml:space="preserve">
+    <value>DONE</value>
+  </data>
+  <data name="MenuEndTurn" xml:space="preserve">
+    <value>END TURN</value>
+  </data>
+  <data name="MenuKills" xml:space="preserve">
+    <value>KILLS:</value>
+  </data>
+  <data name="MenuLegendPitch" xml:space="preserve">
+    <value>ROTATE PITCH</value>
+  </data>
+  <data name="MenuLegendRoll" xml:space="preserve">
+    <value>ROTATE ROLL</value>
+  </data>
+  <data name="MenuLegendVertical" xml:space="preserve">
+    <value>LOWER/RAISE</value>
+  </data>
+  <data name="MenuLegendYaw" xml:space="preserve">
+    <value>ROTATE YAW</value>
+  </data>
+  <data name="MenuPlayback" xml:space="preserve">
+    <value>PLAYBACK</value>
+  </data>
+  <data name="ModeAimMode" xml:space="preserve">
+    <value>PRIORITY TARGET</value>
+  </data>
+  <data name="ModeMovement" xml:space="preserve">
+    <value>PLANAR MOVEMENT</value>
+  </data>
+  <data name="ModePitchOrientation" xml:space="preserve">
+    <value>PITCH ORIENTATION</value>
+  </data>
+  <data name="ModeRollOrientation" xml:space="preserve">
+    <value>ROLL ORIENTATION</value>
+  </data>
+  <data name="ModeVerticalMovement" xml:space="preserve">
+    <value>VERTICAL MOVEMENT</value>
+  </data>
+  <data name="ModeYawOrientation" xml:space="preserve">
+    <value>YAW ORIENTATION</value>
+  </data>
+  <data name="MsgBottomHit" xml:space="preserve">
+    <value>BOTTOM HIT</value>
+  </data>
+  <data name="MsgHit" xml:space="preserve">
+    <value>HIT</value>
+  </data>
+  <data name="MsgRearHit" xml:space="preserve">
+    <value>REAR HIT</value>
+  </data>
+  <data name="Number01" xml:space="preserve">
+    <value>ONE</value>
+  </data>
+  <data name="Number02" xml:space="preserve">
+    <value>TWO</value>
+  </data>
+  <data name="Number03" xml:space="preserve">
+    <value>THREE</value>
+  </data>
+  <data name="Number04" xml:space="preserve">
+    <value>FOUR</value>
+  </data>
+  <data name="Number05" xml:space="preserve">
+    <value>FIVE</value>
+  </data>
+  <data name="Number06" xml:space="preserve">
+    <value>SIX</value>
+  </data>
+  <data name="Number07" xml:space="preserve">
+    <value>SEVEN</value>
+  </data>
+  <data name="Number08" xml:space="preserve">
+    <value>EIGHT</value>
+  </data>
+  <data name="Number09" xml:space="preserve">
+    <value>NINE</value>
+  </data>
+  <data name="Number10" xml:space="preserve">
+    <value>TEN</value>
+  </data>
+  <data name="Number11" xml:space="preserve">
+    <value>ELEVEN</value>
+  </data>
+  <data name="Number12" xml:space="preserve">
+    <value>TWELVE</value>
+  </data>
+  <data name="Number13" xml:space="preserve">
+    <value>THIRTEEN</value>
+  </data>
+  <data name="Number14" xml:space="preserve">
+    <value>FOURTEEN</value>
+  </data>
+  <data name="OrderActivate" xml:space="preserve">
+    <value>ACTIVATE</value>
+  </data>
+  <data name="OrderDeactivate" xml:space="preserve">
+    <value>CLEAR ORDER</value>
+  </data>
+  <data name="OrderFlank" xml:space="preserve">
+    <value>FLANK MOVE</value>
+  </data>
+  <data name="OrderFlankDescription" xml:space="preserve">
+    <value>- Increased move speed.
+- Deactivate all weapons.</value>
+  </data>
+  <data name="OrderFocusFire" xml:space="preserve">
+    <value>FOCUS FIRE</value>
+  </data>
+  <data name="OrderFocusFireDescription" xml:space="preserve">
+    <value>- Increased fire rate.
+- Decreased move speed.</value>
+  </data>
+  <data name="OrderMove" xml:space="preserve">
+    <value>ATTACK MOVE</value>
+  </data>
+  <data name="OrderMoveDescription" xml:space="preserve">
+    <value>- Move and fire.</value>
+  </data>
+  <data name="OrderRepair" xml:space="preserve">
+    <value>FIELD REPAIRS</value>
+  </data>
+  <data name="OrderRepairDescription" xml:space="preserve">
+    <value>- Emergency repairs.
+- Deactivate weapons.
+- Deactivate thrusters.</value>
+  </data>
+  <data name="ShipBattleship" xml:space="preserve">
+    <value>BATTLESHIP</value>
+  </data>
+  <data name="ShipDestroyer" xml:space="preserve">
+    <value>DESTROYER</value>
+  </data>
+  <data name="ShipFighter" xml:space="preserve">
+    <value>PROTO FIGHTER</value>
+  </data>
+  <data name="SysDeviceChoose" xml:space="preserve">
+    <value>YOU HAVE NOT SELECTED A STORAGE DEVICE. NO PROGRESS OR CHANGES TO GAME SETTINGS WILL BE SAVED.
+
+DO YOU WANT TO SELECT A STORAGE DEVICE NOW?</value>
+  </data>
+  <data name="SysDeviceChooseConfirm" xml:space="preserve">
+    <value>CHOOSE STORAGE DEVICE</value>
+  </data>
+  <data name="SysDeviceChooseIgnore" xml:space="preserve">
+    <value>DO NOT SELECT STORAGE DEVICE</value>
+  </data>
+  <data name="MenuTitle" xml:space="preserve">
+    <value>FLOTILLA</value>
+  </data>
+  <data name="MenuSubtitle" xml:space="preserve">
+    <value>ORBITAL BATTLESHIP MANEUVERS</value>
+  </data>
+  <data name="MenuTitlePressStart" xml:space="preserve">
+    <value>PRESS START</value>
+  </data>
+  <data name="MenuTitlePresents" xml:space="preserve">
+    <value>PRESENTS</value>
+  </data>
+  <data name="MenuProfileError" xml:space="preserve">
+    <value>NO GAMER PROFILE CHOSEN
+You did not choose a gamer profile. Singleplayer progress saving will not be available.</value>
+  </data>
+  <data name="MenuProfileNotSignedin" xml:space="preserve">
+    <value>YOU ARE NOT SIGNED IN. TO SAVE PROGRESS, YOU MUST BE SIGNED IN.
+
+SIGN IN NOW?</value>
+  </data>
+  <data name="MenuProfileSigninChange" xml:space="preserve">
+    <value>A SIGN-IN CHANGE HAS OCCURRED. YOU ARE NOW BEING RETURNED TO THE TITLE SCREEN.</value>
+  </data>
+  <data name="MenuProfileNotSignedinConfirm" xml:space="preserve">
+    <value>SIGN IN NOW</value>
+  </data>
+  <data name="MenuProfileNotSignedinIgnore" xml:space="preserve">
+    <value>DO NOT SIGN IN</value>
+  </data>
+  <data name="MenuSkirmish" xml:space="preserve">
+    <value>SKIRMISH</value>
+  </data>
+  <data name="MenuOK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="MenuSkirmishEmptySlot" xml:space="preserve">
+    <value>Empty slot</value>
+  </data>
+  <data name="FactionBlueName" xml:space="preserve">
+    <value>LAS BABAS NACIONALE</value>
+  </data>
+  <data name="FactionRedName" xml:space="preserve">
+    <value>DUTCH EAST VINDALOO</value>
+  </data>
+  <data name="MenuSkirmishEasy" xml:space="preserve">
+    <value>Computer Player</value>
+  </data>
+  <data name="MenuSkirmishEasyAdd" xml:space="preserve">
+    <value>ADD COMPUTER PLAYER</value>
+  </data>
+  <data name="MenuSkirmishGuest" xml:space="preserve">
+    <value>Guest Player</value>
+  </data>
+  <data name="MenuSkirmishSlotClear" xml:space="preserve">
+    <value>CLEAR THIS SLOT</value>
+  </data>
+  <data name="MenuSkirmishSlotMove" xml:space="preserve">
+    <value>MOVE TO THIS SLOT</value>
+  </data>
+  <data name="MenuSkirmishStart" xml:space="preserve">
+    <value>START SKIRMISH</value>
+  </data>
+  <data name="MenuOptions" xml:space="preserve">
+    <value>OPTIONS</value>
+  </data>
+  <data name="MenuLoading" xml:space="preserve">
+    <value>LOADING</value>
+  </data>
+  <data name="ShipBeamFrigate" xml:space="preserve">
+    <value>BEAM FRIGATE</value>
+  </data>
+  <data name="MenuPaused" xml:space="preserve">
+    <value>PAUSED</value>
+  </data>
+  <data name="MenuCampaign" xml:space="preserve">
+    <value>ADVENTURE {0}</value>
+  </data>
+  <data name="MenuQuit" xml:space="preserve">
+    <value>QUIT</value>
+  </data>
+  <data name="MenuResumeGame" xml:space="preserve">
+    <value>RESUME GAME</value>
+  </data>
+  <data name="MenuSignedIn" xml:space="preserve">
+    <value>SIGNED IN:</value>
+  </data>
+  <data name="MenuUnlockFullGame" xml:space="preserve">
+    <value>UNLOCK FULL GAME</value>
+  </data>
+  <data name="MenuCarnage" xml:space="preserve">
+    <value>AFTER ACTION REPORT</value>
+  </data>
+  <data name="MenuConfirmPriorityTargetSkip" xml:space="preserve">
+    <value>NO PRIORITY TARGET</value>
+  </data>
+  <data name="ModeModifyClear" xml:space="preserve">
+    <value>CLEAR THIS ORDER</value>
+  </data>
+  <data name="ModeModifyVertical" xml:space="preserve">
+    <value>CHANGE VERTICAL MOVE</value>
+  </data>
+  <data name="ModeModifyPriorityTarget" xml:space="preserve">
+    <value>CHANGE PRIORITY TARGET</value>
+  </data>
+  <data name="Planet01" xml:space="preserve">
+    <value>ASA</value>
+  </data>
+  <data name="Planet02" xml:space="preserve">
+    <value>FRO</value>
+  </data>
+  <data name="Planet03" xml:space="preserve">
+    <value>GILI</value>
+  </data>
+  <data name="Planet04" xml:space="preserve">
+    <value>BOSO</value>
+  </data>
+  <data name="Planet05" xml:space="preserve">
+    <value>LO</value>
+  </data>
+  <data name="Planet06" xml:space="preserve">
+    <value>CRA</value>
+  </data>
+  <data name="Planet07" xml:space="preserve">
+    <value>LICO</value>
+  </data>
+  <data name="Planet08" xml:space="preserve">
+    <value>OKRA</value>
+  </data>
+  <data name="Planet09" xml:space="preserve">
+    <value>HILE</value>
+  </data>
+  <data name="Planet10" xml:space="preserve">
+    <value>VINE</value>
+  </data>
+  <data name="Planet100" xml:space="preserve">
+    <value>MOCO</value>
+  </data>
+  <data name="Planet11" xml:space="preserve">
+    <value>YO</value>
+  </data>
+  <data name="Planet12" xml:space="preserve">
+    <value>KI</value>
+  </data>
+  <data name="Planet13" xml:space="preserve">
+    <value>HO</value>
+  </data>
+  <data name="Planet14" xml:space="preserve">
+    <value>BURO</value>
+  </data>
+  <data name="Planet15" xml:space="preserve">
+    <value>SHO</value>
+  </data>
+  <data name="Planet16" xml:space="preserve">
+    <value>CHA</value>
+  </data>
+  <data name="Planet17" xml:space="preserve">
+    <value>RONO</value>
+  </data>
+  <data name="Planet18" xml:space="preserve">
+    <value>KELE</value>
+  </data>
+  <data name="Planet19" xml:space="preserve">
+    <value>NAMA</value>
+  </data>
+  <data name="Planet20" xml:space="preserve">
+    <value>GRO</value>
+  </data>
+  <data name="Planet21" xml:space="preserve">
+    <value>MERE</value>
+  </data>
+  <data name="Planet22" xml:space="preserve">
+    <value>MUBU</value>
+  </data>
+  <data name="Planet23" xml:space="preserve">
+    <value>AQU</value>
+  </data>
+  <data name="Planet24" xml:space="preserve">
+    <value>AURI</value>
+  </data>
+  <data name="Planet25" xml:space="preserve">
+    <value>BETA</value>
+  </data>
+  <data name="Planet26" xml:space="preserve">
+    <value>CAPE</value>
+  </data>
+  <data name="Planet27" xml:space="preserve">
+    <value>DENE</value>
+  </data>
+  <data name="Planet28" xml:space="preserve">
+    <value>SUME</value>
+  </data>
+  <data name="Planet29" xml:space="preserve">
+    <value>DANI</value>
+  </data>
+  <data name="Planet30" xml:space="preserve">
+    <value>EPSI</value>
+  </data>
+  <data name="Planet31" xml:space="preserve">
+    <value>INDI</value>
+  </data>
+  <data name="Planet32" xml:space="preserve">
+    <value>PEGA</value>
+  </data>
+  <data name="Planet33" xml:space="preserve">
+    <value>CASSI</value>
+  </data>
+  <data name="Planet34" xml:space="preserve">
+    <value>FOMA</value>
+  </data>
+  <data name="Planet35" xml:space="preserve">
+    <value>ETA</value>
+  </data>
+  <data name="Planet36" xml:space="preserve">
+    <value>GAMA</value>
+  </data>
+  <data name="Planet37" xml:space="preserve">
+    <value>EZA</value>
+  </data>
+  <data name="Planet38" xml:space="preserve">
+    <value>HORO</value>
+  </data>
+  <data name="Planet39" xml:space="preserve">
+    <value>KOHO</value>
+  </data>
+  <data name="Planet40" xml:space="preserve">
+    <value>LELA</value>
+  </data>
+  <data name="Planet41" xml:space="preserve">
+    <value>PINI</value>
+  </data>
+  <data name="Planet42" xml:space="preserve">
+    <value>SOMA</value>
+  </data>
+  <data name="Planet43" xml:space="preserve">
+    <value>PRO</value>
+  </data>
+  <data name="Planet44" xml:space="preserve">
+    <value>DELA</value>
+  </data>
+  <data name="Planet45" xml:space="preserve">
+    <value>CHENA</value>
+  </data>
+  <data name="Planet46" xml:space="preserve">
+    <value>HACHI</value>
+  </data>
+  <data name="Planet47" xml:space="preserve">
+    <value>ANDRO</value>
+  </data>
+  <data name="Planet48" xml:space="preserve">
+    <value>UMGA</value>
+  </data>
+  <data name="Planet49" xml:space="preserve">
+    <value>UTWI</value>
+  </data>
+  <data name="Planet50" xml:space="preserve">
+    <value>YEHA</value>
+  </data>
+  <data name="Planet51" xml:space="preserve">
+    <value>OKO</value>
+  </data>
+  <data name="Planet52" xml:space="preserve">
+    <value>KWO</value>
+  </data>
+  <data name="Planet53" xml:space="preserve">
+    <value>IMBLI</value>
+  </data>
+  <data name="Planet54" xml:space="preserve">
+    <value>ULTO</value>
+  </data>
+  <data name="Planet55" xml:space="preserve">
+    <value>SHOFI</value>
+  </data>
+  <data name="Planet56" xml:space="preserve">
+    <value>WASA</value>
+  </data>
+  <data name="Planet57" xml:space="preserve">
+    <value>MENDE</value>
+  </data>
+  <data name="Planet58" xml:space="preserve">
+    <value>HERNA</value>
+  </data>
+  <data name="Planet59" xml:space="preserve">
+    <value>GONZA</value>
+  </data>
+  <data name="Planet60" xml:space="preserve">
+    <value>CHO</value>
+  </data>
+  <data name="Planet61" xml:space="preserve">
+    <value>CHU</value>
+  </data>
+  <data name="Planet62" xml:space="preserve">
+    <value>DRU</value>
+  </data>
+  <data name="Planet63" xml:space="preserve">
+    <value>BRE</value>
+  </data>
+  <data name="Planet64" xml:space="preserve">
+    <value>TRO</value>
+  </data>
+  <data name="Planet65" xml:space="preserve">
+    <value>TERA</value>
+  </data>
+  <data name="Planet66" xml:space="preserve">
+    <value>PO</value>
+  </data>
+  <data name="Planet67" xml:space="preserve">
+    <value>LOKO</value>
+  </data>
+  <data name="Planet68" xml:space="preserve">
+    <value>PAKI</value>
+  </data>
+  <data name="Planet69" xml:space="preserve">
+    <value>STRA</value>
+  </data>
+  <data name="Planet70" xml:space="preserve">
+    <value>ELRO</value>
+  </data>
+  <data name="Planet71" xml:space="preserve">
+    <value>GOLU</value>
+  </data>
+  <data name="Planet72" xml:space="preserve">
+    <value>BASU</value>
+  </data>
+  <data name="Planet73" xml:space="preserve">
+    <value>SO</value>
+  </data>
+  <data name="Planet74" xml:space="preserve">
+    <value>ASI</value>
+  </data>
+  <data name="Planet75" xml:space="preserve">
+    <value>AKI</value>
+  </data>
+  <data name="Planet76" xml:space="preserve">
+    <value>DECA</value>
+  </data>
+  <data name="Planet77" xml:space="preserve">
+    <value>EKLA</value>
+  </data>
+  <data name="Planet78" xml:space="preserve">
+    <value>FUNI</value>
+  </data>
+  <data name="Planet79" xml:space="preserve">
+    <value>GLE</value>
+  </data>
+  <data name="Planet80" xml:space="preserve">
+    <value>RAVA</value>
+  </data>
+  <data name="Planet81" xml:space="preserve">
+    <value>CATHI</value>
+  </data>
+  <data name="Planet82" xml:space="preserve">
+    <value>SINA</value>
+  </data>
+  <data name="Planet83" xml:space="preserve">
+    <value>FALA</value>
+  </data>
+  <data name="Planet84" xml:space="preserve">
+    <value>KATA</value>
+  </data>
+  <data name="Planet85" xml:space="preserve">
+    <value>EVE</value>
+  </data>
+  <data name="Planet86" xml:space="preserve">
+    <value>IPI</value>
+  </data>
+  <data name="Planet87" xml:space="preserve">
+    <value>WORO</value>
+  </data>
+  <data name="Planet88" xml:space="preserve">
+    <value>HAPA</value>
+  </data>
+  <data name="Planet89" xml:space="preserve">
+    <value>GLO</value>
+  </data>
+  <data name="Planet90" xml:space="preserve">
+    <value>ZE</value>
+  </data>
+  <data name="Planet91" xml:space="preserve">
+    <value>HUGU</value>
+  </data>
+  <data name="Planet92" xml:space="preserve">
+    <value>BARA</value>
+  </data>
+  <data name="Planet93" xml:space="preserve">
+    <value>OBA</value>
+  </data>
+  <data name="Planet94" xml:space="preserve">
+    <value>SITU</value>
+  </data>
+  <data name="Planet95" xml:space="preserve">
+    <value>YAO</value>
+  </data>
+  <data name="Planet96" xml:space="preserve">
+    <value>IPHE</value>
+  </data>
+  <data name="Planet97" xml:space="preserve">
+    <value>RY</value>
+  </data>
+  <data name="Planet98" xml:space="preserve">
+    <value>APO</value>
+  </data>
+  <data name="Planet99" xml:space="preserve">
+    <value>NUCA</value>
+  </data>
+  <data name="Planet101" xml:space="preserve">
+    <value>ORI</value>
+  </data>
+  <data name="Planet102" xml:space="preserve">
+    <value>ERI</value>
+  </data>
+  <data name="Planet103" xml:space="preserve">
+    <value>KITA</value>
+  </data>
+  <data name="Planet104" xml:space="preserve">
+    <value>NORI</value>
+  </data>
+  <data name="Planet105" xml:space="preserve">
+    <value>DORI</value>
+  </data>
+  <data name="Planet106" xml:space="preserve">
+    <value>ZYDE</value>
+  </data>
+  <data name="Planet107" xml:space="preserve">
+    <value>VIDA</value>
+  </data>
+  <data name="Planet108" xml:space="preserve">
+    <value>ANDE</value>
+  </data>
+  <data name="Planet109" xml:space="preserve">
+    <value>EXA</value>
+  </data>
+  <data name="Planet110" xml:space="preserve">
+    <value>JOTO</value>
+  </data>
+  <data name="Planet111" xml:space="preserve">
+    <value>MU</value>
+  </data>
+  <data name="Planet112" xml:space="preserve">
+    <value>MUMU</value>
+  </data>
+  <data name="Planet113" xml:space="preserve">
+    <value>FU</value>
+  </data>
+  <data name="Planet114" xml:space="preserve">
+    <value>GIZO</value>
+  </data>
+  <data name="Planet115" xml:space="preserve">
+    <value>IXTI</value>
+  </data>
+  <data name="Planet116" xml:space="preserve">
+    <value>DAME</value>
+  </data>
+  <data name="Planet117" xml:space="preserve">
+    <value>OXA</value>
+  </data>
+  <data name="Planet118" xml:space="preserve">
+    <value>APA</value>
+  </data>
+  <data name="Planet119" xml:space="preserve">
+    <value>EKA</value>
+  </data>
+  <data name="Planet120" xml:space="preserve">
+    <value>IVO</value>
+  </data>
+  <data name="Planet121" xml:space="preserve">
+    <value>DEKA</value>
+  </data>
+  <data name="Planet122" xml:space="preserve">
+    <value>AKO</value>
+  </data>
+  <data name="Planet123" xml:space="preserve">
+    <value>AGO</value>
+  </data>
+  <data name="Planet124" xml:space="preserve">
+    <value>KA</value>
+  </data>
+  <data name="Planet125" xml:space="preserve">
+    <value>KO</value>
+  </data>
+  <data name="Planet126" xml:space="preserve">
+    <value>MO</value>
+  </data>
+  <data name="Planet127" xml:space="preserve">
+    <value>BLI</value>
+  </data>
+  <data name="Planet128" xml:space="preserve">
+    <value>RO</value>
+  </data>
+  <data name="Planet129" xml:space="preserve">
+    <value>FO</value>
+  </data>
+  <data name="Planet130" xml:space="preserve">
+    <value>CHI</value>
+  </data>
+  <data name="Planet131" xml:space="preserve">
+    <value>VO</value>
+  </data>
+  <data name="Planet132" xml:space="preserve">
+    <value>ZO</value>
+  </data>
+  <data name="Planet133" xml:space="preserve">
+    <value>YO</value>
+  </data>
+  <data name="Planet134" xml:space="preserve">
+    <value>VOI</value>
+  </data>
+  <data name="Planet135" xml:space="preserve">
+    <value>DU</value>
+  </data>
+  <data name="Planet136" xml:space="preserve">
+    <value>WA</value>
+  </data>
+  <data name="Planet137" xml:space="preserve">
+    <value>TRO</value>
+  </data>
+  <data name="Planet138" xml:space="preserve">
+    <value>DRO</value>
+  </data>
+  <data name="Planet139" xml:space="preserve">
+    <value>GA</value>
+  </data>
+  <data name="Planet140" xml:space="preserve">
+    <value>PEA</value>
+  </data>
+  <data name="Planet141" xml:space="preserve">
+    <value>PHO</value>
+  </data>
+  <data name="Planet142" xml:space="preserve">
+    <value>PAO</value>
+  </data>
+  <data name="Planet143" xml:space="preserve">
+    <value>LAU</value>
+  </data>
+  <data name="Planet144" xml:space="preserve">
+    <value>KI</value>
+  </data>
+  <data name="Planet145" xml:space="preserve">
+    <value>CHA</value>
+  </data>
+  <data name="Planet146" xml:space="preserve">
+    <value>ANGA</value>
+  </data>
+  <data name="Planet147" xml:space="preserve">
+    <value>SNO</value>
+  </data>
+  <data name="Planet148" xml:space="preserve">
+    <value>DARA</value>
+  </data>
+  <data name="Planet149" xml:space="preserve">
+    <value>REI</value>
+  </data>
+  <data name="Planet150" xml:space="preserve">
+    <value>PUPU</value>
+  </data>
+  <data name="Planet151" xml:space="preserve">
+    <value>A</value>
+  </data>
+  <data name="Planet152" xml:space="preserve">
+    <value>E</value>
+  </data>
+  <data name="Planet153" xml:space="preserve">
+    <value>I</value>
+  </data>
+  <data name="Planet154" xml:space="preserve">
+    <value>O</value>
+  </data>
+  <data name="Planet155" xml:space="preserve">
+    <value>U</value>
+  </data>
+  <data name="Planet156" xml:space="preserve">
+    <value>UZE</value>
+  </data>
+  <data name="Planet157" xml:space="preserve">
+    <value>JUSU</value>
+  </data>
+  <data name="Planet158" xml:space="preserve">
+    <value>RUTO</value>
+  </data>
+  <data name="Planet159" xml:space="preserve">
+    <value>NA</value>
+  </data>
+  <data name="Planet160" xml:space="preserve">
+    <value>AKA</value>
+  </data>
+  <data name="GameNewCargo" xml:space="preserve">
+    <value>NEW CARGO</value>
+  </data>
+  <data name="MenuTitleByline" xml:space="preserve">
+    <value>BLENDO GAMES PRESENTS</value>
+  </data>
+  <data name="MenuFleet" xml:space="preserve">
+    <value>FLEET SETUP</value>
+  </data>
+  <data name="MenuMissions" xml:space="preserve">
+    <value>MISSIONS:</value>
+  </data>
+  <data name="MenuUpgradesNoneAvailable" xml:space="preserve">
+    <value>NO AVAILABLE UPGRADES!</value>
+  </data>
+  <data name="MenuUpgradesNoneAvailableDescription" xml:space="preserve">
+    <value>EXPLORE DIFFERENT PLANETS TO FIND UPGRADES AND ARTIFACTS.</value>
+  </data>
+  <data name="MenuCampaignJoin" xml:space="preserve">
+    <value>JOIN</value>
+  </data>
+  <data name="MenuCampaignPlayer1" xml:space="preserve">
+    <value>PLAYER 1</value>
+  </data>
+  <data name="MenuCampaignPlayer2" xml:space="preserve">
+    <value>PLAYER 2</value>
+  </data>
+  <data name="MenuCampaignStart" xml:space="preserve">
+    <value>START ADVENTURE {0}</value>
+  </data>
+  <data name="MenuCampaignPlugController" xml:space="preserve">
+    <value>PLUG IN XBOX360 CONTROLLER!</value>
+  </data>
+  <data name="MenuFleetGiveTo" xml:space="preserve">
+    <value>GIVE SHIP TO {0}</value>
+  </data>
+  <data name="MenuUpgrades" xml:space="preserve">
+    <value>UPGRADES</value>
+  </data>
+  <data name="MenuReady" xml:space="preserve">
+    <value>READY</value>
+  </data>
+  <data name="MenuGiveToAlly" xml:space="preserve">
+    <value>GIVE TO ALLY</value>
+  </data>
+  <data name="MenuSelectShip" xml:space="preserve">
+    <value>SELECT SHIP</value>
+  </data>
+  <data name="MenuCampaignTravelTo" xml:space="preserve">
+    <value>TRAVEL TO {0}</value>
+  </data>
+  <data name="MenuOptionsBrightness" xml:space="preserve">
+    <value>BRIGHTNESS</value>
+  </data>
+  <data name="MenuOptionsInvertX" xml:space="preserve">
+    <value>INVERT X-AXIS</value>
+  </data>
+  <data name="MenuOptionsInvertY" xml:space="preserve">
+    <value>INVERT Y-AXIS</value>
+  </data>
+  <data name="MenuOptionsMusic" xml:space="preserve">
+    <value>MUSIC VOLUME</value>
+  </data>
+  <data name="MenuOptionsSensitivity" xml:space="preserve">
+    <value>MOUSE SENSITIVITY</value>
+  </data>
+  <data name="MenuOptionsSound" xml:space="preserve">
+    <value>SOUND VOLUME</value>
+  </data>
+  <data name="MenuOptionsVibration" xml:space="preserve">
+    <value>VIBRATION</value>
+  </data>
+  <data name="MenuCampaignCoop" xml:space="preserve">
+    <value>COOPERATIVE ADVENTURE {0}</value>
+  </data>
+  <data name="GameNewShip" xml:space="preserve">
+    <value>NEW SHIP ADDED TO FLOTILLA!</value>
+  </data>
+  <data name="MenuTrialMode" xml:space="preserve">
+    <value>TRIAL VERSION</value>
+  </data>
+  <data name="MenuBuyProfileError" xml:space="preserve">
+    <value>YOU NEED TO SIGN IN TO XBOX LIVE TO UNLOCK THIS GAME.
+
+SIGN IN NOW?</value>
+  </data>
+  <data name="MenuSignedNotSignedIn" xml:space="preserve">
+    <value>NOT SIGNED IN</value>
+  </data>
+  <data name="MenuCredits" xml:space="preserve">
+    <value>CREDITS</value>
+  </data>
+  <data name="MenuCreditsAudioBy" xml:space="preserve">
+    <value>AUDIO</value>
+  </data>
+  <data name="MenuCreditsBlendoSite" xml:space="preserve">
+    <value>www.blendogames.com</value>
+  </data>
+  <data name="MenuCreditsBrendon" xml:space="preserve">
+    <value>Brendon Chung</value>
+  </data>
+  <data name="MenuCreditsByBlendo" xml:space="preserve">
+    <value>by Blendo Games</value>
+  </data>
+  <data name="MenuCreditsCreatedBy" xml:space="preserve">
+    <value>CREATED BY</value>
+  </data>
+  <data name="MenuCreditsSoundSnap" xml:space="preserve">
+    <value>www.soundsnap.com</value>
+  </data>
+  <data name="MenuFleetCargo" xml:space="preserve">
+    <value>CARGO:</value>
+  </data>
+  <data name="MenuFleetShips" xml:space="preserve">
+    <value>SHIPS:</value>
+  </data>
+  <data name="MenuCarnageKills" xml:space="preserve">
+    <value>KILLS</value>
+  </data>
+  <data name="GameCommanderDefault" xml:space="preserve">
+    <value>Commander</value>
+  </data>
+  <data name="FactionDeerName" xml:space="preserve">
+    <value>ROYAL CERVIDIAN DEERPACK</value>
+  </data>
+  <data name="MenuCarnageDefeat" xml:space="preserve">
+    <value>DEFEATED!</value>
+  </data>
+  <data name="MenuCarnageVictory" xml:space="preserve">
+    <value>VICTORIOUS!</value>
+  </data>
+  <data name="MenuCreditsUnlock" xml:space="preserve">
+    <value>ADVENTURE {0} IS WAITING FOR YOU!</value>
+  </data>
+  <data name="Gamertag01" xml:space="preserve">
+    <value>LUCKY</value>
+  </data>
+  <data name="Gamertag02" xml:space="preserve">
+    <value>CAHOOTS</value>
+  </data>
+  <data name="Gamertag03" xml:space="preserve">
+    <value>SPACKLEY</value>
+  </data>
+  <data name="Gamertag04" xml:space="preserve">
+    <value>SCOTCHY</value>
+  </data>
+  <data name="Gamertag05" xml:space="preserve">
+    <value>SPROCKETY</value>
+  </data>
+  <data name="Gamertag06" xml:space="preserve">
+    <value>LOAFY</value>
+  </data>
+  <data name="Gamertag07" xml:space="preserve">
+    <value>POPPY</value>
+  </data>
+  <data name="Gamertag08" xml:space="preserve">
+    <value>CONNIPTION</value>
+  </data>
+  <data name="Gamertag09" xml:space="preserve">
+    <value>SMITHY</value>
+  </data>
+  <data name="Gamertag10" xml:space="preserve">
+    <value>SCRUMPTIOUS</value>
+  </data>
+  <data name="Gamertag11" xml:space="preserve">
+    <value>BOOGLEY</value>
+  </data>
+  <data name="Gamertag12" xml:space="preserve">
+    <value>HIRSUTE</value>
+  </data>
+  <data name="Gamertag13" xml:space="preserve">
+    <value>SNICKER</value>
+  </data>
+  <data name="Gamertag14" xml:space="preserve">
+    <value>FLABBY</value>
+  </data>
+  <data name="Gamertag15" xml:space="preserve">
+    <value>SNORKELY</value>
+  </data>
+  <data name="Gamertag16" xml:space="preserve">
+    <value>SASSAFRAS</value>
+  </data>
+  <data name="Gamertag17" xml:space="preserve">
+    <value>SNARKY</value>
+  </data>
+  <data name="Gamertag18" xml:space="preserve">
+    <value>DOODLEY</value>
+  </data>
+  <data name="Gamertag19" xml:space="preserve">
+    <value>JIFFY</value>
+  </data>
+  <data name="Gamertag20" xml:space="preserve">
+    <value>PANTSY</value>
+  </data>
+  <data name="Gamertag21" xml:space="preserve">
+    <value>FLUMEY</value>
+  </data>
+  <data name="Gamertag23" xml:space="preserve">
+    <value>SCRAMBLY</value>
+  </data>
+  <data name="Gamertag24" xml:space="preserve">
+    <value>GIMPY</value>
+  </data>
+  <data name="Gamertag25" xml:space="preserve">
+    <value>NOODLEY</value>
+  </data>
+  <data name="Gamertag26" xml:space="preserve">
+    <value>MEATY</value>
+  </data>
+  <data name="Gamertag27" xml:space="preserve">
+    <value>POOCHY</value>
+  </data>
+  <data name="Gamertag28" xml:space="preserve">
+    <value>SHINY</value>
+  </data>
+  <data name="Gamertag29" xml:space="preserve">
+    <value>SPOONY</value>
+  </data>
+  <data name="Gamertag30" xml:space="preserve">
+    <value>FLUMMOX</value>
+  </data>
+  <data name="Gamertag31" xml:space="preserve">
+    <value>GIBLET</value>
+  </data>
+  <data name="Gamertag32" xml:space="preserve">
+    <value>SCOFFLAW</value>
+  </data>
+  <data name="Gamertag33" xml:space="preserve">
+    <value>CANOODLE</value>
+  </data>
+  <data name="Gamertag34" xml:space="preserve">
+    <value>SNOUTY</value>
+  </data>
+  <data name="Gamertag35" xml:space="preserve">
+    <value>GAZEBO</value>
+  </data>
+  <data name="Gamertag36" xml:space="preserve">
+    <value>QUIBBLE</value>
+  </data>
+  <data name="Gamertag37" xml:space="preserve">
+    <value>PODUNK</value>
+  </data>
+  <data name="Gamertag38" xml:space="preserve">
+    <value>WHARFY</value>
+  </data>
+  <data name="Gamertag39" xml:space="preserve">
+    <value>BEANIE</value>
+  </data>
+  <data name="Gamertag40" xml:space="preserve">
+    <value>BOOGIE</value>
+  </data>
+  <data name="Gamertag41" xml:space="preserve">
+    <value>BLUNDERBUSS</value>
+  </data>
+  <data name="Gamertag42" xml:space="preserve">
+    <value>KERFUFFLE</value>
+  </data>
+  <data name="Gamertag43" xml:space="preserve">
+    <value>DANDER</value>
+  </data>
+  <data name="Gamertag44" xml:space="preserve">
+    <value>SPITTLE</value>
+  </data>
+  <data name="Gamertag45" xml:space="preserve">
+    <value>BANEY</value>
+  </data>
+  <data name="Gamertag46" xml:space="preserve">
+    <value>TOITY</value>
+  </data>
+  <data name="Gamertag47" xml:space="preserve">
+    <value>SNOOTY</value>
+  </data>
+  <data name="Gamertag48" xml:space="preserve">
+    <value>BAKEY</value>
+  </data>
+  <data name="Gamertag49" xml:space="preserve">
+    <value>WAKEY</value>
+  </data>
+  <data name="Gamertag50" xml:space="preserve">
+    <value>BUMPKIN</value>
+  </data>
+  <data name="Gamertag51" xml:space="preserve">
+    <value>BOGEY</value>
+  </data>
+  <data name="Gamertag52" xml:space="preserve">
+    <value>BUSHY</value>
+  </data>
+  <data name="Gamertag53" xml:space="preserve">
+    <value>BUNGLE</value>
+  </data>
+  <data name="Gamertag54" xml:space="preserve">
+    <value>CHEEKY</value>
+  </data>
+  <data name="Gamertag55" xml:space="preserve">
+    <value>CHEEZY</value>
+  </data>
+  <data name="Gamertag56" xml:space="preserve">
+    <value>CLAMMY</value>
+  </data>
+  <data name="Gamertag57" xml:space="preserve">
+    <value>CRABBY</value>
+  </data>
+  <data name="Gamertag58" xml:space="preserve">
+    <value>DANGLY</value>
+  </data>
+  <data name="Gamertag59" xml:space="preserve">
+    <value>DONGLE</value>
+  </data>
+  <data name="Gamertag60" xml:space="preserve">
+    <value>FLAPJACK</value>
+  </data>
+  <data name="Gamertag61" xml:space="preserve">
+    <value>FLOPPY</value>
+  </data>
+  <data name="Gamertag62" xml:space="preserve">
+    <value>GIBBON</value>
+  </data>
+  <data name="Gamertag63" xml:space="preserve">
+    <value>GRABBY</value>
+  </data>
+  <data name="Gamertag64" xml:space="preserve">
+    <value>GROMMIT</value>
+  </data>
+  <data name="Gamertag65" xml:space="preserve">
+    <value>GRUMBLES</value>
+  </data>
+  <data name="Gamertag66" xml:space="preserve">
+    <value>HAIRY</value>
+  </data>
+  <data name="Gamertag67" xml:space="preserve">
+    <value>HAMMOCK</value>
+  </data>
+  <data name="Gamertag68" xml:space="preserve">
+    <value>JAMMY</value>
+  </data>
+  <data name="Gamertag69" xml:space="preserve">
+    <value>LOOFA</value>
+  </data>
+  <data name="Gamertag70" xml:space="preserve">
+    <value>LUMPY</value>
+  </data>
+  <data name="Gamertag71" xml:space="preserve">
+    <value>MITTENS</value>
+  </data>
+  <data name="Gamertag72" xml:space="preserve">
+    <value>MOPEY</value>
+  </data>
+  <data name="Gamertag73" xml:space="preserve">
+    <value>SMUCKY</value>
+  </data>
+  <data name="Gamertag74" xml:space="preserve">
+    <value>POKEY</value>
+  </data>
+  <data name="Gamertag75" xml:space="preserve">
+    <value>PUFFY</value>
+  </data>
+  <data name="Gamertag76" xml:space="preserve">
+    <value>SAUSAGE</value>
+  </data>
+  <data name="Gamertag77" xml:space="preserve">
+    <value>BOZO</value>
+  </data>
+  <data name="Gamertag78" xml:space="preserve">
+    <value>CABOOSE</value>
+  </data>
+  <data name="Gamertag79" xml:space="preserve">
+    <value>SWEETY</value>
+  </data>
+  <data name="Gamertag80" xml:space="preserve">
+    <value>BUTCHY</value>
+  </data>
+  <data name="Gamertag81" xml:space="preserve">
+    <value>SPANKY</value>
+  </data>
+  <data name="Gamertag82" xml:space="preserve">
+    <value>SMIDGEN</value>
+  </data>
+  <data name="Gamertag83" xml:space="preserve">
+    <value>SPONGEY</value>
+  </data>
+  <data name="Gamertag84" xml:space="preserve">
+    <value>SQUIRTY</value>
+  </data>
+  <data name="Gamertag85" xml:space="preserve">
+    <value>STUMPY</value>
+  </data>
+  <data name="Gamertag86" xml:space="preserve">
+    <value>SPROUTY</value>
+  </data>
+  <data name="Gamertag87" xml:space="preserve">
+    <value>TOASTY</value>
+  </data>
+  <data name="Gamertag88" xml:space="preserve">
+    <value>ROASTY</value>
+  </data>
+  <data name="Gamertag89" xml:space="preserve">
+    <value>SPATULA</value>
+  </data>
+  <data name="Gamertag90" xml:space="preserve">
+    <value>WHISKEY</value>
+  </data>
+  <data name="Gamertag91" xml:space="preserve">
+    <value>BUNGALOW</value>
+  </data>
+  <data name="Gamertag92" xml:space="preserve">
+    <value>SHINDIG</value>
+  </data>
+  <data name="Gamertag93" xml:space="preserve">
+    <value>PLETHORA</value>
+  </data>
+  <data name="Gamertag94" xml:space="preserve">
+    <value>BOUFFANT</value>
+  </data>
+  <data name="Gamertag95" xml:space="preserve">
+    <value>BELUGA</value>
+  </data>
+  <data name="Gamertag96" xml:space="preserve">
+    <value>GALOSHES</value>
+  </data>
+  <data name="Gamertag97" xml:space="preserve">
+    <value>BLUBBER</value>
+  </data>
+  <data name="Gamertag98" xml:space="preserve">
+    <value>MUKLUKS</value>
+  </data>
+  <data name="Gamertag99" xml:space="preserve">
+    <value>MACADAMIA</value>
+  </data>
+  <data name="Gamertag22" xml:space="preserve">
+    <value>FLOOZY</value>
+  </data>
+  <data name="MenuFleetEquip" xml:space="preserve">
+    <value>EQUIP ITEM</value>
+  </data>
+  <data name="FactionSlavers" xml:space="preserve">
+    <value>ZUGISIAN SLAVETRADERS</value>
+  </data>
+  <data name="MenuCarnageHideScores" xml:space="preserve">
+    <value>VIEW PLAYBACK</value>
+  </data>
+  <data name="MenuCarnageShowScores" xml:space="preserve">
+    <value>SHOW SCOREBOARD</value>
+  </data>
+  <data name="MenuMainWelcome" xml:space="preserve">
+    <value>WELCOME,</value>
+  </data>
+  <data name="FactionAssassins" xml:space="preserve">
+    <value>ASSASSINS UNION LOCAL 17</value>
+  </data>
+  <data name="FactionToucans" xml:space="preserve">
+    <value>RAMPHASTIAN REFUGEES</value>
+  </data>
+  <data name="FactionChickens" xml:space="preserve">
+    <value>JUNGLEFOWL PIRATES</value>
+  </data>
+  <data name="MenuGameOverScore" xml:space="preserve">
+    <value>{0}'S FINAL SCORE: {1}</value>
+  </data>
+  <data name="MenuGameOverTitle" xml:space="preserve">
+    <value>END OF ADVENTURE {0}</value>
+  </data>
+  <data name="MenuHighScoresEmpty" xml:space="preserve">
+    <value>NO HIGH SCORES FOUND. START A NEW ADVENTURE!</value>
+  </data>
+  <data name="MenuHighScoresTitle" xml:space="preserve">
+    <value>HALL OF FAME</value>
+  </data>
+  <data name="MenuHighScoresPlus" xml:space="preserve">
+    <value>+</value>
+  </data>
+  <data name="GameCameraSpeed" xml:space="preserve">
+    <value>CAMERA SPEED: {0}x</value>
+  </data>
+  <data name="MenuSkirmishPlayer2JoinPress" xml:space="preserve">
+    <value>Player 2: Connect XBOX360 controller and press</value>
+  </data>
+  <data name="MenuSkirmishPlayer2JoinToJoin" xml:space="preserve">
+    <value>to join</value>
+  </data>
+  <data name="MenuClickToStart" xml:space="preserve">
+    <value>CLICK TO START</value>
+  </data>
+  <data name="MenuNamePrompt" xml:space="preserve">
+    <value>WHAT'S YOUR NAME, CAPTAIN?</value>
+  </data>
+  <data name="MenuClickWhenDone" xml:space="preserve">
+    <value>CLICK HERE WHEN DONE</value>
+  </data>
+  <data name="MenuVideo" xml:space="preserve">
+    <value>VIDEO SETTINGS</value>
+  </data>
+  <data name="MenuVideoBloom" xml:space="preserve">
+    <value>BLOOM</value>
+  </data>
+  <data name="MenuVideoDivider" xml:space="preserve">
+    <value>x</value>
+  </data>
+  <data name="MenuVideoFullscreen" xml:space="preserve">
+    <value>FULLSCREEN</value>
+  </data>
+  <data name="MenuVideoResolution" xml:space="preserve">
+    <value>RESOLUTION</value>
+  </data>
+  <data name="MenuVideoWidescreen" xml:space="preserve">
+    <value>widescreen</value>
+  </data>
+  <data name="MenuVideoCurrent" xml:space="preserve">
+    <value>(ACTIVE)</value>
+  </data>
+  <data name="ShipGunship" xml:space="preserve">
+    <value>TORPEDO GUNSHIP</value>
+  </data>
+  <data name="ShipDreadnought" xml:space="preserve">
+    <value>DREADNOUGHT</value>
+  </data>
+  <data name="MenuSkirmishTrialSelection" xml:space="preserve">
+    <value>THE {0} IS NOT AVAILABLE IN THE TRIAL VERSION OF FLOTILLA.
+
+DO YOU WANT TO UNLOCK THE FULL GAME?</value>
+  </data>
+  <data name="MenuSkirmishTrialShipError" xml:space="preserve">
+    <value>YOU ARE USING SHIPS NOT AVAILABLE IN THE TRIAL VERSION.
+
+NON-TRIAL SHIPS HAVE BEEN REMOVED FROM YOUR FLEETS.</value>
+  </data>
+  <data name="MenuLog" xml:space="preserve">
+    <value>{0}'S LOG: ADVENTURE {1}</value>
+  </data>
+  <data name="MenuLogEmpty" xml:space="preserve">
+    <value>NO LOG ENTRIES. GO EXPLORE THE GALAXY!</value>
+  </data>
+  <data name="TutorialElevateCamera" xml:space="preserve">
+    <value>LOWER / RAISE CAMERA</value>
+  </data>
+  <data name="TutorialMoveCamera" xml:space="preserve">
+    <value>MOVE CAMERA</value>
+  </data>
+  <data name="TutorialPCMouseCam" xml:space="preserve">
+    <value>PRESS AND HOLD TO
+TURN CAMERA</value>
+  </data>
+  <data name="TutorialArmorTip" xml:space="preserve">
+    <value>TIP:
+SHIP ARMOR IS WEAK IN
+THE REAR AND BOTTOM</value>
+  </data>
+  <data name="TutorialBottom" xml:space="preserve">
+    <value>BOTTOM</value>
+  </data>
+  <data name="TutorialRear" xml:space="preserve">
+    <value>REAR</value>
+  </data>
+  <data name="MenuVeterancy" xml:space="preserve">
+    <value>VETERANCY:</value>
+  </data>
+  <data name="FactionCasino" xml:space="preserve">
+    <value>TANGERIN CASINOS</value>
+  </data>
+  <data name="OrderNext" xml:space="preserve">
+    <value>NEXT ORDER</value>
+  </data>
+  <data name="MenuConfirmFacing" xml:space="preserve">
+    <value>FACE TOWARD HERE</value>
+  </data>
+  <data name="ModeFacingMode" xml:space="preserve">
+    <value>ORIENTATION</value>
+  </data>
+  <data name="MenuAdvancedMoveOff" xml:space="preserve">
+    <value>MANUAL MODE</value>
+  </data>
+  <data name="MenuAdvancedMoveOn" xml:space="preserve">
+    <value>BASIC MODE</value>
+  </data>
+  <data name="MenuClickToEquip" xml:space="preserve">
+    <value>CLICK HERE TO EQUIP ITEM</value>
+  </data>
+  <data name="MenuPatchAvailable" xml:space="preserve">
+    <value>A NEW UPDATE IS AVAILABLE!
+
+YOUR CURRENT VERSION: v{0}
+NEW VERSION: v{1}
+
+DO YOU WANT TO DOWNLOAD THE UPDATE NOW?</value>
+  </data>
+  <data name="MenuPatchGet" xml:space="preserve">
+    <value>GET UPDATE NOW</value>
+  </data>
+  <data name="MenuPatchLater" xml:space="preserve">
+    <value>GET UPDATE LATER</value>
+  </data>
+  <data name="MenuVersionPrefix" xml:space="preserve">
+    <value>v</value>
+  </data>
+  <data name="MenuAimTip" xml:space="preserve">
+    <value>SELECT PRIORITY ENEMY TARGET</value>
+  </data>
+  <data name="MenuFacingTip" xml:space="preserve">
+    <value>SELECT ENEMY TO FACE</value>
+  </data>
+  <data name="MenuReadyWaitingFor" xml:space="preserve">
+    <value>WAITING FOR {0}</value>
+  </data>
+  <data name="MenuFleetItemSelect" xml:space="preserve">
+    <value>ITEM SELECT</value>
+  </data>
+  <data name="MenuFleetShipSelect" xml:space="preserve">
+    <value>SHIP SELECT</value>
+  </data>
+  <data name="TutorialPlayerFleet" xml:space="preserve">
+    <value>THESE ARE YOUR SHIPS.</value>
+  </data>
+  <data name="TutorialPlayerShip" xml:space="preserve">
+    <value>THIS IS YOUR SHIP.</value>
+  </data>
+  <data name="TutorialEnemyFleet" xml:space="preserve">
+    <value>...AND HERE'S THE ENEMY.</value>
+  </data>
+  <data name="TutorialOrdersIntro" xml:space="preserve">
+    <value>NOW, LET'S BLOW UP THAT ENEMY.</value>
+  </data>
+  <data name="ShipTrainingDrone" xml:space="preserve">
+    <value>TRAINING DRONE</value>
+  </data>
+  <data name="TutorialGiveOrderShip" xml:space="preserve">
+    <value>SELECT YOUR SHIP.</value>
+  </data>
+  <data name="TutorialGiveOrderShips" xml:space="preserve">
+    <value>SELECT ONE OF YOUR SHIPS.</value>
+  </data>
+  <data name="TutorialPlanarMove" xml:space="preserve">
+    <value>ORDER YOUR SHIP'S DESTINATION.
+
+TIPS:
+- SHIP ARMOR IS WEAK IN THE REAR AND BOTTOM
+- STAY OUT OF ENEMY FIRING ARCS
+- FLANK AROUND THE ENEMY!</value>
+  </data>
+  <data name="TutorialSelectOrder" xml:space="preserve">
+    <value>SELECT AN ORDER.</value>
+  </data>
+  <data name="TutorialFacing" xml:space="preserve">
+    <value>FACE TOWARD WHICH ENEMY?</value>
+  </data>
+  <data name="TutorialGiveOrderOtherShip" xml:space="preserve">
+    <value>SELECT YOUR OTHER SHIP.</value>
+  </data>
+  <data name="TutorialHeightMode" xml:space="preserve">
+    <value>NOW, ORDER THE VERTICAL MOVEMENT.</value>
+  </data>
+  <data name="TutorialOpenCommandMenu" xml:space="preserve">
+    <value>GOOD! NOW, OPEN THE COMMAND MENU.</value>
+  </data>
+  <data name="TutorialEndTurn" xml:space="preserve">
+    <value>SELECT "END TURN" AFTER ISSUING ORDERS TO ALL YOUR SHIPS.
+
+DURING THIS PHASE, YOU WILL WATCH THE FLEETS FOLLOW THEIR BATTLE ORDERS.</value>
+  </data>
+  <data name="MenuSelectChoice" xml:space="preserve">
+    <value>SELECT CHOICE</value>
+  </data>
+  <data name="MenuWorldMoveCursor" xml:space="preserve">
+    <value>MOVE CURSOR</value>
+  </data>
+  <data name="MenuSelect" xml:space="preserve">
+    <value>SELECT</value>
+  </data>
+  <data name="MenuClickToContinue" xml:space="preserve">
+    <value>CLICK HERE TO CONTINUE</value>
+  </data>
+  <data name="MenuContinue" xml:space="preserve">
+    <value>CONTINUE</value>
+  </data>
+  <data name="MenuBugReport" xml:space="preserve">
+    <value>REPORT-A-BUG</value>
+  </data>
+  <data name="MenuBugReportThanks" xml:space="preserve">
+    <value>BUG REPORT HAS BEEN SENT.
+
+LOVE,
+BLENDO GAMES</value>
+  </data>
+  <data name="MenuBugReportEmptyDescription" xml:space="preserve">
+    <value>PLEASE FILL IN THE DESCRIPTION BOX.</value>
+  </data>
+  <data name="MenuSubmit" xml:space="preserve">
+    <value>SUBMIT</value>
+  </data>
+  <data name="MenuNextAvailableShip" xml:space="preserve">
+    <value>SELECT NEXT AVAILABLE SHIP</value>
+  </data>
+  <data name="MenuSpaceBar" xml:space="preserve">
+    <value>(SPACEBAR)</value>
+  </data>
+  <data name="MenuNextTarget" xml:space="preserve">
+    <value>NEXT TARGET</value>
+  </data>
+  <data name="MenuMainMenu" xml:space="preserve">
+    <value>MAIN MENU</value>
+  </data>
+  <data name="MenuPressAndHold" xml:space="preserve">
+    <value>PRESS AND HOLD</value>
+  </data>
+  <data name="TutorialTutorial" xml:space="preserve">
+    <value>TUTORIAL</value>
+  </data>
+  <data name="MenuSellWellDone" xml:space="preserve">
+    <value>WELL DONE, CAPTAIN {0}</value>
+  </data>
+  <data name="FactionSecretPolice" xml:space="preserve">
+    <value>ANATIDAEN SECRET POLICE</value>
+  </data>
+  <data name="FactionYetis" xml:space="preserve">
+    <value>ROGUE YETIS</value>
+  </data>
+  <data name="MenuDemoPlanetLocked" xml:space="preserve">
+    <value>PLANET {0} IS LOCKED IN THE TRIAL VERSION OF FLOTILLA.
+
+DO YOU WANT TO UNLOCK THE FULL GAME?
+
+</value>
+  </data>
+  <data name="MenuDemoPlanetMaybeLater" xml:space="preserve">
+    <value>MAYBE LATER!</value>
+  </data>
+  <data name="CreditsNameDaniel" xml:space="preserve">
+    <value>Daniel Wiksten</value>
+  </data>
+  <data name="CreditsNameDrew" xml:space="preserve">
+    <value>Drew Marlowe</value>
+  </data>
+  <data name="CreditsNameRobert" xml:space="preserve">
+    <value>Robert Kingsley</value>
+  </data>
+  <data name="CreditsNameSherman" xml:space="preserve">
+    <value>Sherman Wang</value>
+  </data>
+  <data name="CreditsNameTom" xml:space="preserve">
+    <value>Tom Nguyen</value>
+  </data>
+  <data name="CreditsNameVenny" xml:space="preserve">
+    <value>Venny Wong</value>
+  </data>
+  <data name="MenuCreditsSpecialThanks" xml:space="preserve">
+    <value>SPECIAL THANKS</value>
+  </data>
+  <data name="MenuHighScoresTrial" xml:space="preserve">
+    <value>UNLOCK THE FULL GAME TO SEE HIGH SCORE TABLE!</value>
+  </data>
+  <data name="ShipBeamGunship" xml:space="preserve">
+    <value>BEAM GUNSHIP</value>
+  </data>
+  <data name="GameFeatAdj01" xml:space="preserve">
+    <value>the Indomitable</value>
+  </data>
+  <data name="GameFeatAdj02" xml:space="preserve">
+    <value>our Pal</value>
+  </data>
+  <data name="GameFeatAdj03" xml:space="preserve">
+    <value>the Return of</value>
+  </data>
+  <data name="GameFeatAdj04" xml:space="preserve">
+    <value>the Steely</value>
+  </data>
+  <data name="GameFeatAdj05" xml:space="preserve">
+    <value>the Mighty</value>
+  </data>
+  <data name="GameFeatAdj06" xml:space="preserve">
+    <value>the Lovable</value>
+  </data>
+  <data name="GameFeatAdj07" xml:space="preserve">
+    <value>the Huggable</value>
+  </data>
+  <data name="GameFeatAdj08" xml:space="preserve">
+    <value>our Hero</value>
+  </data>
+  <data name="GameFeatAdj09" xml:space="preserve">
+    <value>the Amazing</value>
+  </data>
+  <data name="GameFeatAdj10" xml:space="preserve">
+    <value>the Aromatic</value>
+  </data>
+  <data name="GameFeatAdj11" xml:space="preserve">
+    <value>Tennis Pro</value>
+  </data>
+  <data name="GameFeatAdj12" xml:space="preserve">
+    <value>Expert Kisser</value>
+  </data>
+  <data name="GameFeatAdj13" xml:space="preserve">
+    <value>the Gutsy</value>
+  </data>
+  <data name="GameFeatAdj14" xml:space="preserve">
+    <value>the Gallant</value>
+  </data>
+  <data name="GameFeatAdj15" xml:space="preserve">
+    <value>the Brave</value>
+  </data>
+  <data name="GameFeatAdj16" xml:space="preserve">
+    <value>the Dashing</value>
+  </data>
+  <data name="GameFeatAdj17" xml:space="preserve">
+    <value>the Spicy</value>
+  </data>
+  <data name="GameFeatAdj18" xml:space="preserve">
+    <value>the Bold</value>
+  </data>
+  <data name="GameFeatAdj19" xml:space="preserve">
+    <value>the Dauntless</value>
+  </data>
+  <data name="GameFeatAdj20" xml:space="preserve">
+    <value>the Fearless</value>
+  </data>
+  <data name="GameFeatAdj21" xml:space="preserve">
+    <value>the High-Flying</value>
+  </data>
+  <data name="GameFeatAdj22" xml:space="preserve">
+    <value>the Acrobatic</value>
+  </data>
+  <data name="GameFeatAdj23" xml:space="preserve">
+    <value>the Intrepid</value>
+  </data>
+  <data name="GameFeatAdj24" xml:space="preserve">
+    <value>the Lion-Hearted</value>
+  </data>
+  <data name="GameFeatAdj25" xml:space="preserve">
+    <value>the Stouthearted</value>
+  </data>
+  <data name="GameFeatAdj26" xml:space="preserve">
+    <value>the Valiant</value>
+  </data>
+  <data name="GameFeatAdj27" xml:space="preserve">
+    <value>the Audacious</value>
+  </data>
+  <data name="GameFeatAdj28" xml:space="preserve">
+    <value>the Resolute</value>
+  </data>
+  <data name="GameFeatAdj29" xml:space="preserve">
+    <value>the Daring</value>
+  </data>
+  <data name="GameFeatAdj30" xml:space="preserve">
+    <value>the Venturous</value>
+  </data>
+  <data name="GameFeatAdj31" xml:space="preserve">
+    <value>the Daredevil</value>
+  </data>
+  <data name="GameFeatAdj32" xml:space="preserve">
+    <value>the Courageous</value>
+  </data>
+  <data name="GameFeatAdj33" xml:space="preserve">
+    <value>the Avid</value>
+  </data>
+  <data name="GameFeatAdj34" xml:space="preserve">
+    <value>the Formidable</value>
+  </data>
+  <data name="GameFeatAdj35" xml:space="preserve">
+    <value>the Napalm-Hearted</value>
+  </data>
+  <data name="GameFeatAdj36" xml:space="preserve">
+    <value>the Tumble-riffic</value>
+  </data>
+  <data name="GameFeatAdj37" xml:space="preserve">
+    <value>the Smashing</value>
+  </data>
+  <data name="GameFeatAdj38" xml:space="preserve">
+    <value>the Uncanny</value>
+  </data>
+  <data name="GameFeatAdj39" xml:space="preserve">
+    <value>the Astonishing</value>
+  </data>
+  <data name="GameFeatAdj40" xml:space="preserve">
+    <value>the Mind-Blowing</value>
+  </data>
+  <data name="GameFeatAdj41" xml:space="preserve">
+    <value>the Troublemaking</value>
+  </data>
+  <data name="GameFeatAdj42" xml:space="preserve">
+    <value>the Rabblerousing</value>
+  </data>
+  <data name="GameFeatAdj43" xml:space="preserve">
+    <value>the Bon Vivant</value>
+  </data>
+  <data name="GameFeaturingPlayer1" xml:space="preserve">
+    <value>FEATURING:
+{0} CAPTAIN {1}</value>
+  </data>
+  <data name="GameFeaturingPlayer2" xml:space="preserve">
+    <value>and {0} CAPTAIN {1}</value>
+  </data>
+  <data name="TutorialDeflection" xml:space="preserve">
+    <value>NOTICE FRONT ARMOR DEFLECTS MISSILES.</value>
+  </data>
+  <data name="TutorialNextShip" xml:space="preserve">
+    <value>GREAT! YOU'VE JUST COMPLETED GIVING ATTACK ORDERS TO ONE OF YOUR SHIPS.
+
+NOW, GIVE ORDERS TO YOUR OTHER SHIP.</value>
+  </data>
+  <data name="FactionGroupies" xml:space="preserve">
+    <value>FERAL GROUPIES</value>
+  </data>
+  <data name="FactionSpider" xml:space="preserve">
+    <value>THE CHELI CERATAS</value>
+  </data>
+  <data name="MenuJoystick" xml:space="preserve">
+    <value>CONFIGURE GAMEPAD</value>
+  </data>
+  <data name="JoyXAxis" xml:space="preserve">
+    <value>X AXIS</value>
+  </data>
+  <data name="JoyXRot" xml:space="preserve">
+    <value>X ROTATION</value>
+  </data>
+  <data name="JoyYAxis" xml:space="preserve">
+    <value>Y AXIS</value>
+  </data>
+  <data name="JoyYRot" xml:space="preserve">
+    <value>Y ROTATION</value>
+  </data>
+  <data name="JoyZAxis" xml:space="preserve">
+    <value>Z AXIS</value>
+  </data>
+  <data name="JoyZRot" xml:space="preserve">
+    <value>Z ROTATION</value>
+  </data>
+  <data name="JoyAltA" xml:space="preserve">
+    <value>ALTERNATE ACTION</value>
+  </data>
+  <data name="JoyButton" xml:space="preserve">
+    <value>BUTTON {0}</value>
+  </data>
+  <data name="JoyCamReset" xml:space="preserve">
+    <value>RESET CAMERA</value>
+  </data>
+  <data name="JoyCancel" xml:space="preserve">
+    <value>CANCEL ACTION</value>
+  </data>
+  <data name="JoyConfirm" xml:space="preserve">
+    <value>CONFIRM ACTION</value>
+  </data>
+  <data name="JoyEscCancel" xml:space="preserve">
+    <value>Press ESC to cancel</value>
+  </data>
+  <data name="JoyGiveToAlly" xml:space="preserve">
+    <value>GIVE SHIP TO ALLY</value>
+  </data>
+  <data name="JoyLookHoriz" xml:space="preserve">
+    <value>ROTATE LEFT/RIGHT</value>
+  </data>
+  <data name="JoyLookVert" xml:space="preserve">
+    <value>ROTATE UP/DOWN</value>
+  </data>
+  <data name="JoyMoveForward" xml:space="preserve">
+    <value>MOVE FORWARD/BACK</value>
+  </data>
+  <data name="JoyMoveStrafe" xml:space="preserve">
+    <value>MOVE LEFT/RIGHT</value>
+  </data>
+  <data name="JoyNextMenu" xml:space="preserve">
+    <value>MENU SELECT RIGHT</value>
+  </data>
+  <data name="JoyOpenMenu" xml:space="preserve">
+    <value>OPEN COMMAND MENU</value>
+  </data>
+  <data name="JoyPrevMenu" xml:space="preserve">
+    <value>MENU SELECT LEFT</value>
+  </data>
+  <data name="JoyTurbo" xml:space="preserve">
+    <value>INCREASE CAMERA SPEED</value>
+  </data>
+  <data name="JoyWaitingForKey" xml:space="preserve">
+    <value>Press a gamepad button for:</value>
+  </data>
+  <data name="JoyWaitingForStick" xml:space="preserve">
+    <value>Move a gamepad thumbstick for:</value>
+  </data>
+  <data name="JoyEqual" xml:space="preserve">
+    <value>=</value>
+  </data>
+  <data name="JoyClimb" xml:space="preserve">
+    <value>RAISE CAMERA</value>
+  </data>
+  <data name="JoyLower" xml:space="preserve">
+    <value>LOWER CAMERA</value>
+  </data>
+  <data name="JoyInvert" xml:space="preserve">
+    <value>Invert</value>
+  </data>
+  <data name="MenuSkirmishNoShips" xml:space="preserve">
+    <value>{0}'S FLEET IS EMPTY!
+
+ENSURE ALL PLAYERS HAVE SHIPS IN THEIR FLEET.</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>???</value>
+  </data>
+  <data name="HelpAndOptions" xml:space="preserve">
+    <value>HELP / OPTIONS</value>
+  </data>
+  <data name="HelpHowToPlay" xml:space="preserve">
+    <value>HOW TO PLAY</value>
+  </data>
+  <data name="HelpViewControls" xml:space="preserve">
+    <value>VIEW CONTROLS</value>
+  </data>
+  <data name="HelpConfirmSelectNext" xml:space="preserve">
+    <value>CONFIRM ORDER /</value>
+  </data>
+  <data name="HelpConfirmSelectNext2" xml:space="preserve">
+    <value>SELECT NEXT SHIP</value>
+  </data>
+  <data name="HelpLeftButton1" xml:space="preserve">
+    <value>ACTIVATE</value>
+  </data>
+  <data name="HelpRightButton1" xml:space="preserve">
+    <value>ROTATE CAMERA</value>
+  </data>
+  <data name="HelpRightButton2" xml:space="preserve">
+    <value>(press and hold)</value>
+  </data>
+  <data name="HelpWheel1" xml:space="preserve">
+    <value>Scroll: RAISE/LOWER CAMERA</value>
+  </data>
+  <data name="HelpWheel2" xml:space="preserve">
+    <value>Click: RESET CAMERA</value>
+  </data>
+  <data name="HelpNextPage" xml:space="preserve">
+    <value>NEXT PAGE</value>
+  </data>
+  <data name="HelpBumper2" xml:space="preserve">
+    <value>ORDER /</value>
+  </data>
+  <data name="HelpBumper3" xml:space="preserve">
+    <value>MOVE SHIP</value>
+  </data>
+  <data name="HelpCamera" xml:space="preserve">
+    <value>CAMERA</value>
+  </data>
+  <data name="HelpLBumper1" xml:space="preserve">
+    <value>PREVIOUS</value>
+  </data>
+  <data name="HelpLeftStick1" xml:space="preserve">
+    <value>MOVE CAMERA /</value>
+  </data>
+  <data name="HelpLeftStick2" xml:space="preserve">
+    <value>Press and hold:</value>
+  </data>
+  <data name="HelpLeftStick3" xml:space="preserve">
+    <value>FAST CAMERA SPEED</value>
+  </data>
+  <data name="HelpLTrigger1" xml:space="preserve">
+    <value>LOWER</value>
+  </data>
+  <data name="HelpRBumper1" xml:space="preserve">
+    <value>NEXT</value>
+  </data>
+  <data name="HelpRTrigger1" xml:space="preserve">
+    <value>RAISE</value>
+  </data>
+  <data name="MenuSellBuyToday" xml:space="preserve">
+    <value>BUY TODAY TO UNLOCK UNLIMITED GAMEPLAY!</value>
+  </data>
+  <data name="MenuSellAnimals" xml:space="preserve">
+    <value>More encounters,
+artifacts, and animals!</value>
+  </data>
+  <data name="MenuSellExplore" xml:space="preserve">
+    <value>Explore new planets in
+Adventure Mode!</value>
+  </data>
+  <data name="MenuSellFight" xml:space="preserve">
+    <value>Face off against a friend or
+computer in Skirmish Mode!</value>
+  </data>
+  <data name="MenuSellScores" xml:space="preserve">
+    <value>Save your scores in
+the Hall of Fame!</value>
+  </data>
+  <data name="MenuSellShips" xml:space="preserve">
+    <value>Unlock seven different
+powerful battleships!</value>
+  </data>
+  <data name="MenuSellUpgrades" xml:space="preserve">
+    <value>Upgrade your ships
+with exotic artifacts!</value>
+  </data>
+  <data name="MenuNo" xml:space="preserve">
+    <value>NO</value>
+  </data>
+  <data name="MenuQuitQuestion" xml:space="preserve">
+    <value>QUIT?</value>
+  </data>
+  <data name="MenuYes" xml:space="preserve">
+    <value>YES</value>
+  </data>
+  <data name="MenuSkirmishTrialSelectionNoSignin" xml:space="preserve">
+    <value>THE {0} IS NOT AVAILABLE IN THE TRIAL VERSION OF FLOTILLA.</value>
+  </data>
+  <data name="MenuLogScroll" xml:space="preserve">
+    <value>SCROLL UP/DOWN</value>
+  </data>
+  <data name="TutorialExplorePC" xml:space="preserve">
+    <value>GREAT JOB!
+
+NOW IT'S TIME TO START YOUR ADVENTURE. CLICK ON A PLANET AND EXPLORE!</value>
+  </data>
+  <data name="TutorialExploreXBOX" xml:space="preserve">
+    <value>GREAT JOB!
+
+NOW IT'S TIME TO EXPLORE THE UNIVERSE. MOVE THE CURSOR OVER A PLANET AND PRESS [A].
+
+GOOD LUCK!</value>
+  </data>
+  <data name="TradingTitle" xml:space="preserve">
+    <value>THE CRIPPLED FLAMINGO TRADING OUTPOST</value>
+  </data>
+  <data name="TraderPlayerItem" xml:space="preserve">
+    <value>...NOW TRADE ME TWO OF YOUR ITEMS.</value>
+  </data>
+  <data name="TradingNoCargo" xml:space="preserve">
+    <value>YOU DON'T HAVE ENOUGH CARGO
+TO TRADE WITH ME.
+
+COME VISIT AGAIN AFTER YOU
+FIND MORE LOOT!</value>
+  </data>
+  <data name="TradingTraderItem" xml:space="preserve">
+    <value>YOU LOOK LIKE SOMEONE WHO
+WANTS TO MAKE A DEAL.
+
+WHAT ITEM INTERESTS YOU?</value>
+  </data>
+  <data name="TraderLeave" xml:space="preserve">
+    <value>GOODBYE!</value>
+  </data>
+  <data name="TradingNextPrev" xml:space="preserve">
+    <value>PREV/NEXT ITEM</value>
+  </data>
+  <data name="SysDeviceDisconnect" xml:space="preserve">
+    <value>A STORAGE DEVICE HAS BEEN DISCONNECTED OR CHANGED.
+
+NO PROGRESS OR CHANGES TO GAME SETTINGS WILL BE SAVED.</value>
+  </data>
+  <data name="FactionOwl" xml:space="preserve">
+    <value>STRIGIFO FIEFDOM</value>
+  </data>
+  <data name="FactionPenguin" xml:space="preserve">
+    <value>SPHENI SCALLIONS</value>
+  </data>
+  <data name="MenuCampaignPlugControllerPC" xml:space="preserve">
+    <value>PLUG IN GAMEPAD CONTROLLER!</value>
+  </data>
+  <data name="MenuSkirmishPlayer2JoinPressPC" xml:space="preserve">
+    <value>Player 2: Connect gamepad controller and press primary button</value>
+  </data>
+  <data name="HelpRightButton3" xml:space="preserve">
+    <value>DRAG GALAXY MAP</value>
+  </data>
+  <data name="MenuSelfDestruct" xml:space="preserve">
+    <value>SELF-DESTRUCT</value>
+  </data>
+  <data name="MenuSelfDestructDescription" xml:space="preserve">
+    <value>WARNING! THIS WILL DESTROY YOUR ENTIRE FLEET. ARE
+YOU SURE YOU WANT TO END IN A BLAZE OF GLORY?</value>
+  </data>
+  <data name="HelpArmorBottom" xml:space="preserve">
+    <value>PROJECTILES ARE ABLE TO PENETRATE THIS ARMOR AND INFLICT MAJOR DAMAGE.</value>
+  </data>
+  <data name="HelpArmorBottomTitle" xml:space="preserve">
+    <value>BOTTOM / REAR</value>
+  </data>
+  <data name="HelpArmorDesc" xml:space="preserve">
+    <value>THERE ARE WEAK SPOTS IN EVERY SHIP'S ARMOR. EXPLOIT THEM! MANEUVER YOUR SHIPS TO GET A CLEAR SHOT AT VULNERABLE LOCATIONS.</value>
+  </data>
+  <data name="HelpArmorTitle" xml:space="preserve">
+    <value>HOW TO PLAY: ARMOR FACING</value>
+  </data>
+  <data name="HelpArmorTop" xml:space="preserve">
+    <value>THIS ARMOR IS ABLE TO DEFLECT ALMOST ALL PROJECTILES.</value>
+  </data>
+  <data name="HelpArmorTopTitle" xml:space="preserve">
+    <value>TOP / FRONT</value>
+  </data>
+  <data name="HelpNext" xml:space="preserve">
+    <value>NEXT</value>
+  </data>
+  <data name="HelpOrdersAttack" xml:space="preserve">
+    <value>THE SHIP MOVES WHILE FIRING. THIS STANDARD MANEUVER IS EFFECTIVE IN MANY SITUATIONS.</value>
+  </data>
+  <data name="HelpOrdersAttackTitle" xml:space="preserve">
+    <value>ATTACK MOVE</value>
+  </data>
+  <data name="HelpOrdersDesc" xml:space="preserve">
+    <value>SHIPS HAVE THREE AVAILABLE ORDERS TO CHOOSE FROM.</value>
+  </data>
+  <data name="HelpOrdersFlank" xml:space="preserve">
+    <value>ENGINES RECEIVE A DRAMATIC SPEED BOOST, AT THE EXPENSE OF NOT BEING ABLE TO FIRE WEAPONS.</value>
+  </data>
+  <data name="HelpOrdersFlankTitle" xml:space="preserve">
+    <value>FLANK MOVE</value>
+  </data>
+  <data name="HelpOrdersFocus" xml:space="preserve">
+    <value>INCREASES THE FIRING RATE OF THE WEAPON SYSTEMS, BUT SLOWS ENGINE SPEED TO A CRAWL.</value>
+  </data>
+  <data name="HelpOrdersFocusTitle" xml:space="preserve">
+    <value>FOCUS FIRE</value>
+  </data>
+  <data name="HelpOrdersTitle" xml:space="preserve">
+    <value>HOW TO PLAY: ORDERS</value>
+  </data>
+  <data name="HelpPrev" xml:space="preserve">
+    <value>PREV</value>
+  </data>
+  <data name="HelpPrevNext" xml:space="preserve">
+    <value>PREV/NEXT PAGE</value>
+  </data>
+  <data name="HelpTurns" xml:space="preserve">
+    <value>HOW TO PLAY: OVERVIEW</value>
+  </data>
+  <data name="HelpTurnsAction" xml:space="preserve">
+    <value>IN THE ACTION PHASE, WATCH YOUR FLEET (AND THE ENEMY FLEET) CARRY OUT ITS GIVEN ORDERS.</value>
+  </data>
+  <data name="HelpTurnsActionTitle" xml:space="preserve">
+    <value>ACTION PHASE</value>
+  </data>
+  <data name="HelpTurnsDescription" xml:space="preserve">
+    <value>COMBAT IN FLOTILLA USES A SIMULTANEOUS TURN-BASED STYLE OF PLAY. THERE ARE TWO PHASES IN COMBAT: THE ORDERS PHASE AND THE ACTION PHASE.</value>
+  </data>
+  <data name="HelpTurnsOrders" xml:space="preserve">
+    <value>IN THE ORDERS PHASE, YOU GIVE ORDERS TO YOUR SHIPS.</value>
+  </data>
+  <data name="HelpTurnsOrdersTitle" xml:space="preserve">
+    <value>ORDERS PHASE</value>
+  </data>
+  <data name="MenuSkirmishMissingPlayer" xml:space="preserve">
+    <value>ONE OF THE SIDES IS EMPTY!
+
+ADD ANOTHER PLAYER OR COMPUTER PLAYER.</value>
+  </data>
+  <data name="CreditsNameNeil" xml:space="preserve">
+    <value>Neil Mehta</value>
+  </data>
+  <data name="MenuVideoPlanets" xml:space="preserve">
+    <value>DRAW PLANETS</value>
+  </data>
+  <data name="MenuControls" xml:space="preserve">
+    <value>CONFIGURE CONTROLS</value>
+  </data>
+  <data name="MenuOptionsMousewheel" xml:space="preserve">
+    <value>MOUSEWHEEL CAMERA</value>
+  </data>
+  <data name="MenuOptionsMousewheelForward" xml:space="preserve">
+    <value>forward/back</value>
+  </data>
+  <data name="MenuOptionsMousewheelRaise" xml:space="preserve">
+    <value>raise/lower</value>
+  </data>
+  <data name="ThankYou" xml:space="preserve">
+    <value>Thank you for purchasing Flotilla!</value>
+  </data>
+  <data name="MenuOptionsHardwaremouse" xml:space="preserve">
+    <value>HARDWARE MOUSE</value>
+  </data>
+  <data name="MenuOptionsManualDefault" xml:space="preserve">
+    <value>DEFAULT TO MANUAL MODE</value>
+  </data>
+  <data name="MenuHighScoresTitleLocal" xml:space="preserve">
+    <value>LOCAL HALL OF FAME</value>
+  </data>
+  <data name="MenuHighScoresTitleOnline" xml:space="preserve">
+    <value>ONLINE HALL OF FAME</value>
+  </data>
+  <data name="MenuHighscoresLocal" xml:space="preserve">
+    <value>LOCAL SCORES</value>
+  </data>
+  <data name="MenuHighscoresOnline" xml:space="preserve">
+    <value>ONLINE SCORES</value>
+  </data>
+  <data name="MenuHighScoreOnlineEmpty" xml:space="preserve">
+    <value>ONLINE HALL OF FAME IS EMPTY</value>
+  </data>
+  <data name="MenuHighScoreSendError" xml:space="preserve">
+    <value>THERE WAS A PROBLEM ACCESSING THE ONLINE HIGH SCORE TABLE.
+
+PLEASE CHECK YOUR INTERNET CONNECTION.</value>
+  </data>
+  <data name="MenuHighScoresNewScore" xml:space="preserve">
+    <value>NEW HIGH
+SCORE!</value>
+  </data>
+  <data name="MenuHighScoresFilter" xml:space="preserve">
+    <value>FILTER FRIENDS</value>
+  </data>
+  <data name="MenuHighScoresFindMe" xml:space="preserve">
+    <value>FIND ME!</value>
+  </data>
+  <data name="MenuCampaignHardcore" xml:space="preserve">
+    <value>HARDCORE</value>
+  </data>
+  <data name="MenuCampaignHardcoreDescription" xml:space="preserve">
+    <value>- LONGER ADVENTURE
+- ROWDIER ENEMIES</value>
+  </data>
+  <data name="MenuCampaignHardcoreGoodLuck" xml:space="preserve">
+    <value>GOOD LUCK, CAPTAIN!</value>
+  </data>
+  <data name="SmiteDescription" xml:space="preserve">
+    <value>PRAY TO THE IMPLEMENTORS
+TO VAPORIZE AN ENEMY</value>
+  </data>
+  <data name="SmiteDescriptionActive" xml:space="preserve">
+    <value>END THE TURN TO WITNESS THE
+WRATH OF THE IMPLEMENTORS!</value>
+  </data>
+  <data name="SmiteDescriptionRequirements" xml:space="preserve">
+    <value>ATTACK ENEMIES TO ACCESS
+THIS CELESTIAL WEAPON</value>
+  </data>
+  <data name="SmiteTitle" xml:space="preserve">
+    <value>SMITE</value>
+  </data>
+  <data name="SmiteTitleActive" xml:space="preserve">
+    <value>SMITE ON!</value>
+  </data>
+  <data name="SmiteMessage" xml:space="preserve">
+    <value>SMITE!</value>
+  </data>
+  <data name="MenuHighscoresHardcore" xml:space="preserve">
+    <value>HARDCORE SCORES</value>
+  </data>
+  <data name="MenuHighscoresHardcoreHall" xml:space="preserve">
+    <value>HARDCORE HALL OF FAME</value>
+  </data>
+  <data name="HardcoreTrial" xml:space="preserve">
+    <value>SORRY, HARDCORE MODE IS NOT AVAILABLE IN THE TRIAL VERSION.</value>
+  </data>
+  <data name="MenuCreditsEthan" xml:space="preserve">
+    <value>Ethan Lee</value>
+  </data>
+  <data name="MenuCreditsPortedBy" xml:space="preserve">
+    <value>PORTING</value>
+  </data>
+</root>

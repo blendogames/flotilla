@@ -1,0 +1,436 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectGuid>{E965B447-BAD7-43FA-BDC2-161F6809AEF8}</ProjectGuid>
+    <ProjectTypeGuids>{6D335F3A-9D43-41b4-9D22-F6F17C4BE596};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">Xbox 360</Platform>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SpaceShooter</RootNamespace>
+    <AssemblyName>SpaceShooter</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <XnaFrameworkVersion>v3.1</XnaFrameworkVersion>
+    <XnaPlatform>Xbox 360</XnaPlatform>
+    <XnaCrossPlatformGroupID>cdc26893-29df-407e-80b4-f7809eaa1d78</XnaCrossPlatformGroupID>
+    <ApplicationIcon>Game.ico</ApplicationIcon>
+    <Thumbnail>GameThumbnail.png</Thumbnail>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>5E18F773FE2773C201C3CDB190A1C6B1623452F1</ManifestCertificateThumbprint>
+    <ManifestKeyFile>SpaceShooterWindows_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>false</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <PublishUrl>c:\atomdeploy\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Xbox 360' ">
+    <OutputPath>bin\Xbox 360\Debug</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>TRACE;DEBUG;XBOX;XBOX360;LiveEnabled</DefineConstants>
+    <XnaCompressContent>true</XnaCompressContent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Xbox 360' ">
+    <OutputPath>bin\Xbox 360\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE;XBOX;XBOX360;LiveEnabled</DefineConstants>
+    <XnaCompressContent>true</XnaCompressContent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseDemo|Xbox 360' ">
+    <OutputPath>bin\Xbox 360\ReleaseDemo\</OutputPath>
+    <DefineConstants>TRACE;XBOX;XBOX360;LiveEnabled</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'SteamRelease|Xbox 360' ">
+    <OutputPath>bin\Xbox 360\SteamRelease\</OutputPath>
+    <DefineConstants>TRACE;XBOX;XBOX360;LiveEnabled</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'SteamDemo|Xbox 360' ">
+    <OutputPath>bin\Xbox 360\SteamDemo\</OutputPath>
+    <DefineConstants>TRACE;XBOX;XBOX360;LiveEnabled</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Background\Atmosphere.cs" />
+    <Compile Include="BloomEffect\Bloom.cs" />
+    <Compile Include="Camera\LockCamera.cs" />
+    <Compile Include="eResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>eResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Events\evAbandoned.cs" />
+    <Compile Include="Events\evAfrodita.cs" />
+    <Compile Include="Events\evBabyYetis.cs" />
+    <Compile Include="Events\evCasino.cs" />
+    <Compile Include="Events\evCatBounty.cs" />
+    <Compile Include="Events\evCrocodile.cs" />
+    <Compile Include="Events\evDemoEnd.cs" />
+    <Compile Include="Events\evImplementorsMurder.cs" />
+    <Compile Include="Events\evKaraoke.cs" />
+    <Compile Include="Events\evKatanaShip.cs" />
+    <Compile Include="Events\evMurder.cs" />
+    <Compile Include="Events\evOwl.cs" />
+    <Compile Include="Events\evOwlBribe.cs" />
+    <Compile Include="Events\evPenguinReunion.cs" />
+    <Compile Include="Events\evPenguins.cs" />
+    <Compile Include="Events\evPigs.cs" />
+    <Compile Include="Events\evPirates.cs" />
+    <Compile Include="Events\evSlaveFight.cs" />
+    <Compile Include="Events\evSlavers.cs" />
+    <Compile Include="Events\evAssassin.cs" />
+    <Compile Include="Events\evStowaway.cs" />
+    <Compile Include="Events\evBandits.cs" />
+    <Compile Include="Events\evDebug.cs" />
+    <Compile Include="Events\evDeer.cs" />
+    <Compile Include="Events\evDeerRevenge.cs" />
+    <Compile Include="Events\evHitchhikerRevenge.cs" />
+    <Compile Include="Events\evHitchhikers.cs" />
+    <Compile Include="Events\evPrisoner.cs" />
+    <Compile Include="Events\evProfessors.cs" />
+    <Compile Include="Events\evRuins.cs" />
+    <Compile Include="Events\evStorm.cs" />
+    <Compile Include="Events\evTerminalDeath.cs" />
+    <Compile Include="Events\evTutorial.cs" />
+    <Compile Include="Events\evUnicorn.cs" />
+    <Compile Include="Events\ItemPopup.cs" />
+    <Compile Include="Events\ShipPopup.cs" />
+    <Compile Include="Events\Unlockables\evAbandonZombie.cs" />
+    <Compile Include="Events\Unlockables\evAssassinRevenge.cs" />
+    <Compile Include="Events\Unlockables\evAuroraResearchBad.cs" />
+    <Compile Include="Events\Unlockables\evAuroraResearchGood.cs" />
+    <Compile Include="Events\Unlockables\evBitterMelon.cs" />
+    <Compile Include="Events\Unlockables\evBitterMelonConcert.cs" />
+    <Compile Include="Events\Unlockables\evBruja.cs" />
+    <Compile Include="Events\Unlockables\evCasinoJob.cs" />
+    <Compile Include="Events\Unlockables\evCasinoRhino.cs" />
+    <Compile Include="Events\Unlockables\evCatCharity.cs" />
+    <Compile Include="Events\Unlockables\evCatGunReward.cs" />
+    <Compile Include="Events\Unlockables\evCatGuns.cs" />
+    <Compile Include="Events\Unlockables\evCatPrototype.cs" />
+    <Compile Include="Events\Unlockables\evDeerBruja.cs" />
+    <Compile Include="Events\Unlockables\evDeerHitchhikers.cs" />
+    <Compile Include="Events\Unlockables\evDeerKatana.cs" />
+    <Compile Include="Events\Unlockables\evDogBoots.cs" />
+    <Compile Include="Events\Unlockables\evDogs.cs" />
+    <Compile Include="Events\Unlockables\evHippoBuddy.cs" />
+    <Compile Include="Events\Unlockables\evHippoPirateBuddy.cs" />
+    <Compile Include="Events\Unlockables\evHitchhikerDrop.cs" />
+    <Compile Include="Events\Unlockables\evHitchhikerGift.cs" />
+    <Compile Include="Events\Unlockables\evImplementors.cs" />
+    <Compile Include="Events\Unlockables\evJaguarBuddy.cs" />
+    <Compile Include="Events\Unlockables\evKaraokeRevenge.cs" />
+    <Compile Include="Events\Unlockables\evKoala.cs" />
+    <Compile Include="Events\Unlockables\evOwlTattoo.cs" />
+    <Compile Include="Events\Unlockables\evPandaFight.cs" />
+    <Compile Include="Events\Unlockables\evPandaSlaveBuddy.cs" />
+    <Compile Include="Events\Unlockables\evPenguinHitman.cs" />
+    <Compile Include="Events\Unlockables\evPigReward.cs" />
+    <Compile Include="Events\Unlockables\evPirateHostage.cs" />
+    <Compile Include="Events\Unlockables\evSlaverRevenge.cs" />
+    <Compile Include="Events\Unlockables\evSpiderTwain.cs" />
+    <Compile Include="Events\Unlockables\evSwanPolice.cs" />
+    <Compile Include="Events\Unlockables\evToucanRevenge.cs" />
+    <Compile Include="Events\Unlockables\evToucanTreasure.cs" />
+    <Compile Include="Events\Unlockables\evWine.cs" />
+    <Compile Include="Events\Unlockables\evYetiResentment.cs" />
+    <Compile Include="Events\Unlockables\evYetiRevenge.cs" />
+    <Compile Include="Events\Unlockables\evYetiStarve.cs" />
+    <Compile Include="Inventory\AteneaGauntlet.cs" />
+    <Compile Include="Inventory\BeamShield.cs" />
+    <Compile Include="Inventory\BlesoRailChamber.cs" />
+    <Compile Include="Inventory\Boots.cs" />
+    <Compile Include="Inventory\Eyeball.cs" />
+    <Compile Include="Inventory\Gauntlet.cs" />
+    <Compile Include="Inventory\Heart.cs" />
+    <Compile Include="Inventory\itRashadFireCon.cs" />
+    <Compile Include="Inventory\InventoryItem.cs" />
+    <Compile Include="Events\evAurora.cs" />
+    <Compile Include="Events\EventManager.cs" />
+    <Compile Include="Events\evSpaceHulk.cs" />
+    <Compile Include="FrameworkCore.cs" />
+    <Compile Include="Helpers.cs" />
+    <Compile Include="Inventory\itMuyoShield.cs" />
+    <Compile Include="Inventory\itRoachShield.cs" />
+    <Compile Include="Inventory\JamalAutoDoc.cs" />
+    <Compile Include="Inventory\KeshiaEngine.cs" />
+    <Compile Include="Inventory\Totem.cs" />
+    <Compile Include="iResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>iResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="MeshRenderer.cs" />
+    <Compile Include="Particles\ParticleSystems\DeflectTrailSmoke.cs" />
+    <Compile Include="Particles\ParticleSystems\DeflectTrailSparks.cs" />
+    <Compile Include="Particles\ParticleSystems\HulkTrailDebris.cs" />
+    <Compile Include="Particles\ParticleSystems\HulkTrailFire.cs" />
+    <Compile Include="Particles\ParticleSystems\HulkTrailSmoke.cs" />
+    <Compile Include="Particles\ParticleSystems\MissileRingSmoke.cs" />
+    <Compile Include="Particles\ParticleSystems\MuzzleSmoke.cs" />
+    <Compile Include="Particles\ParticleSystems\MissileDeflectFire.cs" />
+    <Compile Include="Particles\ParticleSystems\MissileDeflectSparks.cs" />
+    <Compile Include="Particles\ParticleSystems\MissileHitDebris.cs" />
+    <Compile Include="Particles\ParticleSystems\MissileHitFire.cs" />
+    <Compile Include="Particles\ParticleSystems\MissileHitSmoke.cs" />
+    <Compile Include="Particles\ParticleSystems\MissileHitSparks.cs" />
+    <Compile Include="Particles\ParticleSystems\MissileTrailSparks.cs" />
+    <Compile Include="Particles\ParticleSystems\MissileTrailSmoke.cs" />
+    <Compile Include="Particles\ParticleSystems\MuzzleFire.cs" />
+    <Compile Include="Particles\ParticleSystems\NovaFire.cs" />
+    <Compile Include="Particles\ParticleSystems\NovaGlow.cs" />
+    <Compile Include="Particles\ParticleSystems\NovaSmoke.cs" />
+    <Compile Include="Particles\ParticleSystems\NovaSparks.cs" />
+    <Compile Include="Particles\ParticleSystems\SmiteSmoke.cs" />
+    <Compile Include="Particles\ParticleSystems\TorpedoTrailFire.cs" />
+    <Compile Include="Particles\ParticleSystems\TorpedoTrailSmoke.cs" />
+    <Compile Include="Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Simulation\BeamGun.cs" />
+    <Compile Include="Simulation\Bolt.cs" />
+    <Compile Include="Camera\Camera.cs" />
+    <Compile Include="Camera\ChaseCamera.cs" />
+    <Compile Include="Background\MotionField.cs" />
+    <Compile Include="Particles\ParticleEmitter.cs" />
+    <Compile Include="Particles\ParticleManager.cs" />
+    <Compile Include="Particles\ParticleSettings.cs" />
+    <Compile Include="Particles\ParticleSystem.cs" />
+    <Compile Include="Particles\ParticleSystems\PlanetExplosionFire.cs" />
+    <Compile Include="Particles\ParticleSystems\PlanetExplosionSmoke.cs" />
+    <Compile Include="Particles\ParticleSystems\RockExplosionFire.cs" />
+    <Compile Include="Particles\ParticleSystems\RockExplosionSmoke.cs" />
+    <Compile Include="Particles\ParticleSystems\RockExpolsionSparks.cs" />
+    <Compile Include="Particles\ParticleSystems\RockTrailSmoke.cs" />
+    <Compile Include="Particles\ParticleSystems\RockTrailSparks.cs" />
+    <Compile Include="Particles\ParticleVertex.cs" />
+    <Compile Include="Background\Planet.cs" />
+    <Compile Include="Simulation\Collideable.cs" />
+    <Compile Include="Simulation\Debris.cs" />
+    <Compile Include="Simulation\Factions.cs" />
+    <Compile Include="Simulation\GameEffect.cs" />
+    <Compile Include="Simulation\Hulk.cs" />
+    <Compile Include="Simulation\Projectiles.cs" />
+    <Compile Include="Simulation\WeaponTorpedo.cs" />
+    <Compile Include="System\AudioManager.cs" />
+    <Compile Include="System\Clouds.cs" />
+    <Compile Include="System\InputManager.cs" />
+    <Compile Include="System\Level.cs" />
+    <Compile Include="System\MessageQueue.cs" />
+    <Compile Include="System\Options.cs" />
+    <Compile Include="System\StorageManager.cs" />
+    <Compile Include="System\WorldMap.cs" />
+    <Compile Include="UI\AudioMenu.cs" />
+    <Compile Include="UI\BasePopup.cs" />
+    <Compile Include="UI\BugReport.cs" />
+    <Compile Include="UI\CarnageReport.cs" />
+    <Compile Include="UI\CampaignMenu.cs" />
+    <Compile Include="UI\ControlsMenu.cs" />
+    <Compile Include="UI\Help\HelpArmor.cs" />
+    <Compile Include="UI\Help\HelpControlsPC.cs" />
+    <Compile Include="UI\Help\HelpControlsXBOX.cs" />
+    <Compile Include="UI\Help\HelpLobby.cs" />
+    <Compile Include="UI\Help\HelpOrders.cs" />
+    <Compile Include="UI\Help\HelpTurns.cs" />
+    <Compile Include="UI\JoystickMenu.cs" />
+    <Compile Include="UI\LogMenu.cs" />
+    <Compile Include="UI\NameMenu.cs" />
+    <Compile Include="UI\DebugEventsMenu.cs" />
+    <Compile Include="UI\CreditsMenu.cs" />
+    <Compile Include="UI\GameOverMenu.cs" />
+    <Compile Include="UI\GamePopup.cs" />
+    <Compile Include="UI\FleetMenu.cs" />
+    <Compile Include="Events\EventPopup.cs" />
+    <Compile Include="UI\HighScoreMenu.cs" />
+    <Compile Include="UI\IngameScoreboard.cs" />
+    <Compile Include="UI\InventoryPopup.cs" />
+    <Compile Include="UI\OptionsMenu.cs" />
+    <Compile Include="UI\QuitConfirm.cs" />
+    <Compile Include="UI\SelfDestructConfirm.cs" />
+    <Compile Include="UI\SellScreen.cs" />
+    <Compile Include="UI\SkirmishMenu.cs" />
+    <Compile Include="UI\SkirmishPopup.cs" />
+    <Compile Include="UI\SysPopup.cs" />
+    <Compile Include="UI\TitleMenu.cs" />
+    <Compile Include="UI\MainMenu.cs" />
+    <Compile Include="UI\Menu.cs" />
+    <Compile Include="UI\PauseMenu.cs" />
+    <Compile Include="UI\PlaybackMenu.cs" />
+    <Compile Include="UI\Playback.cs" />
+    <Compile Include="Simulation\Turret.cs" />
+    <Compile Include="Simulation\WeaponSwarmRocket.cs" />
+    <Compile Include="Simulation\PlayerCommander.cs" />
+    <Compile Include="Simulation\shipData.cs" />
+    <Compile Include="Simulation\Weapon.cs" />
+    <Compile Include="Simulation\WeaponMachinegun.cs" />
+    <Compile Include="UI\CommandMenu.cs" />
+    <Compile Include="UI\PointRenderer.cs" />
+    <Compile Include="UI\DiscRenderer.cs" />
+    <Compile Include="UI\LineRenderer.cs" />
+    <Compile Include="Simulation\Commander.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Background\SkyBox.cs" />
+    <Compile Include="Simulation\SpaceShip.cs" />
+    <Compile Include="UI\ShipMenu.cs" />
+    <Compile Include="UI\SphereRenderer.cs" />
+    <Compile Include="SpaceShooterGame.cs" />
+    <Compile Include="SphereGen\SphereBox.cs" />
+    <Compile Include="SphereGen\SphereMesh.cs" />
+    <Compile Include="Background\Sun.cs" />
+    <Compile Include="UI\SysMenu.cs" />
+    <Compile Include="UI\LogoMenu.cs" />
+    <Compile Include="UI\TradeMenu.cs" />
+    <Compile Include="UI\VideoMenu.cs" />
+    <Compile Include="UI\WorldButton.cs" />
+    <Compile Include="UI\WorldText.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Game.ico" />
+    <Content Include="GameThumbnail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <NestedContentProject Include="Content\Content.contentproj">
+      <Project>0dd8be2b-12ee-4ee6-86a1-a70575555982</Project>
+      <Visible>False</Visible>
+    </NestedContentProject>
+    <NestedContentProject Include="XboxContent\XboxContent.contentproj">
+      <Project>2ce14a22-b0eb-4052-81a1-0922f40fa49e</Project>
+      <Visible>false</Visible>
+    </NestedContentProject>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Xna.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft XNA Framework Redistributable 3.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="eResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>eResource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="iResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>iResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Game">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="mscorlib">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>False</Private>
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SpaceProcessors\SpaceProcessors.csproj">
+      <Project>{E59C7A9B-4417-4126-8745-9F1B56D4516B}</Project>
+      <Name>SpaceProcessors</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

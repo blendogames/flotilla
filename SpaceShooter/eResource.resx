@@ -1,0 +1,1516 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="evAurora0" xml:space="preserve">
+    <value>YOU DISCOVER THE {0}{1} BOREALIS, A UNIQUE CELESTIAL PHENOMENA.
+
+"DON'T STARE AT IT TOO LONG, CAPT'N. YOU'LL GET SPACE MADNESS."</value>
+  </data>
+  <data name="evAurora0ContinueStaring" xml:space="preserve">
+    <value>CONTINUE STARING.</value>
+  </data>
+  <data name="evAurora0StopStaring" xml:space="preserve">
+    <value>STOP STARING.</value>
+  </data>
+  <data name="evAurora1Staring" xml:space="preserve">
+    <value>YOU GAZE INTO THE SWIRLING HORROR.
+
+HOURS LATER, YOU SCREAM AWAKE IN THE OPPOSITE END OF THE SHIP.
+
+HOW DID YOU END UP HERE? AND WHO TOOK YOUR PANTS?</value>
+  </data>
+  <data name="evHitchhikerRevenge0" xml:space="preserve">
+    <value>YOU WAKE UP TO SEE GUNS POINTED AT YOU. IT'S THE HITCHHIKERS YOU BETRAYED.
+
+"HEY BOJO. REMEMBER US? GIVE US ALL YOUR CARGO AND WE'LL BE LEAVING, REAL QUIET-LIKE."</value>
+  </data>
+  <data name="evHitchhikerRevenge0Fight" xml:space="preserve">
+    <value>FIGHT BACK.</value>
+  </data>
+  <data name="evHitchhikerRevenge0GiveCargo" xml:space="preserve">
+    <value>GIVE THEM ALL YOUR CARGO.</value>
+  </data>
+  <data name="evHitchhikerRevenge1GiveUp" xml:space="preserve">
+    <value>YOU GIVE THE HITCHHIKERS ALL YOUR CARGO.
+
+"THAT'LL TEACH YA, BOJO!"</value>
+  </data>
+  <data name="evHitchhikerRevenge1Struggle" xml:space="preserve">
+    <value>YOU STRIKE BACK. DURING THE FIGHT, YOU LOSE AN EYE.
+
+THE HITCHHIKERS RETREAT TO THEIR SHIPS. THE BATTLE BEGINS.</value>
+  </data>
+  <data name="evHitchhikers0" xml:space="preserve">
+    <value>SPACE HITCHHIKERS HAIL A RIDE.
+
+"GIVE US A LIFT?"</value>
+  </data>
+  <data name="evHitchhikers0No" xml:space="preserve">
+    <value>DECLINE.</value>
+  </data>
+  <data name="evHitchhikers0Yes" xml:space="preserve">
+    <value>PICK UP THE HITCHHIKERS.</value>
+  </data>
+  <data name="evHitchhikers1Chat" xml:space="preserve">
+    <value>"THANKS FOR THE RIDE. IT'S FREEZING OUT THERE."
+
+THE HITCHHIKERS DELICATELY BRING ABOARD A LARGE PIECE OF CARGO. IT LOOKS VALUABLE.</value>
+  </data>
+  <data name="evHitchHikers1ChatLeave" xml:space="preserve">
+    <value>PLAY BOARDGAMES.</value>
+  </data>
+  <data name="evHitchHikers1ChatSteal" xml:space="preserve">
+    <value>STEAL THEIR CARGO.</value>
+  </data>
+  <data name="evHitchHikers2StealCargo" xml:space="preserve">
+    <value>A STRUGGLE ENSUES. THE HITCHHIKERS MAKE A DARING ESCAPE.
+
+"YOU'LL REGRET THAT, BOJO!"</value>
+  </data>
+  <data name="evSpaceHulk0" xml:space="preserve">
+    <value>YOUR SALVAGE CREW EXPLORES THE "{0} {1}," A DERELICT WARSHIP.
+
+"CAPT'N, WE HEAR... SOMETHING. SOUNDS LIKE A CRYING CHILD OR A HOWLING DOG."</value>
+  </data>
+  <data name="evSpaceHulk0Investigate" xml:space="preserve">
+    <value>CONTINUE EXPLORING.</value>
+  </data>
+  <data name="evSpaceHulk0Leave" xml:space="preserve">
+    <value>LEAVE IMMEDIATELY.</value>
+  </data>
+  <data name="evSpaceHulk1Bruja" xml:space="preserve">
+    <value>AFTER HOURS OF EXPLORATION, THE SALVAGE CREW RETURNS.
+
+THEY RETURN CATATONIC AND COVERED IN LACERATIONS. THEY NEVER SPEAK ANOTHER WORD.</value>
+  </data>
+  <data name="evSpaceHulk1BrujaLost" xml:space="preserve">
+    <value>THE SALVAGE CREW CONTINUES EXPLORING.
+
+"THE BRUJA! THE BRU-"
+
+THE RADIO CUTS OUT AND THEY ARE NEVER HEARD FROM AGAIN.</value>
+  </data>
+  <data name="evSpaceHulk1Cargo" xml:space="preserve">
+    <value>THE SALVAGE CREW RETURNS WITH CARGO.
+
+"CAPT'N, WE FOUND SALVAGE.
+
+LET'S GET OUTTA HERE. THAT SHIP GIVES ME THE HEEBIE JEEBIES."</value>
+  </data>
+  <data name="startBattle" xml:space="preserve">
+    <value>START BATTLE</value>
+  </data>
+  <data name="evBandits0" xml:space="preserve">
+    <value>YOU ARE AMBUSHED BY A BANDIT SUFFERING FROM SPACE MADNESS.
+
+"I TOLD THEM TO SHOOT, BUT THEY DIDN'T BELIEVE ME!"</value>
+  </data>
+  <data name="evRuins0" xml:space="preserve">
+    <value>WHILE EXPLORING ANCIENT RUINS, YOU ENCOUNTER CATS ON THE RUN FROM THE AUTHORITIES.
+
+"HELLO FRIEND. I AND ME BRETHREN NEED YOUR HELP."</value>
+  </data>
+  <data name="evRuins0Help" xml:space="preserve">
+    <value>HELP THE CATS ESCAPE.</value>
+  </data>
+  <data name="evRuins0Turnin" xml:space="preserve">
+    <value>TURN THEM IN TO THE AUTHORITIES.</value>
+  </data>
+  <data name="evRuins1Help" xml:space="preserve">
+    <value>AN INTENSE CHASE ENSUES. YOU AND THE CATS ESCAPE THE AUTHORITIES.
+
+CHU-CHU MEOWS A SIGH OF RELIEF. "MUCH LOVE, MUCH RESPECT. WE SHARE OUR LOOT."</value>
+  </data>
+  <data name="evRuins1Turnin" xml:space="preserve">
+    <value>THE AUTHORITIES DRAG THE CATS AWAY.
+
+"WHERE'S THE LOVE, FRIEND?"</value>
+  </data>
+  <data name="evDeer0" xml:space="preserve">
+    <value>"HALT, INCOMING FLOTILLA. YOU PLEBS ARE ENCROACHING ROYAL CERVIDIAN SPACE.
+
+PAY A TOLL OF ONE CARGO PIECE."</value>
+  </data>
+  <data name="evDeer0Pay" xml:space="preserve">
+    <value>PAY THE FEE.</value>
+  </data>
+  <data name="evDeer0Refuse" xml:space="preserve">
+    <value>REFUSE TO PAY.</value>
+  </data>
+  <data name="evDeer1Fight" xml:space="preserve">
+    <value>THE DEER LICKS HIS LIPS.
+
+"I WAS HOPING YOU'D SAY THAT, PLEB."</value>
+  </data>
+  <data name="evDeer1Pay" xml:space="preserve">
+    <value>"THIS WILL SERVE THE WAR EFFORT NICELY."
+
+THE DEER TAKES A PIECE OF CARGO:
+
+{0}</value>
+  </data>
+  <data name="evDeer1PayNoCargo" xml:space="preserve">
+    <value>"APPARENTLY YOU HAVE NO CARGO.
+
+GET OUT OF MY SIGHT, PLEB."</value>
+  </data>
+  <data name="evDeerRevenge0" xml:space="preserve">
+    <value>"FOUND YOU AT LAST.
+
+DID YOU THINK YOU COULD DESTROY MY DEER BROTHERS WITHOUT CONSEQUENCE?
+
+PREPARE TO REAP THE WHIRLWIND."</value>
+  </data>
+  <data name="evStorm0" xml:space="preserve">
+    <value>YOUR FLOTILLA IS CAUGHT IN AN ELECTRICAL STORM.
+
+"HELLO FRIENDS. MUCH RESPECT FOR HELPING US WITH THE AUTHORITIES A WHILE AGO.
+
+WHO LOVES YA? I DO."</value>
+  </data>
+  <data name="evStorm0Thanks" xml:space="preserve">
+    <value>THANK YOU, CATS.</value>
+  </data>
+  <data name="evStorm1" xml:space="preserve">
+    <value>THE CATS HELP YOU WEATHER THE STORM.
+
+"WE LEAVE NOW, WE LEAVE A GIFT FOR YOU."</value>
+  </data>
+  <data name="evStorm1Thanks" xml:space="preserve">
+    <value>MUCH RESPECT, CATS.</value>
+  </data>
+  <data name="evCatCharity0" xml:space="preserve">
+    <value>"ME BRETHREN HEARD OF YOUR RUN-IN WITH THE DEER. THEY TOOK YOUR CARGO! SCOUNDRELS!
+
+TAKE THIS, AND SHOW THEM A THING OR TWO."</value>
+  </data>
+  <data name="evPrisoner0" xml:space="preserve">
+    <value>YOU ARE DETAINED BY CERVIDIAN FORCES.
+
+"YOU AIDED AND ABETTED TWO FUGITIVE CATS. TELL US THEIR LOCATION."</value>
+  </data>
+  <data name="evPrisoner0GiveUp" xml:space="preserve">
+    <value>GIVE THE CATS' LOCATION.</value>
+  </data>
+  <data name="evPrisoner0StaySilent" xml:space="preserve">
+    <value>REMAIN SILENT.</value>
+  </data>
+  <data name="evPrisoner1GiveUp" xml:space="preserve">
+    <value>YOU GIVE THEM THE CATS' LOCATION.
+
+"GOOD. WE'LL BE KEEPING A CLOSE EYE ON THOSE CATS."</value>
+  </data>
+  <data name="evPrisoner1Silence" xml:space="preserve">
+    <value>"THAT'S HOW YOU WANT TO PLAY IT?"
+
+DURING THE BRUTAL BEATING, YOU LOSE A LEG.</value>
+  </data>
+  <data name="evProfessors0" xml:space="preserve">
+    <value>YOU ENCOUNTER "THE CRISIUM," A GROUP OF XENOARCHAEOLOGISTS.
+
+"WE'D LIKE TO HIRE YOUR SERVICES. WHAT PAYMENT WOULD YOU PREFER?"</value>
+  </data>
+  <data name="evProfessors0Cargo" xml:space="preserve">
+    <value>GIVE ME CARGO.</value>
+  </data>
+  <data name="evProfessors0Ship" xml:space="preserve">
+    <value>ADD SHIP TO MY FLOTILLA.</value>
+  </data>
+  <data name="evAbandoned0" xml:space="preserve">
+    <value>DEEP IN A SPACE DERELICT, YOU DISCOVER COLONISTS COCOONED IN THE WALLS. THEY SCREAM.
+
+"THE BRUJA... THE BRUJA DID THIS.
+
+PLEASE... PLEASE KILL US."</value>
+  </data>
+  <data name="evAbandoned0CleanShip" xml:space="preserve">
+    <value>DESTROY THE DERELICT.</value>
+  </data>
+  <data name="evAbandoned0Leave" xml:space="preserve">
+    <value>WAIT FOR A CURE.</value>
+  </data>
+  <data name="evAbandoned1GrueEat" xml:space="preserve">
+    <value>YOU PLANT THE TIMED VULCAN CHARGES.
+
+THE EXPLOSION IS DEVASTATING.</value>
+  </data>
+  <data name="evAssassin0" xml:space="preserve">
+    <value>THE ASSASSIN'S MISSILE SMASHES INTO YOUR SHIP.
+
+"FOUND YOU, {0}.
+
+TELL THEM TO KISS THE NIGHT MOTHER."</value>
+  </data>
+  <data name="evSlavers0" xml:space="preserve">
+    <value>YOU ENCOUNTER A FLOTILLA OF SLAVETRADERS.
+
+"YOU DIDN'T SEE NOTHING. HERE'S A LITTLE HAIR OFF THE DOG.
+
+NOW SCRAM."</value>
+  </data>
+  <data name="evSlavers0Accept" xml:space="preserve">
+    <value>ACCEPT BRIBE AND LEAVE.</value>
+  </data>
+  <data name="evSlavers0Fight" xml:space="preserve">
+    <value>FIGHT THE SLAVETRADERS.</value>
+  </data>
+  <data name="evStowaways0" xml:space="preserve">
+    <value>YOU DISCOVER TOUCAN STOWAWAYS IN THE CARGO HOLD. THEY GLOW DANGEROUSLY.
+
+"DON'T SHOOT! WE CAN LEAD YOU TO... HIDDEN TREASURE."
+
+YOU SUSPECT THEY ARE FUGITIVES ON THE RUN.</value>
+  </data>
+  <data name="evStowaways0LetLive" xml:space="preserve">
+    <value>LET THEM STAY.</value>
+  </data>
+  <data name="evStowaways0Shoot" xml:space="preserve">
+    <value>EJECT THEM INTO AIRLOCK.</value>
+  </data>
+  <data name="evStowaways1Live" xml:space="preserve">
+    <value>THE TOUCANS GIVE YOU A TATTERED CLOTH MAP.
+
+"PHEW, I THOUGHT WE WERE DONE FOR."</value>
+  </data>
+  <data name="evStowaways1Shoot" xml:space="preserve">
+    <value>THE AIRLOCK SLAMS OPEN. THE TOUCANS DISAPPEAR INTO THE INKY VOID.
+
+YOU SEARCH THEIR BELONGINGS.</value>
+  </data>
+  <data name="evDeerBruja0" xml:space="preserve">
+    <value>"HALT, INCOMING FLOTILLA.
+
+OUR SCANS INDICATE A SHIP IN YOUR FLOTILLA HAS BEEN TAINTED BY A BRUJA. UNDER CERVIDIAN EDICT MXCVII, WE MUST ENACT QUARANTINE PROTOCOL.
+
+WE WILL NOW ADMINISTER THE CLEANSING FIRE."</value>
+  </data>
+  <data name="evHitchhikerDrop0" xml:space="preserve">
+    <value>YOUR HITCHHIKER PASSENGERS TAKE LEAVE.
+
+"THANKS FOR THE RIDE. SEE Y'ALL LATER!"</value>
+  </data>
+  <data name="evAuroraResearchBad0" xml:space="preserve">
+    <value>YOU TELL THE CRISIUM XENOARCHEOLOGISTS ABOUT THE AURORA.
+
+"GOOD HEAVENS! AN AURORA!
+
+NEXT TIME, STARE STRAIGHT INTO THE AURORA. WE'D BE VERY INTERESTED TO SEE WHAT HAPPENS."</value>
+  </data>
+  <data name="evAuroraResearchGood0" xml:space="preserve">
+    <value>YOU TELL THE CRISIUM XENOARCHEOLOGISTS ABOUT THE AURORA.
+
+"GOOD HEAVENS! YOU STARED RIGHT INTO THE AURORA?"</value>
+  </data>
+  <data name="evAuroraResearchGood0Indeed" xml:space="preserve">
+    <value>INDEED.</value>
+  </data>
+  <data name="evAuroraResearchGood1Study" xml:space="preserve">
+    <value>THE XENOARCHEOLOGISTS RUN SOME TESTS ON YOU.
+
+"THIS HAS BEEN A MOST FRUITFUL FIND.
+
+PLEASE TAKE THIS AS COMPENSATION."</value>
+  </data>
+  <data name="evAbandonZombies0" xml:space="preserve">
+    <value>YOU ENCOUNTER A PLANETARY ZOMBIE OUTBREAK.
+
+A FAMILIAR-LOOKING STARSHIP LIES SMOLDERING AT THE OUTBREAK'S POINT OF ORIGIN.
+
+"CAPT'N, LOOKS LIKE THAT DERELICT SHIP WE ENCOUNTERED EARLIER."</value>
+  </data>
+  <data name="evAssassinRevenge0" xml:space="preserve">
+    <value>THE ASSASSIN FIRES A VOLLEY OF MISSILES.
+
+"I HAVE NO QUARREL WITH YOU, {0}. I JUST WANT YOUR STOWAWAYS - THOSE TWO GLOWING TOUCANS.
+
+HAND THEM OVER, AND I'LL PAY YOU HANDSOMELY."</value>
+  </data>
+  <data name="evAssassinRevenge0DenyToucans" xml:space="preserve">
+    <value>FIGHT THE ASSASSIN.</value>
+  </data>
+  <data name="evAssassinRevenge0GiveToucans" xml:space="preserve">
+    <value>GIVE HER THE TOUCANS.</value>
+  </data>
+  <data name="evAssassinRevenge1GiveToucans" xml:space="preserve">
+    <value>AGAINST THEIR WISHES, YOU GIVE THE TOUCANS TO THE ASSASSIN.
+
+"NOW THAT WASN'T SO HARD, WAS IT?"</value>
+  </data>
+  <data name="evToucanRevenge0" xml:space="preserve">
+    <value>YOU ENCOUNTER TWO FAMILIAR GLOWING TOUCANS.
+
+"LOOK WHAT WE HAVE HERE - A SPACE CAPTAIN WHO FANCIES LAUNCHING TOUCANS OUT OF AIRLOCKS! REMEMBER US? 
+
+WE'RE GONNA END YOU."</value>
+  </data>
+  <data name="evPirates0" xml:space="preserve">
+    <value>YOU ENCOUNTER FOWL SPACE PIRATES.
+
+"NICE FLOTILLA YOU GOT THERE. I THINK WE'LL TAKE IT."</value>
+  </data>
+  <data name="evHippoBuddy0" xml:space="preserve">
+    <value>YOU ENCOUNTER A HIPPO.
+
+"I HEARD YOU TOOK OUT TWO CERDIVIAN FLEETS. IF YOU'RE GOING TO HELL, I'M COMING WITH YA.
+
+I WANT TO JOIN YOUR FLOTILLA."</value>
+  </data>
+  <data name="evHippoBuddy0Welcome" xml:space="preserve">
+    <value>WELCOME ABOARD!</value>
+  </data>
+  <data name="evPirateHostage0" xml:space="preserve">
+    <value>YOU ENCOUNTER PIRATES.
+
+"HAND OVER SOME CARGO, AND WE'LL BE ON OUR WAY.
+
+AND BEFORE YOU GO A-BLASTIN', KNOW THAT WE HAVE CIVILIAN HOSTAGES ONBOARD."</value>
+  </data>
+  <data name="evPirateHostage0Attack" xml:space="preserve">
+    <value>ATTACK THE PIRATES.</value>
+  </data>
+  <data name="evPirateHostage0GiveCargo" xml:space="preserve">
+    <value>GIVE THEM CARGO.</value>
+  </data>
+  <data name="evPirateHostage1GiveCargo" xml:space="preserve">
+    <value>THE PIRATES TAKE:
+
+{0}
+
+{1}
+
+{2}
+</value>
+  </data>
+  <data name="evPirateHostage1NoCargo" xml:space="preserve">
+    <value>"...YOU DON'T HAVE ANY CARGO?
+
+PREPARE TO EAT SPACE DUST."</value>
+  </data>
+  <data name="evHippoPirateBuddy" xml:space="preserve">
+    <value>YOU ENCOUNTER A HIPPO.
+
+"I SAW HOW YOU TOOK OUT THOSE PIRATES.
+
+THOSE PIRATES TOOK MY LEGS. IT'S ABOUT TIME I GET THEM BACK.
+
+I WANT TO JOIN YOUR FLOTILLA."</value>
+  </data>
+  <data name="evBabyYetis0" xml:space="preserve">
+    <value>YOU FIND BABY YETIS CHEWING YOUR ELECTRICAL CONDUITS.
+
+YOUR NAVIGATION OFFICER IS DISTRAUGHT.
+
+"CAPT'N, I'M SO SORRY. I DON'T KNOW HOW THEY ESCAPED FROM MY QUARTERS."</value>
+  </data>
+  <data name="evBabyYetis0Airlock" xml:space="preserve">
+    <value>THROW THE YETIS OUT THE AIRLOCK.</value>
+  </data>
+  <data name="evBabyYetis0Declaw" xml:space="preserve">
+    <value>DE-CLAW AND DE-FANG THE YETIS.</value>
+  </data>
+  <data name="evBabyYetis1Airlock" xml:space="preserve">
+    <value>YOU LAUNCH THE BABY YETIS OUT OF THE AIRLOCK.
+
+"CAPT'N!"
+
+YOUR NAVIGATION OFFICER BOARDS A SHUTTLE AND LEAVES.</value>
+  </data>
+  <data name="evBabyYetis1Declaw" xml:space="preserve">
+    <value>YOU DE-CLAW AND DE-FANG THE YETIS.
+
+THE YETIS GROW RESENTFUL AND BITTER.</value>
+  </data>
+  <data name="evImplementors0" xml:space="preserve">
+    <value>YOU DREAM. THE IMPLEMENTORS APPEAR.
+
+"You're a child playing with friends. Your mother calls you in.
+
+What do you do?"</value>
+  </data>
+  <data name="evImplementors0Obey" xml:space="preserve">
+    <value>OBEY HER IMMEDIATELY.</value>
+  </data>
+  <data name="evImplementors0Defy" xml:space="preserve">
+    <value>DEFY HER. CONTINUE PLAYING.</value>
+  </data>
+  <data name="evYetiResentment0" xml:space="preserve">
+    <value>YOUR NAV OFFICER'S PET YETIS GIVE YOU THE EVIL EYE. THEY ARE RESENTFUL THAT YOU DE-CLAWED AND DE-FANGED THEM.
+
+"DON'T WORRY, CAPT'N. I'M SURE IT'S JUST A PHASE."</value>
+  </data>
+  <data name="evYetiResentment0Ok" xml:space="preserve">
+    <value>YEAH, IT BETTER BE.</value>
+  </data>
+  <data name="evMurder0" xml:space="preserve">
+    <value>A DIPLOMAT IS KILLED. YOUR WEAPONS OFFICER IS DISTRAUGHT.
+
+"CAPT'N, YOU'VE KNOWN ME FOR TEN YEARS. THIS ISN'T MY FAULT..."</value>
+  </data>
+  <data name="evMurder0Authorities" xml:space="preserve">
+    <value>REPORT DEAN TO THE AUTHORITIES.</value>
+  </data>
+  <data name="evMurder0Help" xml:space="preserve">
+    <value>HELP DEAN BECOME A FUGITIVE.</value>
+  </data>
+  <data name="evMurder1Authorities" xml:space="preserve">
+    <value>DEAN FIGHTS HIS WAY TO THE ESCAPE PODS.
+
+YOU BLAST OFF HIS LEFT ARM, BUT HE MANAGES TO ESCAPE.</value>
+  </data>
+  <data name="evMurder1Help" xml:space="preserve">
+    <value>YOU DISPOSE THE DIPLOMAT'S BODY.
+
+"CAPT'N, YOU DON'T KNOW HOW MUCH THIS MEANS TO ME."</value>
+  </data>
+  <data name="evYetiStarve0" xml:space="preserve">
+    <value>YOUR NAVIGATION OFFICER'S PET YETIS RUIN YOUR FOOD STORES.
+
+"WE'LL HAVE TO RATION THE REMAINING FOOD STORES. WHO GETS PRIORITY?"</value>
+  </data>
+  <data name="evYetiStarve0Elderly" xml:space="preserve">
+    <value>GIVE FOOD TO THE ELDERLY.</value>
+  </data>
+  <data name="evYetiStarve0Young" xml:space="preserve">
+    <value>GIVE FOOD TO THE YOUTH.</value>
+  </data>
+  <data name="evYetiStarve1Elderly" xml:space="preserve">
+    <value>YOU GIVE FOOD PRIORITY TO THE ELDERLY.
+
+THE CHILDREN GROW SICK AND WEAK.
+
+ANTI-YETI SENTIMENT GROWS STRONGER.</value>
+  </data>
+  <data name="evYetiStarve1Young" xml:space="preserve">
+    <value>YOU GIVE FOOD PRIORITY TO THE YOUTH.
+
+THE ELDERLY GROW FEEBLE. MANY PERISH.
+
+ANTI-YETI SENTIMENT GROWS STRONGER.</value>
+  </data>
+  <data name="evCasino0" xml:space="preserve">
+    <value>YOUR SCIENCE OFFICER'S BIRTHDAY IS SPENT AT THE TANGERIN GAMBLING RESORT.
+
+HOURS LATER IN A DRUNKEN STUPOR, YOU REALIZE YOU'VE GAMBLED AWAY YOUR ENTIRE FLOTILLA.</value>
+  </data>
+  <data name="evCasino0UhOh" xml:space="preserve">
+    <value>OH NO!</value>
+  </data>
+  <data name="evCasino1" xml:space="preserve">
+    <value>THE CASINO PRESIDENT OFFERS A PROPOSAL.
+
+"I CAN FOREGO YOUR DEBT IF YOU AGREE TO PERFORM CERTAIN... SERVICES FOR OUR CASINO."</value>
+  </data>
+  <data name="evCasino1Agree" xml:space="preserve">
+    <value>ACCEPT THE OFFER.</value>
+  </data>
+  <data name="evCasino1Disagree" xml:space="preserve">
+    <value>FIGHT YOUR WAY OUT.</value>
+  </data>
+  <data name="evCasino2Agree" xml:space="preserve">
+    <value>YOU ACCEPT THE OFFER.
+
+"VERY GOOD. WE'LL BE CONTACTING YOU AGAIN SHORTLY."</value>
+  </data>
+  <data name="evCasino2Disagree" xml:space="preserve">
+    <value>YOU REFUSE THE OFFER.
+
+THREE HOURS AND 3000 BULLETS LATER, YOU AND YOUR CREW ESCAPE THE CASINO.</value>
+  </data>
+  <data name="evImplementorsMurder0" xml:space="preserve">
+    <value>YOU DREAM. THE IMPLEMENTORS APPEAR.
+
+"A close friend commits a crime. What do you do?"</value>
+  </data>
+  <data name="evImplementorsMurder0Authorities" xml:space="preserve">
+    <value>REPORT FRIEND TO AUTHORITIES.</value>
+  </data>
+  <data name="evImplementorsMurder0Help" xml:space="preserve">
+    <value>HELP COVER UP THE CRIME.</value>
+  </data>
+  <data name="evKatanaShip0" xml:space="preserve">
+    <value>"CAPT'N, WE FOUND A FRIGATE FROM THE LOST CRUCES FLEET. WE COULD SALVAGE IT, BUT...
+
+I THINK IT'S HAUNTED. WE SHOULD BLOW IT UP."</value>
+  </data>
+  <data name="evKatanaShip0Leave" xml:space="preserve">
+    <value>DESTROY THE SHIP.</value>
+  </data>
+  <data name="evKatanaShip0Salvage" xml:space="preserve">
+    <value>SALVAGE THE SHIP.</value>
+  </data>
+  <data name="evPigs0" xml:space="preserve">
+    <value>YOU RECEIVE A DISTRESS CALL FROM PIGS.
+
+"WE GOT A WEE SPOT O' PIRATE TROUBLE! HELP!"
+
+YOU RECOGNIZE THE PIGS. THEY'RE NOTORIOUS WHITE-COLLAR CRIMINALS WHO LIKELY HAVE VALUABLE CARGO.</value>
+  </data>
+  <data name="evPigs0Help" xml:space="preserve">
+    <value>HELP THE PIGS.</value>
+  </data>
+  <data name="evPigs0Leave" xml:space="preserve">
+    <value>ATTACK THE PIGS AND ROB THEM.</value>
+  </data>
+  <data name="evPigs1Betray" xml:space="preserve">
+    <value>YOU OPEN FIRE ON THE PIGS.
+
+THEIR SHIP SHATTERS INTO SPACE DUST.</value>
+  </data>
+  <data name="evCasino2NoCargo" xml:space="preserve">
+    <value>"YOU HAVE NO CARGO? LOOKS LIKE YOU'LL BE WORKING FOR US AFTER ALL.
+
+WE'LL BE IN CONTACT SHORTLY."</value>
+  </data>
+  <data name="evPandaSlaveBuddy0" xml:space="preserve">
+    <value>"I WAS IN THAT SLAVE RING YOU ATTACKED EARLIER. THANKS FOR FREEING ME!
+
+CALL ME SHABA. I'D LIKE TO JOIN YOUR FLOTILLA."</value>
+  </data>
+  <data name="logPigsHelp" xml:space="preserve">
+    <value>I ENCOUNTERED PIGS UNDER PIRATE ATTACK. I CHOSE TO SAVE THEM.</value>
+  </data>
+  <data name="logPigsKill" xml:space="preserve">
+    <value>I ENCOUNTERED PIGS UNDER PIRATE ATTACK. I CHOSE TO ATTACK THE PIGS AND ROB THEM.</value>
+  </data>
+  <data name="logAbandonedKill" xml:space="preserve">
+    <value>I ENCOUNTERED A DERELICT WITH COCOONED COLONISTS. I DECIDED TO DESTROY THE DERELICT.</value>
+  </data>
+  <data name="logAbandonedSave" xml:space="preserve">
+    <value>I ENCOUNTERED A DERELICT WITH COCOONED COLONISTS. I DECIDED TO LEAVE THEM ALONE.</value>
+  </data>
+  <data name="logAbandonZombies" xml:space="preserve">
+    <value>I ENCOUNTERED A ZOMBIE OUTBREAK. IT ORIGINATED FROM THE DERELICT SHIP I ENCOUNTERED EARLIER.</value>
+  </data>
+  <data name="logAssassin" xml:space="preserve">
+    <value>I ENCOUNTERED AN ASSASSIN INTENT ON DESTROYING MY FLOTILLA.</value>
+  </data>
+  <data name="logAssassinRevengeFight" xml:space="preserve">
+    <value>THE ASSASSIN FOUND ME AGAIN. I REFUSED TO GIVE HER THE TOUCANS SHE WAS HUNTING.</value>
+  </data>
+  <data name="logAssassinRevengeGive" xml:space="preserve">
+    <value>THE ASSASSIN FOUND ME AGAIN. I GAVE HER THE TOUCANS SHE WAS HUNTING.</value>
+  </data>
+  <data name="logAuroraNoStare" xml:space="preserve">
+    <value>I ENCOUNTERED A CELESTIAL AURORA. I CHOSE TO NOT STARE AT IT.</value>
+  </data>
+  <data name="logAuroraResearchBad" xml:space="preserve">
+    <value>I SPOKE TO THE CRISIUM SCIENTISTS ABOUT THE CELESTIAL AURORA. THEY WANT ME TO STARE AT IT NEXT TIME.</value>
+  </data>
+  <data name="logAuroraResearchGood" xml:space="preserve">
+    <value>I SPOKE TO THE CRISIUM SCIENTISTS ABOUT THE CELESTIAL AURORA. THEY WERE ENTHRALLED.</value>
+  </data>
+  <data name="logAuroraStare" xml:space="preserve">
+    <value>I ENCOUNTERED A CELESTIAL AURORA. I CHOSE TO STARE STRAIGHT INTO IT.</value>
+  </data>
+  <data name="logBabyYetisKill" xml:space="preserve">
+    <value>I FOUND BABY YETIS CHEWING MY POWER CONDUITS. I CHOSE TO EJECT THEM OUT THE AIRLOCK.</value>
+  </data>
+  <data name="logBabyYetisSave" xml:space="preserve">
+    <value>I FOUND BABY YETIS CHEWING MY POWER CONDUITS. I CHOSE TO DE-FANG AND DE-CLAW THEM.</value>
+  </data>
+  <data name="logBandit" xml:space="preserve">
+    <value>I ENCOUNTERED A HOSTILE BANDIT SICK WITH SPACE MADNESS.</value>
+  </data>
+  <data name="logCasinoLoseCargo" xml:space="preserve">
+    <value>I GAMBLED AWAY MY ENTIRE FLOTILLA AT A CASINO. I CHOSE TO MAKE A DARING ESCAPE AND NOW I'M ON THE RUN.</value>
+  </data>
+  <data name="logCasinoWork" xml:space="preserve">
+    <value>I CHOSE TO WORK FOR A CASINO TO PAY OFF MY DEBT.</value>
+  </data>
+  <data name="logCatCharity" xml:space="preserve">
+    <value>THE CATS HEARD ABOUT MY CERDIVIAN TOLL ROUTE INCIDENT. THEY DONATED CARGO TO ME.</value>
+  </data>
+  <data name="logDeerBruja" xml:space="preserve">
+    <value>CERDIVIAN FORCES SUSPECTED A SHIP IN MY FLOTILLA WAS TAINTED BY THE BRUJA. THEY ATTACKED ME.</value>
+  </data>
+  <data name="logDeerFight" xml:space="preserve">
+    <value>I ENCOUNTERED A CERDIVIAN TOLL ROUTE. I REFUSED TO PAY THE TOLL.</value>
+  </data>
+  <data name="logDeerPay" xml:space="preserve">
+    <value>I ENCOUNTERED A CERDIVIAN TOLL ROUTE. I CHOSE TO PAY THE TOLL.</value>
+  </data>
+  <data name="logDeerRevenge" xml:space="preserve">
+    <value>IN RETALIATION FOR MY ATTACK AT THE CERDIVIAN TOLL ROUTE, A STRIKE FORCE WAS SENT AFTER ME.</value>
+  </data>
+  <data name="logHippoBuddy" xml:space="preserve">
+    <value>A HIPPO HEARD I DESTROYED TWO CERDIVIAN FLEETS. THE HIPPO JOINED MY FLOTILLA.</value>
+  </data>
+  <data name="logHippoPirateBuddy" xml:space="preserve">
+    <value>A LEGLESS HIPPO HEARD ABOUT MY FIGHT AGAINST THE PIRATES. THE HIPPO JOINED MY FLOTILLA.</value>
+  </data>
+  <data name="logHitchhikerDrop" xml:space="preserve">
+    <value>THE HITCHHIKERS THANKED ME FOR THE RIDE AND LEFT.</value>
+  </data>
+  <data name="logHitchhikerRevengeFight" xml:space="preserve">
+    <value>THE HITCHHIKERS RETURNED FOR REVENGE. I REFUSED TO GIVE THEM MY CARGO AND CHOSE TO FIGHT THEM.</value>
+  </data>
+  <data name="logHitchhikerRevengePay" xml:space="preserve">
+    <value>THE HITCHHIKERS RETURNED FOR REVENGE. I CHOSE TO GIVE UP ALL MY CARGO.</value>
+  </data>
+  <data name="logHitchhikersDecline" xml:space="preserve">
+    <value>I ENCOUNTERED HITCHHIKERS. I CHOSE TO NOT PICK THEM UP.</value>
+  </data>
+  <data name="logHitchhikersNoSteal" xml:space="preserve">
+    <value>I ENCOUNTERED HITCHHIKERS. I CHOSE TO PICK THEM UP.</value>
+  </data>
+  <data name="logHitchhikersSteal" xml:space="preserve">
+    <value>I ENCOUNTERED HITCHHIKERS. I CHOSE TO STEAL THEIR CARGO.</value>
+  </data>
+  <data name="logImplementors" xml:space="preserve">
+    <value>I HAD A DREAM ABOUT THE IMPLEMENTORS.</value>
+  </data>
+  <data name="logKatanaShipDestroy" xml:space="preserve">
+    <value>I ENCOUNTERED A HAUNTED LOST CRUCES SHIP. I CHOSE TO DESTROY IT.</value>
+  </data>
+  <data name="logKatanaShipSalvage" xml:space="preserve">
+    <value>I ENCOUNTERED A HAUNTED LOST CRUCES SHIP. I CHOSE TO ADD IT TO MY FLOTILLA.</value>
+  </data>
+  <data name="logMurderAuthorities" xml:space="preserve">
+    <value>I CHOSE TO REPORT MY WEAPONS OFFICER FOR THE DEATH OF A DIPLOMAT. HE MANAGED TO FLEE IN AN ESCAPE POD.</value>
+  </data>
+  <data name="logMurderHelp" xml:space="preserve">
+    <value>I CHOSE TO HELP MY WEAPONS OFFICER COVER UP THE DEATH OF A DIPLOMAT.</value>
+  </data>
+  <data name="logPandaSlaveBuddy" xml:space="preserve">
+    <value>A PANDA ESCAPED FROM THE SLAVE SHIP I ATTACKED EARLIER. THE PANDA JOINED MY FLOTILLA.</value>
+  </data>
+  <data name="logPirateHostageAttack" xml:space="preserve">
+    <value>I ENCOUNTERED MURDEROUS CHICKEN PIRATES WITH HOSTAGES. I CHOSE TO ATTACK THEM.</value>
+  </data>
+  <data name="logPirateHostageCargo" xml:space="preserve">
+    <value>I ENCOUNTERED MURDEROUS CHICKEN PIRATES WITH HOSTAGES. I CHOSE TO PAY THE RANSOM.</value>
+  </data>
+  <data name="logPirateHostageNoCargo" xml:space="preserve">
+    <value>I ENCOUNTERED MURDEROUS CHICKEN PIRATES WITH HOSTAGES. I HAD NO RANSOM, SO THE PIRATES ATTACKED ME.</value>
+  </data>
+  <data name="logPirates" xml:space="preserve">
+    <value>I ENCOUNTERED MURDEROUS CHICKEN PIRATES.</value>
+  </data>
+  <data name="logPrisonerGiveUp" xml:space="preserve">
+    <value>I WAS INTERROGATED BY CERDIVIANS. I TOLD THEM THE CATS' LOCATION.</value>
+  </data>
+  <data name="logPrisonerSilent" xml:space="preserve">
+    <value>I WAS INTERROGATED BY CERDIVIANS. I REFUSED TO TELL THEM THE CATS' LOCATION.</value>
+  </data>
+  <data name="logProfessorsItem" xml:space="preserve">
+    <value>I WAS HIRED BY "THE CRISIUM." THEY PAID ME WITH NEW CARGO.</value>
+  </data>
+  <data name="logProfessorsShip" xml:space="preserve">
+    <value>I WAS HIRED BY "THE CRISIUM." THEY PAID ME WITH A NEW SHIP.</value>
+  </data>
+  <data name="logRuinsAuthorities" xml:space="preserve">
+    <value>I ENCOUNTERED CATS ON THE RUN. I REPORTED THEM TO THE AUTHORITIES.</value>
+  </data>
+  <data name="logRuinsHelp" xml:space="preserve">
+    <value>I ENCOUNTERED CATS ON THE RUN. I HELPED THEM ESCAPE.</value>
+  </data>
+  <data name="logSlaversBribe" xml:space="preserve">
+    <value>I ENCOUNTERED SLAVERS. I ACCEPTED THEIR BRIBE AND LEFT THEM ALONE.</value>
+  </data>
+  <data name="logSlaversFight" xml:space="preserve">
+    <value>I ENCOUNTERED SLAVERS. THEY TRIED TO BRIBE ME, BUT I REFUSED.</value>
+  </data>
+  <data name="logSpacehulkBruja" xml:space="preserve">
+    <value>I ORDERED MY CREW TO EXPLORE A DERELICT. THEY ENCOUNTERED THE BRUJA AND WERE NEVER HEARD FROM AGAIN.</value>
+  </data>
+  <data name="logSpacehulkCargo" xml:space="preserve">
+    <value>I ORDERED MY CREW TO EXPLORE A DERELICT. THEY RETURNED WITH CARGO.</value>
+  </data>
+  <data name="logSpacehulkIgnore" xml:space="preserve">
+    <value>I ENCOUNTERED A DERELICT. I CHOSE TO NOT EXPLORE IT.</value>
+  </data>
+  <data name="logStorm" xml:space="preserve">
+    <value>MY FLOTILLA ENTERED A DEVASTATING ELECTRICAL STORM. THE CATS HELPED US WEATHER THE STORM.</value>
+  </data>
+  <data name="logStowawayHelp" xml:space="preserve">
+    <value>I FOUND TOUCAN STOWAWAYS. I DECIDED TO LET THEM STAY.</value>
+  </data>
+  <data name="logStowawayKill" xml:space="preserve">
+    <value>I FOUND TOUCAN STOWAWAYS. I EJECTED THEM FROM THE AIRLOCK.</value>
+  </data>
+  <data name="logToucanRevenge" xml:space="preserve">
+    <value>I ENCOUNTERED THE TOUCANS I EARLIER HAD EJECTED FROM THE AIRLOCK. THEY IMMEDIATELY ATTACKED ME.</value>
+  </data>
+  <data name="logYetiResentment" xml:space="preserve">
+    <value>MY NAV OFFICER'S PET YETIS ARE RESENTFUL I DE-CLAWED AND DE-FANGED THEM.</value>
+  </data>
+  <data name="logYetiStarveOld" xml:space="preserve">
+    <value>MY NAV OFFICER'S PET YETIS RAIDED THE FOOD STORES. I CHOSE TO GIVE THE REMAINING RATIONS TO THE ELDERLY.</value>
+  </data>
+  <data name="logYetiStarveYouth" xml:space="preserve">
+    <value>MY NAV OFFICER'S PET YETIS RAIDED THE FOOD STORES. I CHOSE TO GIVE THE REMAINING RATIONS TO THE YOUTHS.</value>
+  </data>
+  <data name="evCasino2DisagreeYikes" xml:space="preserve">
+    <value>YIKES!</value>
+  </data>
+  <data name="evCasinoRhino0" xml:space="preserve">
+    <value>"THERE YOU ARE.
+
+MY EMPLOYER, TANGERIN CASINOS, WISHES TO EXPRESS ITS SINCERE DISPLEASURE AT YOUR FAILURE TO PAY YOUR DEBT.
+
+IT'S STRICTLY BUSINESS, PAL."</value>
+  </data>
+  <data name="evDeerKatana0" xml:space="preserve">
+    <value>"HALT, INCOMING FLOTILLA.
+
+WE'VE RECEIVED REPORTS YOU WILLFULLY COMMANDEERED A CLASS-7B DERELICT WITHOUT NOTIFYING THE PROPER AUTHORITIES.
+
+THE PENALTY IS TOTAL ANNIHILATION."</value>
+  </data>
+  <data name="logCasinoRhino" xml:space="preserve">
+    <value>THE CASINO SENT A RHINO HITMAN AFTER ME.</value>
+  </data>
+  <data name="logDeerKatana" xml:space="preserve">
+    <value>CERDIVIAN FORCES NOTICED I COMMANDEERED A DERELICT SHIP. THEY ATTACKED ME.</value>
+  </data>
+  <data name="evTutorial0" xml:space="preserve">
+    <value>ARMED WITH NOTHING BUT A BONE TO PICK AND SEVEN MONTHS LEFT TO LIVE, YOU EMBARK ON YOUR LAST ADVENTURE.</value>
+  </data>
+  <data name="evTutorial0OK" xml:space="preserve">
+    <value>ONWARD GO!</value>
+  </data>
+  <data name="evTutorial1" xml:space="preserve">
+    <value>"CAPT'N, YOU'RE STILL FOGGY FROM THE HIBERNATION SLEEP.
+
+DO YOU WANT TO RUN A COMBAT TRAINING EXERCISE?"</value>
+  </data>
+  <data name="evTutorial1RunTutorial" xml:space="preserve">
+    <value>RUN TUTORIAL</value>
+  </data>
+  <data name="evTutorial1SkipTutorial" xml:space="preserve">
+    <value>SKIP TUTORIAL</value>
+  </data>
+  <data name="logTutorial" xml:space="preserve">
+    <value>WITH SEVEN MONTHS LEFT TO LIVE, I EMBARKED ON MY LAST ADVENTURE.</value>
+  </data>
+  <data name="logTutorial1" xml:space="preserve">
+    <value>I'M TOLD I HAVE SEVEN MONTHS LEFT TO LIVE. SO BEGINS MY LAST ADVENTURE.</value>
+  </data>
+  <data name="logTutorial2" xml:space="preserve">
+    <value>WITH NOTHING TO LOSE AND SEVEN MONTHS LEFT TO LIVE, I BEGAN MY LAST ADVENTURE.</value>
+  </data>
+  <data name="logTutorial3" xml:space="preserve">
+    <value>ARMED WITH NOTHING BUT A BONE TO PICK AND SEVEN MONTHS LEFT TO LIVE, I EMBARKED ON MY LAST ADVENTURE.</value>
+  </data>
+  <data name="logTutorial4" xml:space="preserve">
+    <value>I'M DIAGNOSED WITH SEVEN MONTHS LEFT TO LIVE. SO BEGINS MY LAST ADVENTURE.</value>
+  </data>
+  <data name="evTerminalDeath0" xml:space="preserve">
+    <value>AFTER SEVEN MONTHS, YOUR TERMINAL CONDITION ENTERS ITS FINAL PHASE.
+
+YOUR ADVENTURE COMES TO AN END.</value>
+  </data>
+  <data name="evTerminalDeath0TheEnd" xml:space="preserve">
+    <value>THE END</value>
+  </data>
+  <data name="logTerminalDeath" xml:space="preserve">
+    <value>AFTER SEVEN MONTHS, MY TERMINAL CONDITION CAUGHT UP TO ME.</value>
+  </data>
+  <data name="evCatGuns0" xml:space="preserve">
+    <value>"YO. I HEARD YOU HELPED ME COUSINS ESCAPE THE LAW.
+
+I NEED ASSISTANCE. HIDE THIS CARGO FOR ME, HEAR?"</value>
+  </data>
+  <data name="evCatGuns0HideGuns" xml:space="preserve">
+    <value>HIDE THE HOT CARGO.</value>
+  </data>
+  <data name="evCatGuns0Refuse" xml:space="preserve">
+    <value>DECLINE TO HELP.</value>
+  </data>
+  <data name="logCatGunsHide" xml:space="preserve">
+    <value>SOME CATS HEARD ABOUT ME. I HELPED THEM HIDE HOT CARGO ON MY SHIP.</value>
+  </data>
+  <data name="logCatGunsRefuse" xml:space="preserve">
+    <value>SOME CATS HEARD ABOUT ME. THEY WANTED TO HIDE HOT CARGO ON MY SHIP, BUT I REFUSED.</value>
+  </data>
+  <data name="evJaguarBuddy0" xml:space="preserve">
+    <value>YOU'RE APPROACHED BY A JAGUAR MERCENARY.
+
+"I SAW YOU POD THOSE PIGS BACK THERE. THAT WAS REAL COLD-BLOODED.
+
+I WANT TO JOIN YOUR FLOTILLA."</value>
+  </data>
+  <data name="evJaguarBuddy0Welcome" xml:space="preserve">
+    <value>WELCOME ABOARD, YOU PSYCHOPATH.</value>
+  </data>
+  <data name="evSlaverRevenge0" xml:space="preserve">
+    <value>YOU'RE AMBUSHED BY SLAVERS.
+
+"YOU'RE THE ONE WHO ATTACKED US EARLIER.
+
+WHAT HAPPENS WHEN YOU POKE THE BEAR? THIS HAPPENS."</value>
+  </data>
+  <data name="evSwanPolice0" xml:space="preserve">
+    <value>YOU'RE VISITED BY A SECRET POLICE SWAN.
+
+"WE'RE INVESTIGATING THE DEATH OF A DIPLOMAT."</value>
+  </data>
+  <data name="evSwanPolice0Attack" xml:space="preserve">
+    <value>ATTACK THE AGENT.</value>
+  </data>
+  <data name="evSwanPolice0Bribe" xml:space="preserve">
+    <value>BRIBE THE AGENT.</value>
+  </data>
+  <data name="evSwanPolice1Bribe" xml:space="preserve">
+    <value>"I THINK YOU'RE MISTAKING ME FOR SOMEONE WHO TAKES BRIBES."
+
+THE SECRET POLICE OPEN FIRE.</value>
+  </data>
+  <data name="evYetiRevenge0" xml:space="preserve">
+    <value>AN ARTILLERY BARRAGE ROCKS YOUR SHIP.
+
+"LONG TIME NO SEE, CAPT'N. MY YETIS ARE ALL GROWN UP NOW.
+
+YOU BROUGHT THIS UPON YOURSELF!"</value>
+  </data>
+  <data name="logJaguarBuddy" xml:space="preserve">
+    <value>A MERCENARY JAGUAR WAS IMPRESSED WITH HOW I DESTROYED THE PIGS. THE JAGUAR JOINED MY FLOTILLA.</value>
+  </data>
+  <data name="logSlaverRevenge" xml:space="preserve">
+    <value>I WAS AMBUSHED BY THE SLAVERS I ATTACKED EARLIER.</value>
+  </data>
+  <data name="logSwanPoliceAttack" xml:space="preserve">
+    <value>THE SECRET POLICE INVESTIGATED ME CONCERNING THE DIPLOMAT DEATH. I CHOSE TO ATTACK THE AGENT.</value>
+  </data>
+  <data name="logSwanPoliceBribe" xml:space="preserve">
+    <value>THE SECRET POLICE INVESTIGATED ME CONCERNING THE DIPLOMAT DEATH. I ATTEMPTED TO BRIBE THE AGENT.</value>
+  </data>
+  <data name="logYetiRevenge" xml:space="preserve">
+    <value>MY ROGUE NAV OFFICER AND HER YETIS FOUND ME. THEY ATTACKED ME ON-SIGHT.</value>
+  </data>
+  <data name="evPigReward0" xml:space="preserve">
+    <value>YOU ENCOUNTER FAMILIAR WHITE-COLLAR PIGS.
+
+"THANKS FOR SAVING US FROM THE SPOT O' TROUBLE BACK THERE."
+
+THEY OFFER A SHIP, OR CRAZY SPECULATIVE STOCK.</value>
+  </data>
+  <data name="evPigReward0Ship" xml:space="preserve">
+    <value>ACCEPT NEW SHIP.</value>
+  </data>
+  <data name="evPigReward0Stock" xml:space="preserve">
+    <value>ACCEPT SPECULATIVE STOCK.</value>
+  </data>
+  <data name="logPigRewardShip" xml:space="preserve">
+    <value>THE PIGS THANKED ME. I CHOSE TO ACCEPT A NEW SHIP FROM THEM.</value>
+  </data>
+  <data name="logPigRewardStock" xml:space="preserve">
+    <value>THE PIGS THANKED ME. I CHOSE TO ACCEPT CRAZY SPECULATIVE STOCK FROM THEM.</value>
+  </data>
+  <data name="evToucanTreasure0" xml:space="preserve">
+    <value>YOU FOLLOW THE TOUCANS' TREASURE MAP.
+
+YOU FIGHT THROUGH AN UNDERWATER TEMPLE AND ARRIVE AT THE INNER SANCTUM.
+
+THE TREASURE IS A SIGHT TO BEHOLD.</value>
+  </data>
+  <data name="evToucanTreasure0Yay" xml:space="preserve">
+    <value>YAY!</value>
+  </data>
+  <data name="logToucanTreasure" xml:space="preserve">
+    <value>I FOLLOWED THE TOUCAN TREASURE MAP. AFTER A LONG JOURNEY, WE FOUND THE TOTEM OF MECA LECA.</value>
+  </data>
+  <data name="nameAssassin" xml:space="preserve">
+    <value>NINA PASADENA</value>
+  </data>
+  <data name="nameBandit" xml:space="preserve">
+    <value>KOKO FLORES</value>
+  </data>
+  <data name="nameCats" xml:space="preserve">
+    <value>FUN FACTORY
+AND CHU-CHU</value>
+  </data>
+  <data name="nameDeer" xml:space="preserve">
+    <value>COL. AIRAM ATNAS</value>
+  </data>
+  <data name="nameHitchhikers" xml:space="preserve">
+    <value>BILLINA HENNING
+AND PRETZEL
+</value>
+  </data>
+  <data name="nameNavOfficer" xml:space="preserve">
+    <value>LT. MIAMI KHAN</value>
+  </data>
+  <data name="nameCrisium" xml:space="preserve">
+    <value>THE CRISIUM</value>
+  </data>
+  <data name="nameHippoBuddy" xml:space="preserve">
+    <value>PIG-EYE ROBBINS</value>
+  </data>
+  <data name="nameHippoPirateBuddy" xml:space="preserve">
+    <value>BIG CHEEKS</value>
+  </data>
+  <data name="nameImplementors" xml:space="preserve">
+    <value>THE IMPLEMENTORS</value>
+  </data>
+  <data name="nameJaguar" xml:space="preserve">
+    <value>CHAZ VOLTA</value>
+  </data>
+  <data name="namePandaSlave" xml:space="preserve">
+    <value>SHABA</value>
+  </data>
+  <data name="namePigs" xml:space="preserve">
+    <value>HAROULLA
+AND SPAROULLA</value>
+  </data>
+  <data name="namePirates" xml:space="preserve">
+    <value>POISON SUMAC
+AND ALL-BALL</value>
+  </data>
+  <data name="nameRhino" xml:space="preserve">
+    <value>TRIPHAMMER JACKSON</value>
+  </data>
+  <data name="nameSlaver" xml:space="preserve">
+    <value>MR. HORNERS CORNERS</value>
+  </data>
+  <data name="nameSwan" xml:space="preserve">
+    <value>AGENT SYLVIA VALDEZ</value>
+  </data>
+  <data name="nameToucan" xml:space="preserve">
+    <value>THURSTON
+AND WIGGIN</value>
+  </data>
+  <data name="nameWeapOfficer" xml:space="preserve">
+    <value>BIG DEAN CAVES</value>
+  </data>
+  <data name="nameYetis" xml:space="preserve">
+    <value>PALANKA
+AND GUBO
+</value>
+  </data>
+  <data name="evBitterMelon0" xml:space="preserve">
+    <value>YOU ENCOUNTER INTERGALACTIC ROCK BAND "BITTER MELON."
+
+"OI. A COUPLE O' OUR PIGGY FRIENDS TOLD US YOU WERE ON THE UP AN' UP.
+
+HELP US CURE OUR DRUMMER'S BAD CASE OF BOOTY-BATS. WE'LL PAY HANDSOMELY."
+</value>
+  </data>
+  <data name="logBitterMelon" xml:space="preserve">
+    <value>THE PIGS WE SAVED SENT US TO THE ROCK BAND BITTER MELON. THEY'RE LOOKING FOR A CURE FOR THEIR DRUMMER'S BOOTY-BATS.</value>
+  </data>
+  <data name="evCatGunReward0" xml:space="preserve">
+    <value>LITTLE LION RETURNS FOR HIS STASHED GUNS.
+
+"RIGHTEOUS ON YA. ME COUSINS WERE RIGHT ABOUT YOU.
+
+TAKE THIS AS YOUR PAYMENT."</value>
+  </data>
+  <data name="evCatGunReward0DamnToucans" xml:space="preserve">
+    <value>SORRY, LITTLE LION.</value>
+  </data>
+  <data name="evCatGunReward0Thanks" xml:space="preserve">
+    <value>MUCH LOVE, LITTLE LION.</value>
+  </data>
+  <data name="evCatGunReward0Toucans" xml:space="preserve">
+    <value>LITTLE LION RETURNS FOR HIS STASHED GUNS.
+
+"WHAT'S THIS? WHERE BE ME GUNS?!"
+
+YOU SEARCH FOR HOURS, BUT THE GUNS ARE NOWHERE TO BE FOUND. YOU HAVE A STRONG SUSPICION YOUR TOUCAN STOWAWAYS ARE INVOLVED.</value>
+  </data>
+  <data name="evCatPrototype0" xml:space="preserve">
+    <value>YOU FIND LITTLE LION RIDDLED WITH GUNSHOTS.
+
+"IS IT SAFE!?... TAKE THIS PROTOTYPE SHIP... AND KEEP IT SAFE!"
+
+YOU CATCH A GLIMPSE OF AN ANATIDAEN SECRET POLICE BADGE IN HIS WALLET.</value>
+  </data>
+  <data name="evCatPrototype0Goodnight" xml:space="preserve">
+    <value>GOOD NIGHT, LITTLE LION.</value>
+  </data>
+  <data name="logCatGunReward" xml:space="preserve">
+    <value>LITTLE LION RETURNED FOR HIS GUN STASH. HE PAID ME AND LEFT WITH HIS GUNS.</value>
+  </data>
+  <data name="logCatGunRewardToucanStole" xml:space="preserve">
+    <value>LITTLE LION RETURNED FOR HIS GUN STASH, BUT THE GUNS WERE GONE. I SUSPECT MY TOUCAN STOWAWAYS HAD A HAND IN THIS.</value>
+  </data>
+  <data name="logCatPrototype" xml:space="preserve">
+    <value>I FOUND LITTLE LION RIDDLED WITH BULLETS. HE GAVE ME HIS "PROTOTYPE SHIP" AND URGED I KEEP IT SAFE.</value>
+  </data>
+  <data name="nameCatGuns" xml:space="preserve">
+    <value>LITTLE LION</value>
+  </data>
+  <data name="evBitterMelonConcert0" xml:space="preserve">
+    <value>AFTER A CONCERT, YOU ARE ATTACKED BY BITTER MELON GROUPIES.
+
+"ERRRR, THIS IS AWKWARD.
+
+GROUPIES, Y'KNOW? THEY GET A BIT WILD, NO?"</value>
+  </data>
+  <data name="evBitterMelonPanda0" xml:space="preserve">
+    <value>SHABA THE PANDA GROWS INCREASINGLY INFATUATED WITH BITTER MELON.
+
+"ERRRR, PANDA, WE'RE A BIT BUSY AT THE MO'.
+
+HERE, TAKE THIS. IT'S VERY VALUABLE. NOW PLEASE GO."</value>
+  </data>
+  <data name="evCasinoJob0" xml:space="preserve">
+    <value>"TIME TO PAY UP. WE GOT A JOB FOR YOU.
+
+HUNT DOWN SPIDER TWAIN AND TAKE HIS DIAMOND EYEBALL. EASY PEASY, NO?"</value>
+  </data>
+  <data name="evSpiderTwain0" xml:space="preserve">
+    <value>"WHY I DO DECLARE, THE CASINO SENT YOU TO TAKE MY SPECTACULAR DIAMOND EYEBALL.
+
+WHY DON'T I GIVE YOU SOME CARGO, AND YOU PRETEND YOU NEVER SEEN ME?
+
+I SAY, I SAY, DO WE HAVE A DEAL?"
+</value>
+  </data>
+  <data name="evSpiderTwain0AcceptBribe" xml:space="preserve">
+    <value>ACCEPT BRIBE AND LEAVE.</value>
+  </data>
+  <data name="evSpiderTwain0Fight" xml:space="preserve">
+    <value>FIGHT SPIDER TWAIN.</value>
+  </data>
+  <data name="logBitterMelonConcert" xml:space="preserve">
+    <value>AFTER BITTER MELON PERFORMED AT A CONCERT, WE WERE ATTACKED BY A PACK OF WILD GROUPIES.</value>
+  </data>
+  <data name="logBitterMelonPanda" xml:space="preserve">
+    <value>SHABA THE PANDA BECAME INFATUATED WITH BITTER MELON. THEY GAVE SHABA SOME CARGO AND TOLD HIM TO PLEASE LEAVE.</value>
+  </data>
+  <data name="logCasinoJob" xml:space="preserve">
+    <value>THE CASINO WANTS ME TO HUNT DOWN AND TAKE THE DIAMOND EYEBALL OF SOMEONE NAMED "SPIDER TWAIN".</value>
+  </data>
+  <data name="logSpiderTwainBribe" xml:space="preserve">
+    <value>I TRACKED DOWN SPIDER TWAIN. I CHOSE TO ACCEPT HIS BRIBE AND LET HIM LEAVE.</value>
+  </data>
+  <data name="logSpiderTwainFight" xml:space="preserve">
+    <value>I TRACKED DOWN SPIDER TWAIN. I CHOSE TO FULFILL MY PROMISE TO THE CASINO, AND TOOK TWAIN'S DIAMOND EYE.</value>
+  </data>
+  <data name="nameBitterMelon" xml:space="preserve">
+    <value>BITTER MELON</value>
+  </data>
+  <data name="nameSpiderTwain" xml:space="preserve">
+    <value>SPIDER TWAIN</value>
+  </data>
+  <data name="evDemoEnd0" xml:space="preserve">
+    <value>"HALT. YOU'VE REACHED THE END OF THIS FLOTILLA TRIAL VERSION ADVENTURE.
+
+WHAT HAPPENS NOW? THE UNIVERSE IMPLODES."
+
+DO YOU WANT TO UNLOCK THE FULL GAME?</value>
+  </data>
+  <data name="logDemoEnd" xml:space="preserve">
+    <value>I REACHED THE END OF THE FLOTILLA TRIAL VERSION ADVENTURE. AS A RESULT, THE UNIVERSE IMPLODED UPON ITSELF.</value>
+  </data>
+  <data name="evKaraoke0" xml:space="preserve">
+    <value>YOU AND YOUR CREW VISIT A KARAOKE BAR. YOU SING A "BITTER MELON" SONG.
+
+SIXTEEN CASES OF VODKAHOL LATER, YOU FIND YOURSELF DECLARED KARAOKE CHAMPION OF THE UNIVERSE.
+
+YOU TAKE YOUR DESERVED PRIZE.</value>
+  </data>
+  <data name="evKaraoke0Great" xml:space="preserve">
+    <value>I DO DESERVE IT.</value>
+  </data>
+  <data name="evPandaFight0" xml:space="preserve">
+    <value>YOU PASS BY A SLAVER RING. WITHOUT WARNING, SHABA THE PANDA OPENS FIRE.
+
+"AWWW YEAAAH! COME AND GET ME, YOU SLIMY SLAVER CLOWNS!"</value>
+  </data>
+  <data name="evSlaveFight0" xml:space="preserve">
+    <value>YOUR BLIND JUMP LANDS YOU IN THE MIDDLE OF A SLAVER RING. THE SLAVERS LOSE A SHIPMENT OF PANDA BEARS.
+
+"YOU JUS' LOST US A SLEUTH OF PANDAS. TODAY AIN'T YOUR DAY, BUB."</value>
+  </data>
+  <data name="logKaraoke" xml:space="preserve">
+    <value>I SANG IN A KARAOKE CONTEST AND WON CARGO.</value>
+  </data>
+  <data name="logPandaFight" xml:space="preserve">
+    <value>WE PASSED BY A SLAVER RING. SHABA THE PANDA IMMEDIATELY OPENED FIRE AND WE CAME UNDER ATTACK.</value>
+  </data>
+  <data name="logSlaveFight" xml:space="preserve">
+    <value>MY BLIND JUMP DISRUPTED A SLAVE RING. THE SLAVERS OPENED FIRE.</value>
+  </data>
+  <data name="evUnicorn0" xml:space="preserve">
+    <value>AFTER DAYS LOST IN THE WARP, A VISION EMERGES.
+
+"IT'S DANGEROUS TO GO ALONE. TAKE THIS AND VANQUISH THE BRUJA."</value>
+  </data>
+  <data name="evUnicorn0OK" xml:space="preserve">
+    <value>ROCK ON</value>
+  </data>
+  <data name="logUnicorn" xml:space="preserve">
+    <value>I CHOSE TO ENTER A WORMHOLE. THE GODDESS ATENEA GAVE US AN ARTIFACT.</value>
+  </data>
+  <data name="nameUnicorn" xml:space="preserve">
+    <value>ATENEA</value>
+  </data>
+  <data name="evAfrodita0" xml:space="preserve">
+    <value>YOU ENCOUNTER THE GODDESS AFRODITA. SHE PLUCKS OUT YOUR EYE.
+
+"NOW TAKE THIS GAUNTLET! STRIKE FORTH WITH YOUR ALL-SEEING EYE!"</value>
+  </data>
+  <data name="evAfrodita0Thanks" xml:space="preserve">
+    <value>THANK YOU...?</value>
+  </data>
+  <data name="evCatBounty0" xml:space="preserve">
+    <value>"ON BEHALF OF THE CERVIDIAN EMPIRE, WE THANK YOU FOR ASSISTING THE APPREHENSION OF THOSE TWO FUGITIVE CATS. PLEASE TAKE THIS REWARD.
+
+THOUGH ON A PERSONAL NOTE, BOTTOM DREGS LIKE YOU MAKE ME SICK.
+
+GET A REAL JOB, PLEB."</value>
+  </data>
+  <data name="evKoala0" xml:space="preserve">
+    <value>YOU ENCOUNTER A TEAR-STAINED KOALA.
+
+"YOU FRIBBING MONSTER!
+
+MY TWIN BROTHER "COOLER" WAS A HOSTAGE ON THAT PIRATE SHIP YOU FRIBBIN' BLEW UP.
+
+ALL I HAVE LEFT OF HIM IS THIS DIDGERIDOO. I'M GONNA END YOU."</value>
+  </data>
+  <data name="logAfrodita" xml:space="preserve">
+    <value>I CHOSE TO ENTER A WORMHOLE. THE GODDESS AFRODITA PLUCKED OUT MY EYE AND GAVE ME A GAUNTLET ARTIFACT.</value>
+  </data>
+  <data name="logCatBounty" xml:space="preserve">
+    <value>CERVIDIAN AUTHORITIES REWARDED US FOR HELPING CAPTURE THE FUGITIVE CATS.</value>
+  </data>
+  <data name="logKoala" xml:space="preserve">
+    <value>I ENCOUNTERED A HOSTILE KOALA. HIS TWIN BROTHER WAS A HOSTAGE ON THE PIRATE SHIP I BLEW UP.</value>
+  </data>
+  <data name="nameAfrodita" xml:space="preserve">
+    <value>AFRODITA</value>
+  </data>
+  <data name="nameKoala" xml:space="preserve">
+    <value>COOLIE HERNANDEZ</value>
+  </data>
+  <data name="logFlamingo" xml:space="preserve">
+    <value>I ENCOUNTERED A CRIPPLED FLAMINGO AT A TRADING OUTPOST.</value>
+  </data>
+  <data name="evDogs0" xml:space="preserve">
+    <value>YOU ENCOUNTER THE PSYCHIC DOGS OF PUPU 7.
+
+"YOU HAVE LOST AN EYE IN YOUR JOURNEY. SO BEGINS YOUR ROLE IN THE PROPHECY.
+
+TAKE THIS. WHEN THE TIME COMES, YOU'LL KNOW WHAT TO DO."</value>
+  </data>
+  <data name="evDogs0OK" xml:space="preserve">
+    <value>SURE THING, DOGS</value>
+  </data>
+  <data name="logDogs" xml:space="preserve">
+    <value>I ENCOUNTERED THE PSYCHIC DOGS OF PUPU 7. THEY BELIEVE I'M PART OF A PROPHECY, AND GAVE ME AN ARTIFACT.</value>
+  </data>
+  <data name="nameDogs" xml:space="preserve">
+    <value>PSYCHIC DOGS</value>
+  </data>
+  <data name="evKaraokeRevenge0" xml:space="preserve">
+    <value>YOU ENCOUNTER AN OWL WARLORD.
+
+"FAREWELL, SO-CALLED KARAOKE CHAMP. PRETENDER TO THE THRONE. BABY-PEANUT WEAK.
+
+THERE'S ONLY ROOM FOR ONE KARAOKE CHAMP IN THIS UNIVERSE."</value>
+  </data>
+  <data name="logKaraokeRevenge" xml:space="preserve">
+    <value>I ENCOUNTERED A HOSTILE OWL WARLORD. HE SOUGHT TO RECLAIM HIS KARAOKE CHAMP TITLE FROM ME.</value>
+  </data>
+  <data name="nameOwl" xml:space="preserve">
+    <value>SZE IZOR</value>
+  </data>
+  <data name="evCrocodile0" xml:space="preserve">
+    <value>YOU ENCOUNTER A BARKING MAD CROCODILE.
+
+"WHAT- WHERE AM I- WHO ARE YOU?!
+
+SHE TOLD ME I WAS GOING TO BE OKAY! THIS! IS! NOT! OKAY!"
+
+THE CROCODILE OPENS FIRE.
+
+</value>
+  </data>
+  <data name="evCrocodile0Friend" xml:space="preserve">
+    <value>YOU ENCOUNTER A BARKING MAD CROCODILE. "WHAT- WHERE AM I- WHO ARE YOU?!"
+
+YOUR CRISIUM SCIENTISTS DISCOVER THE CROCODILE HAS SUFFERED TERRIBLY FROM A TIME-TRAVELING EXPERIMENT GONE WRONG.
+
+THE CROCODILE JOINS YOUR FLOTILLA.</value>
+  </data>
+  <data name="evPenguinReunion0" xml:space="preserve">
+    <value>YOU ACCIDENTALLY INTERRUPT A FAMILY REUNION OF PENGUIN BANDITS. THEY OPEN FIRE.
+
+"CAREFUL, BOJO! THIS IS PENGUIN COUNTRY!"</value>
+  </data>
+  <data name="evPenguins0" xml:space="preserve">
+    <value>THE PENGUIN BANDIT OPENS FIRE.
+
+"YOU'RE IN MY WORLD NOW, BOJO."</value>
+  </data>
+  <data name="logCrocodile" xml:space="preserve">
+    <value>I ENCOUNTERED A CONFUSED CROCODILE. THE CROCODILE OPENED FIRE ON ME.</value>
+  </data>
+  <data name="logCrocodileFriend" xml:space="preserve">
+    <value>I ENCOUNTERED A CONFUSED TIME-TRAVELING CROCODILE. AFTER MY CRISIUM SCIENTISTS CALMED HIM DOWN, HE JOINED MY FLOTILLA.</value>
+  </data>
+  <data name="logPenguinReunion" xml:space="preserve">
+    <value>I ENCOUNTERED A PENGUIN BANDIT FAMILY REUNION. THEY ATTACKED ME ON SIGHT.</value>
+  </data>
+  <data name="logPenguins" xml:space="preserve">
+    <value>I ENCOUNTERED A HOSTILE PENGUIN BANDIT.</value>
+  </data>
+  <data name="nameCrocodile" xml:space="preserve">
+    <value>LATISSIMUS DORSI</value>
+  </data>
+  <data name="namePenguins" xml:space="preserve">
+    <value>VENETIA FLAIR</value>
+  </data>
+  <data name="evOwl0" xml:space="preserve">
+    <value>THE WARFARING OWL LAUNCHES A MISSILE BARRAGE.
+
+"I HEARD OF YOUR EXPLOITS, CAPTAIN. AT LAST I HAVE FOUND WORTHY PREY.
+
+LET US DIE IN HONORABLE BATTLE!"</value>
+  </data>
+  <data name="logOwl" xml:space="preserve">
+    <value>A WARFARING OWL ATTACKED ME WITH EXTREME PREJUDICE.</value>
+  </data>
+  <data name="nameOwl2" xml:space="preserve">
+    <value>AMI IZOR</value>
+  </data>
+  <data name="evOwlBribe0" xml:space="preserve">
+    <value>A WARFARING OWL FIRES A WARNING SHOT.
+
+"I DON'T TAKE KINDLY TO SLAVERS.
+
+AND I DON'T TAKE KINDLY TO THOSE WHO ACCEPT BRIBES FROM SLAVERS."</value>
+  </data>
+  <data name="logOwlBribe" xml:space="preserve">
+    <value>I ENCOUNTERED A HOSTILE WARFARING OWL. THE OWL WAS DISPLEASED I TOOK THE BRIBE FROM THE SLAVER.</value>
+  </data>
+  <data name="nameOwl3" xml:space="preserve">
+    <value>LAU FU ZI</value>
+  </data>
+  <data name="logDestruct" xml:space="preserve">
+    <value>MY ADVENTURE ENDED IN A FIERY BLAZE OF GLORY.</value>
+  </data>
+  <data name="evDeerHitchhikers0" xml:space="preserve">
+    <value>"HALT, INCOMING FLOTILLA. WE'VE RECEIVED WORD YOU'VE HARBORED HITCHHIKERS.
+
+UNDER CERVIDIAN EDICT MCXVII, PAY A PENALTY FEE OF ONE CARGO PIECE."</value>
+  </data>
+  <data name="evDeerHitchhikers0NoCargo" xml:space="preserve">
+    <value>"APPARENTLY YOU DON'T HAVE CARGO.
+
+DON'T WORRY. YOU'LL BE FINE TARGET PRACTICE."</value>
+  </data>
+  <data name="logDeerHitchhikerFight" xml:space="preserve">
+    <value>A DEER ORDERED ME TO PAY A PENALTY FOR HARBORING HITCHHIKERS. I REFUSED TO PAY.</value>
+  </data>
+  <data name="logDeerHitchhikerPay" xml:space="preserve">
+    <value>A DEER ORDERED ME TO PAY A PENALTY FOR HARBORING HITCHHIKERS. I CHOSE TO COMPLY.</value>
+  </data>
+  <data name="logDeerHitchhikerPayNoCargo" xml:space="preserve">
+    <value>A DEER ORDERED ME TO PAY A PENALTY FOR HARBORING HITCHHIKERS. I COULDN'T PAY THE FEE, SO THE DEER OPENED FIRE.</value>
+  </data>
+  <data name="nameDeer2" xml:space="preserve">
+    <value>COL. ANIN ATNIP</value>
+  </data>
+  <data name="evPrisoner0StaySilentTakeCargo" xml:space="preserve">
+    <value>THE DEER TAKE ONE CARGO PIECE:
+
+{0}
+{1}</value>
+  </data>
+  <data name="evWine0" xml:space="preserve">
+    <value>YOUR KARAOKE FANS TAKE YOU ON A PUB CRAWL.
+
+HOURS LATER, YOU REALIZE YOU'VE INVENTED A MIXED DRINK: "THE {0} SUCKER-PUNCH."
+
+YOUR FAME NETS YOU AN IMPRESSIVE PRIZE.</value>
+  </data>
+  <data name="evWine0OK" xml:space="preserve">
+    <value>I LOVE IT</value>
+  </data>
+  <data name="logWine" xml:space="preserve">
+    <value>MY KARAOKE FANS TOOK ME ON A PUB CRAWL. I INVENTED A MIXED DRINK AND IT WON ME A PRIZE.</value>
+  </data>
+  <data name="evDogBoots0" xml:space="preserve">
+    <value>YOU ENCOUNTER THE PSYCHIC DOGS OF PUPU 7.
+
+"YOU'VE MET THE IMPLEMENTORS IN A DREAM. YOU HAVE THE MARK!
+
+TAKE THIS. IT WILL SERVE YOU WELL."</value>
+  </data>
+  <data name="evHitchhikerGift0" xml:space="preserve">
+    <value>"HEY STRANGER! REMEMBER US?"
+
+YOU BUMP INTO TWO FAMILIAR FACES. THEY HAVE SINCE BECOME WEALTHY BOARDGAME TYCOONS.
+
+THEY GIVE YOU A TOKEN OF APPRECIATION.</value>
+  </data>
+  <data name="evHitchhikerGift0OK" xml:space="preserve">
+    <value>GOOD TO SEE Y'ALL</value>
+  </data>
+  <data name="evPenguinHitman0" xml:space="preserve">
+    <value>YOU ENCOUNTER A PENGUIN BOUNTY HUNTER.
+
+"THE TANGERIN CASINO SENT ME. YOU SURE KNOW HOW TO PICK YOUR ENEMIES.
+
+YOU'RE DEAD MEAT, CHUM."</value>
+  </data>
+  <data name="logDogBoots" xml:space="preserve">
+    <value>THE PSYCHIC DOGS OF PUPU 7 SOMEHOW KNOW ABOUT MY IMPLEMENTORS DREAM. THE DOGS GAVE ME AN ARTIFACT.</value>
+  </data>
+  <data name="logHitchhikerGift" xml:space="preserve">
+    <value>I BUMPED INTO THE HITCHHIKERS. THEY'VE SINCE BECOME WEALTHY BOARDGAME DESIGNERS. THEY GAVE ME A GIFT.</value>
+  </data>
+  <data name="logPenguinHitman" xml:space="preserve">
+    <value>THE TANGERIN CASINO SENT A PENGUIN HITMAN TO HUNT AND DESTROY ME.</value>
+  </data>
+  <data name="namePenguinHitman" xml:space="preserve">
+    <value>CLIV TOMBAUGH</value>
+  </data>
+  <data name="evBruja0" xml:space="preserve">
+    <value>"CAPT'N, WHEN WE INVESTIGATED THAT DERELICT SHIP, I THINK... SOMETHING FOLLOWED US BACK."
+
+YOU ENCOUNTER THE BRUJA.
+
+{0}</value>
+  </data>
+  <data name="evBruja0Fail" xml:space="preserve">
+    <value>WHEN YOU WAKE UP, YOU FIND A CURSED TATTOO BURNED ONTO YOUR CHEST.</value>
+  </data>
+  <data name="evBruja0Gauntlet" xml:space="preserve">
+    <value>YOU USE YOUR GAUNTLET ARTIFACT TO SMASH THE BRUJA TO PIECES.</value>
+  </data>
+  <data name="evBruja0OK" xml:space="preserve">
+    <value>YIKES!</value>
+  </data>
+  <data name="logBrujaFail" xml:space="preserve">
+    <value>THE BRUJA FOLLOWED US WHEN WE INVESTIGATED THE DERELICT. THE BRUJA BURNED A TATTOO ONTO MY CHEST AND DISAPPEARED.</value>
+  </data>
+  <data name="logBrujaGauntlet" xml:space="preserve">
+    <value>THE BRUJA FOLLOWED US WHEN WE INVESTIGATED THE DERELICT. I USED MY GAUNTLET ARTIFACT TO SMASH AND DESTROY THE BRUJA.</value>
+  </data>
+  <data name="nameBruja" xml:space="preserve">
+    <value>BRUJA</value>
+  </data>
+  <data name="evOwlTattoo0" xml:space="preserve">
+    <value>"YOU BEAR THE MARK OF THE BRUJA. MAY THE IMPLEMENTORS HAVE MERCY ON YOUR SOUL.
+
+YOUR MISERY ENDS NOW. GO LIGHTLY TOWARD THE DARKNESS, FRIEND."</value>
+  </data>
+  <data name="logOwlTattoo" xml:space="preserve">
+    <value>I ENCOUNTERED A WARFARING OWL. THE OWL KNEW OF MY BRUJA MARK AND WANTED TO "PUT ME OUT OF MY MISERY."</value>
+  </data>
+  <data name="nameOwlTattoo" xml:space="preserve">
+    <value>TARO BEAN</value>
+  </data>
+</root>
