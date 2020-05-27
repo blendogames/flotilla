@@ -1,5 +1,6 @@
 # Flotilla
 [![Donate](https://img.shields.io/badge/donate-$$$-brightgreen.svg)](https://blendogames.itch.io/flotilla/purchase)
+
 Source code of tactical space game Flotilla (2010)
 
 ## About
