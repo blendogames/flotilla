@@ -27,65 +27,6 @@ namespace SpaceShooter
         public static Color TransparentBlack = new Color(0, 0, 0, 0);
     }
 
-    public static class PointSpriteHelper
-    {
-        private static bool supported = false;
-
-        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
-        private delegate void EnableFunc(uint cap);
-        private static EnableFunc glEnable;
-
-        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
-        private delegate void DisableFunc(uint cap);
-        private static DisableFunc glDisable;
-
-        private const uint GL_POINT_SPRITE = 0x8861;
-
-        public static void Initialize()
-        {
-#if SDL2
-            IntPtr enable, disable;
-            enable = SDL2.SDL.SDL_GL_GetProcAddress("glEnable");
-            disable = SDL2.SDL.SDL_GL_GetProcAddress("glDisable");
-            if (enable != IntPtr.Zero && disable != IntPtr.Zero)
-            {
-                try
-                {
-                    glEnable = (EnableFunc) Marshal.GetDelegateForFunctionPointer(
-                        enable,
-                        typeof(EnableFunc)
-                    );
-                    glDisable = (DisableFunc) Marshal.GetDelegateForFunctionPointer(
-                        disable,
-                        typeof(DisableFunc)
-                    );
-                    supported = true;
-                }
-                catch(Exception e)
-                {
-                    Console.WriteLine("Invalid GLProcAddress? " + e.ToString());
-                }
-            }
-#endif
-        }
-
-        public static void Enable()
-        {
-            if (supported)
-            {
-                glEnable(GL_POINT_SPRITE);
-            }
-        }
-
-        public static void Disable()
-        {
-            if (supported)
-            {
-                glDisable(GL_POINT_SPRITE);
-            }
-        }
-    }
-
 #if SDL2
     public static class YesNoPopup
     {
