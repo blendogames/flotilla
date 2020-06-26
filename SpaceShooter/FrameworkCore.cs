@@ -1018,7 +1018,6 @@ namespace SpaceShooter
             sphererenderer.OnCreateDevice();
 
             pointrenderer = new PointRenderer(Game.Content.Load<Effect>("shaders/pointeffect"));
-            PointSpriteHelper.Initialize();
 
             particles.Initialize();
             boltManager.Initialize();

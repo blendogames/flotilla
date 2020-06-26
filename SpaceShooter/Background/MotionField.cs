@@ -177,7 +177,6 @@ namespace SpaceShooter
                     starEffect.Parameters["ViewportHeight"].SetValue(GraphicsDevice.Viewport.Height);
 
                     GraphicsDevice.SetVertexBuffer(vertexBuffer);
-                    PointSpriteHelper.Enable();
 
                     // Set the alpha blend mode.
                     BlendStateHelper.BeginApply(GraphicsDevice);
@@ -199,8 +198,6 @@ namespace SpaceShooter
                         GraphicsDevice.DrawPrimitives(PrimitiveType.PointListEXT, 0, starCount);
 #endif
                     }
-
-                    PointSpriteHelper.Disable();
 
                     GraphicsDevice.SetVertexBuffer(null);
 

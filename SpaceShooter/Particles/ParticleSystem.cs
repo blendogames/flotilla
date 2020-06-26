@@ -423,7 +423,6 @@ namespace SpaceShooter
 
                     // Reset a couple of the more unusual renderstates that we changed,
                     // so as not to mess up any other subsequent drawing.
-                    PointSpriteHelper.Disable();
                     if (device.DepthStencilState.DepthBufferEnable)
                     {
                         device.DepthStencilState = DepthStencilState.Default;
@@ -486,8 +485,6 @@ namespace SpaceShooter
         /// </summary>
         void SetParticleRenderStates(GraphicsDevice device)
         {
-            // Enable point sprites.
-            PointSpriteHelper.Enable();
             // renderState.PointSizeMax = 256; // FIXME: Do we care? -flibit
 
             // Set the alpha blend mode.
