@@ -484,7 +484,7 @@ namespace SpaceShooter
         {
             if (options.bloom)
             {
-                Bloomcomponent.SetResolveTarget();
+                Bloomcomponent.SetSceneTarget();
             }
 
             // Clear screen to black
