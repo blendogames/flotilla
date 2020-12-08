@@ -93,6 +93,7 @@ namespace SpaceShooter
         Effect bloomCombineEffect;
         Effect gaussianBlurEffect;
 
+        RenderTarget2D sceneRenderTarget;
         RenderTarget2D resolveTarget;
         RenderTarget2D renderTarget1;
         RenderTarget2D renderTarget2;
@@ -177,6 +178,8 @@ namespace SpaceShooter
             SurfaceFormat format = pp.BackBufferFormat;
 
             // Create a texture for reading back the backbuffer contents.
+            sceneRenderTarget = new RenderTarget2D(GraphicsDevice, width, height, false,
+                format, pp.DepthStencilFormat, 0, RenderTargetUsage.PreserveContents);
             resolveTarget = new RenderTarget2D(GraphicsDevice, width, height, false,
                 format, pp.DepthStencilFormat, 0, RenderTargetUsage.PreserveContents);
 
@@ -199,6 +202,9 @@ namespace SpaceShooter
         /// </summary>
         protected override void UnloadContent()
         {
+            if (sceneRenderTarget != null)
+                sceneRenderTarget.Dispose();
+
             if (resolveTarget != null)
                 resolveTarget.Dispose();
 
@@ -239,11 +245,11 @@ namespace SpaceShooter
             targetBaseSaturation = targetBaseSat;
         }
 
-        public void SetResolveTarget()
+        public void SetSceneTarget()
         {
             // Resolve the scene into a texture, so we can
             // use it as input data for the bloom processing.
-            GraphicsDevice.SetRenderTarget(resolveTarget);
+            GraphicsDevice.SetRenderTarget(sceneRenderTarget);
         }
 
         public void DrawResolveTarget()
@@ -276,7 +282,7 @@ namespace SpaceShooter
             bloomExtractEffect.Parameters["BloomThreshold"].SetValue(
                 Settings.BloomThreshold);
 
-            DrawFullscreenQuad(resolveTarget, renderTarget1,
+            DrawFullscreenQuad(sceneRenderTarget, renderTarget1,
                                bloomExtractEffect,
                                IntermediateBuffer.PreBloom);
 
@@ -308,7 +314,7 @@ namespace SpaceShooter
             parameters["BloomSaturation"].SetValue(Settings.BloomSaturation);
             parameters["BaseSaturation"].SetValue(baseSaturation);
 
-            GraphicsDevice.Textures[1] = resolveTarget;
+            GraphicsDevice.Textures[1] = sceneRenderTarget;
 
             Viewport viewport = GraphicsDevice.Viewport;
 
