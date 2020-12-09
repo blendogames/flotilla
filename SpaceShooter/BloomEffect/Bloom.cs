@@ -256,7 +256,7 @@ namespace SpaceShooter
         {
             GraphicsDevice.SetRenderTarget(null);
             spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.Opaque);
-            spriteBatch.Draw(resolveTarget, Vector2.Zero, Color.White);
+            spriteBatch.Draw(sceneRenderTarget, Vector2.Zero, Color.White);
             spriteBatch.End();
         }
 
@@ -277,12 +277,17 @@ namespace SpaceShooter
             Texture t0 = GraphicsDevice.Textures[0];
             Texture t1 = GraphicsDevice.Textures[1];
 
+            // Resolve the scene to a temporary target, to blit back later
+            DrawFullscreenQuad(sceneRenderTarget, resolveTarget,
+                               null,
+                               IntermediateBuffer.FinalResult + 1); // +1 to avoid null references
+
             // Pass 1: draw the scene into rendertarget 1, using a
             // shader that extracts only the brightest parts of the image.
             bloomExtractEffect.Parameters["BloomThreshold"].SetValue(
                 Settings.BloomThreshold);
 
-            DrawFullscreenQuad(sceneRenderTarget, renderTarget1,
+            DrawFullscreenQuad(resolveTarget, renderTarget1,
                                bloomExtractEffect,
                                IntermediateBuffer.PreBloom);
 
@@ -305,7 +310,7 @@ namespace SpaceShooter
             // Pass 4: draw both rendertarget 1 and the original scene
             // image back into the main backbuffer, using a shader that
             // combines them to produce the final bloomed result.
-            GraphicsDevice.SetRenderTarget(resolveTarget);
+            GraphicsDevice.SetRenderTarget(sceneRenderTarget);
 
             EffectParameterCollection parameters = bloomCombineEffect.Parameters;
 
@@ -314,7 +319,7 @@ namespace SpaceShooter
             parameters["BloomSaturation"].SetValue(Settings.BloomSaturation);
             parameters["BaseSaturation"].SetValue(baseSaturation);
 
-            GraphicsDevice.Textures[1] = sceneRenderTarget;
+            GraphicsDevice.Textures[1] = resolveTarget;
 
             Viewport viewport = GraphicsDevice.Viewport;
 
