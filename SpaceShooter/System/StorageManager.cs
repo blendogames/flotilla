@@ -19,8 +19,8 @@ namespace SpaceShooter
     {
         //these are the default values.
         public int VideoWidth = 1280;
-        public int VideoHeight = 800;
-        public bool isFullscreen = false;
+        public int VideoHeight = 720;
+        public bool isFullscreen = true;
         public bool bloom = true;
 
         public bool renderPlanets = true;
@@ -512,7 +512,6 @@ namespace SpaceShooter
         //do NOT use this on the xbox. this function is PC specific.
         public OptionsData LoadOptionsPC()
         {
-
                 //these 3 lines will make the xbox explode.
                 OptionsData data = null;
                 IAsyncResult result = StorageDevice.BeginShowSelector(null, null);
@@ -546,6 +545,13 @@ namespace SpaceShooter
                         //If the file doesn't exist, make a new one.
                         OptionsData newData = new OptionsData();
 
+                        //choose desktop resolution.
+                        SDL2.SDL.SDL_DisplayMode mode;
+                        SDL2.SDL.SDL_GetCurrentDisplayMode(0, out mode);
+                        newData.VideoWidth = mode.w;
+                        newData.VideoHeight = mode.h;
+
+
                         using (Stream stream = container.OpenFile(PCFILE, FileMode.Create))
                         {
                             try
@@ -569,7 +575,6 @@ namespace SpaceShooter
 
 
                 return data;
-
         }
 
 

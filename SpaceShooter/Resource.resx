@@ -2458,4 +2458,10 @@ THIS CELESTIAL WEAPON</value>
   <data name="MenuCreditsPortedBy" xml:space="preserve">
     <value>PORTING</value>
   </data>
+  <data name="CreditsNameLaura" xml:space="preserve">
+    <value>Laura Michet</value>
+  </data>
+  <data name="MenuCreditsAdditionalWriting" xml:space="preserve">
+    <value>ADDITIONAL WRITING</value>
+  </data>
 </root>

@@ -166,6 +166,9 @@ namespace SpaceShooter
             basicEffect.View = camera.View;
             basicEffect.Projection = camera.Projection;
 
+            if (Helpers.CheckMatrixNans(basicEffect.Projection))
+                return;
+
             basicEffect.CurrentTechnique.Passes[0].Apply();
         }
 
@@ -201,7 +204,11 @@ namespace SpaceShooter
 
             basicEffect.World = orientation * scaleMatrix * translateMat;
             basicEffect.DiffuseColor = color.ToVector3();
-            basicEffect.CurrentTechnique.Passes[0].Apply();
+
+            if (Helpers.CheckMatrixNans(basicEffect.World))
+                return;
+            
+            basicEffect.CurrentTechnique.Passes[0].Apply();            
 
             device.DrawIndexedPrimitives(
                 PrimitiveType.LineStrip,

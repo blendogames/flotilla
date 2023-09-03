@@ -690,16 +690,39 @@ namespace SpaceShooter
                     FrameworkCore.sysMenuManager.AddMenu(new PauseMenu());
                 }
             }
-            
+
 
 #if WINDOWS
-            if (Keyboard.GetState().IsKeyDown(Keys.Escape))
+            
+
+            
+            if (FrameworkCore.players[0].inputmanager.kbEscPressed)
+            {
+                //BC 8/23/2023 have ESC prioritize exiting menus/modes instead of always opening pausemenu
+                if (FrameworkCore.players[0].ActiveMenu != null)
+                {
+                    FrameworkCore.players[0].ActiveMenu.Deactivate();                    
+                }
+                else if (FrameworkCore.players[0].selectedShip != null)
+                {
+                    
+                    //esc logic is handled in playercommander.cs
+
+                }
+                else
+                {
+                    //Open the pausemenu.
+                    FrameworkCore.sysMenuManager.AddMenu(new PauseMenu());
+                }
+            }
+
+            if (Keyboard.GetState().IsKeyDown(Keys.F10))
             {
                 FrameworkCore.sysMenuManager.AddMenu(new PauseMenu());
             }
 #endif
 
-            
+
 
             foreach (PlayerCommander player in FrameworkCore.players)
             {
@@ -1624,6 +1647,9 @@ namespace SpaceShooter
 
         public void Draw(GameTime gameTime)
         {
+            if (gameTime.TotalGameTime.TotalMilliseconds < 200)
+                return;
+
 #if DEBUG
             foreach (Commander enemy in enemies)
             {

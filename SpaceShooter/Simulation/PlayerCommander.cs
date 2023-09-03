@@ -214,6 +214,8 @@ namespace SpaceShooter
         }
 
 
+        const int CURSOR_HIDETIME = 50;
+        int cursorHideTimer;
         
         public PlayerCommander(PlayerIndex playerIndex, Color teamColor, Color shipColor) : base(teamColor, shipColor)
         {
@@ -561,11 +563,20 @@ namespace SpaceShooter
 
         public void UpdateCameraFOV(float fov)
         {
+            // If the viewportSize hasn't been initialized, just use the global viewport -flibit
+            float viewX, viewY;
+            if (viewportSize == Vector2.Zero)
+            {
+                viewX = FrameworkCore.Graphics.GraphicsDevice.Viewport.Width;
+                viewY = FrameworkCore.Graphics.GraphicsDevice.Viewport.Height;
+            }
+            else
+            {
+                viewX = viewportSize.X;
+                viewY = viewportSize.Y;
+            }
             lockCamera.SetProjectionParams(MathHelper.ToRadians(fov),
-                //(float)FrameworkCore.Graphics.GraphicsDevice.Viewport.Width /
-                //(float)FrameworkCore.Graphics.GraphicsDevice.Viewport.Height,
-                viewportSize.X / 
-                viewportSize.Y,
+                viewX / viewY,
                 1.0f, 3000000.0f);
         }
 
@@ -1376,7 +1387,7 @@ namespace SpaceShooter
                         TimeSpan.FromMilliseconds(200).TotalMilliseconds);
 
                 HelpOverlayTransition = MathHelper.Clamp(HelpOverlayTransition - delta, 0, 1);
-            }           
+            }
 
 
             base.Update(gameTime);
@@ -2555,9 +2566,11 @@ namespace SpaceShooter
                 currentMovePos = new Vector3(newPos.X, currentMovePos.Y, newPos.Z);                    
 #endif
 
-                if (inputManager.buttonBPressed || inputManager.kbBackspaceJustPressed ||
+                if (inputManager.buttonBPressed || inputManager.kbBackspaceJustPressed || inputmanager.kbEscPressed ||
                     (confirmButtonHover == 0 && inputManager.mouseLeftClick))
                 {
+                    //is in planar movement mode. Exiting to ship command menu.
+
                     //undo the order, revert to the last order.
                     selectedShip.RevertToLastOrderEffect();
 
@@ -2614,9 +2627,11 @@ namespace SpaceShooter
                     ChangeToNextMode(gameTime, ModeName.HeightMode);
                     FrameworkCore.PlayCue(sounds.click.select);
                 }
-                else if (inputManager.buttonBPressed || inputManager.kbBackspaceJustPressed ||
+                else if (inputManager.buttonBPressed || inputManager.kbBackspaceJustPressed || inputManager.kbEscPressed ||
                     (confirmButtonHover == 0 && inputManager.mouseLeftClick))
                 {
+                    //is currently in vertical movement mode. exiting back to planar movement mode.
+
                     ChangeToPrevMode(gameTime, ModeName.HeightMode);
                     FrameworkCore.PlayCue(sounds.click.back);
                 }
@@ -2649,7 +2664,7 @@ namespace SpaceShooter
                     ChangePlayerMode(ModeName.PitchMode);
                     FrameworkCore.PlayCue(sounds.click.select);
                 }
-                else if (inputManager.buttonBPressed || inputManager.kbBackspaceJustPressed ||
+                else if (inputManager.buttonBPressed || inputManager.kbBackspaceJustPressed || inputmanager.kbEscPressed ||
                     (confirmButtonHover == 0 && inputManager.mouseLeftClick))
                 {
                     ChangePlayerMode(ModeName.HeightMode);
@@ -2680,7 +2695,7 @@ namespace SpaceShooter
                     ChangePlayerMode(ModeName.RollMode);
                     FrameworkCore.PlayCue(sounds.click.select);
                 }
-                else if (inputManager.buttonBPressed || inputManager.kbBackspaceJustPressed ||
+                else if (inputManager.buttonBPressed || inputManager.kbBackspaceJustPressed || inputmanager.kbEscPressed ||
                     (confirmButtonHover == 0 && inputManager.mouseLeftClick))
                 {
                     ChangePlayerMode(ModeName.YawMode);
@@ -2726,7 +2741,7 @@ namespace SpaceShooter
                     //ActivateShipMenu();
                     FrameworkCore.PlayCue(sounds.click.select);
                 }
-                else if (inputManager.buttonBPressed || inputManager.kbBackspaceJustPressed ||
+                else if (inputManager.buttonBPressed || inputManager.kbBackspaceJustPressed || inputmanager.kbEscPressed ||
                     (confirmButtonHover == 0 && inputManager.mouseLeftClick))
                 {
                     ChangePlayerMode(ModeName.PitchMode);
@@ -3204,7 +3219,7 @@ namespace SpaceShooter
                 WarpFacingCamera(gameTime);
             }
 
-            if (inputManager.buttonBPressed || inputManager.kbBackspaceJustPressed ||
+            if (inputManager.buttonBPressed || inputManager.kbBackspaceJustPressed || inputManager.kbEscPressed ||
                 (confirmButtonHover == 0 && inputManager.mouseLeftClick))
             {
                 ChangeToPrevMode(gameTime, ModeName.FacingMode);
@@ -3284,7 +3299,7 @@ namespace SpaceShooter
             {
                 UpdateConfirmButtons();
 
-                if (inputManager.buttonBPressed || inputManager.kbBackspaceJustPressed ||
+                if (inputManager.buttonBPressed || inputManager.kbBackspaceJustPressed || inputmanager.kbEscPressed ||
                     (confirmButtonHover == 0 && inputManager.mouseLeftClick))
                 {
                     ChangeToPrevMode(gameTime, ModeName.AimMode);
@@ -3654,22 +3669,24 @@ namespace SpaceShooter
 
         private float UpdateTurbo(GameTime gameTime, float baseSpeed)
         {
+            //BC 8/26/2023 camera speed up is now instantaneous instead of a ramp up
+
             if (inputManager.turboHeld)
             {
                 float delta = (float)(gameTime.ElapsedGameTime.TotalMilliseconds /
-                                        TimeSpan.FromMilliseconds(800).TotalMilliseconds);
+                                        TimeSpan.FromMilliseconds(100).TotalMilliseconds);
 
                 turboTransition = MathHelper.Clamp(turboTransition + delta, 0, 1);
             }
             else
             {
                 float delta = (float)(gameTime.ElapsedGameTime.TotalMilliseconds /
-                                        TimeSpan.FromMilliseconds(200).TotalMilliseconds);
+                                        TimeSpan.FromMilliseconds(100).TotalMilliseconds);
 
                 turboTransition = MathHelper.Clamp(turboTransition - delta, 0, 1);
             }
 
-            float turboSpeed = MathHelper.Lerp(1, 12, turboTransition);
+            float turboSpeed = MathHelper.Lerp(1, 4, turboTransition);
             baseSpeed *= turboSpeed;
             return baseSpeed;
         }
@@ -4035,6 +4052,17 @@ namespace SpaceShooter
             if (mouseEnabled && FrameworkCore.sysMenuManager.menus.Count <= 0 &&
                 FrameworkCore.level.LevelMenuManager.menus.Count <= 0)
             {
+
+                if (cursorHideTimer > 0)
+                    cursorHideTimer -= gameTime.ElapsedGameTime.Milliseconds;
+
+                if (inputManager.mouseRightJustReleased)
+                {
+                    cursorHideTimer = CURSOR_HIDETIME;
+                }
+
+
+
                 if (inputManager.mouseCameraMode)
                 {
                     
@@ -4054,10 +4082,13 @@ namespace SpaceShooter
                         FrameworkCore.SpriteBatch.Draw(FrameworkCore.hudSheet, inputmanager.mousePos, sprite.updownCursor,
                             Color.White, 0, Helpers.SpriteCenter(sprite.updownCursor), 1, SpriteEffects.None, 0);
                     }
-                    else
+                    else if (!FrameworkCore.HideHud)
                     {
-                        Helpers.DrawMouseCursor(FrameworkCore.SpriteBatch,
-                            inputmanager.mousePos);
+                        if (cursorHideTimer <= 0)
+                        {
+                            Helpers.DrawMouseCursor(FrameworkCore.SpriteBatch,
+                                inputmanager.mousePos);
+                        }
                     }
                 }
             }
@@ -4770,9 +4801,8 @@ namespace SpaceShooter
                 if (isTutorialLevel && tutState < TutState.doOrders)
                 {
                 }
-                else
+                else if (!FrameworkCore.HideHud)
                 {
-
                     if (mouseEnabled)
                         Helpers.DrawLegend(Resource.MenuNextAvailableShip, sprite.buttons.spacebar, 1);
                     else
@@ -5863,10 +5893,12 @@ namespace SpaceShooter
             }
 
             //draw the rod.
+            /* This is now drawn in DrawUI, see note from BC 8/26/2023 -flibit
             Color rodColor = new Color(255, 255, 255, 48);
             FrameworkCore.lineRenderer.Draw(
                 new Vector3(rodPosition.X, gridAltitude, rodPosition.Z),
                 rodPosition, rodColor);
+            */
         }
 
 
@@ -6001,6 +6033,25 @@ namespace SpaceShooter
                         Color lineColor = Color.Lerp(Color.Gray, TeamColor, 0.4f);
                         lineColor.A = 128;//BC 3-28-2019 Increase alpha.
 
+                        FrameworkCore.lineRenderer.Draw(dotStart, endDot, lineColor);
+
+                        FrameworkCore.pointRenderer.Draw(endDot, 7, Color.Black);
+                        FrameworkCore.pointRenderer.Draw(endDot, 5, TeamColor);
+                    }
+                    else
+                    {
+                        //BC 8/26/2023 not sure what happened here but we're not drawing the vertical line when in heightmode/movemode.
+                        //Do not remember if this is/was an intentional thing, but it looks pretty strange. So, add a line render here.
+
+                        //It would be cleaner to integrate this into the above code instead of copy and pasting, but at this point of development
+                        //I sometimes prefer to graft additional code on instead of messing with ancient gameplay code.
+
+                        Vector3 dotStart = currentMovePos;
+                        Vector3 endDot = currentMovePos;
+                        endDot.Y = GridAltitude;
+
+                        Color lineColor = Color.Lerp(Color.Gray, TeamColor, 0.4f);
+                        lineColor.A = 128;
                         FrameworkCore.lineRenderer.Draw(dotStart, endDot, lineColor);
 
                         FrameworkCore.pointRenderer.Draw(endDot, 7, Color.Black);
@@ -6288,7 +6339,7 @@ namespace SpaceShooter
             float upLength = MathHelper.Lerp(0.01f, Helpers.UPARROWLENGTH, transition);
 
 
-            //the vertical line from ship to disc.
+            //the vertical line from ship to disc. This is only during the non-order phase (when player can select ships).
             Vector3 discPos = meshPos;
             discPos.Y = gridAltitude;
             Color lineColor = new Color(greyColor.R, greyColor.G, greyColor.B, 128); //BC 3-28-2019 Increase alpha of line.

@@ -538,7 +538,7 @@ namespace SpaceShooter
             if (FrameworkCore.options.brightness == 5)
                 return;
 
-            //Ghetto Brightness settings.
+            //Brightness settings.
             if (FrameworkCore.options.brightness > 5)
             {
                 float adjustedBrightness = FrameworkCore.options.brightness - 5;
@@ -595,6 +595,17 @@ namespace SpaceShooter
         /// </summary>
         static void Main(string[] args)
         {
+
+            //BC 9/1/2023 allow force to windowed mode
+            foreach (string arg in args)
+            {
+                if (arg.Equals("-safemode"))
+                {
+                    Helpers.SAFEMODE = true;
+                }
+            }
+
+
 #if SDL2
             string baseFolder = GetStorageRoot();
             string oldFolder = System.IO.Path.Combine(baseFolder, "AllPlayers");
@@ -634,6 +645,14 @@ namespace SpaceShooter
                     );
                 }
             }
+
+            // D3D11 doesn't support point sprites.
+            // TODO: Remove when FNA3D moves to SDL_gpu
+            SDL2.SDL.SDL_SetHintWithPriority(
+                "FNA3D_FORCE_DRIVER",
+                "OpenGL",
+                SDL2.SDL.SDL_HintPriority.SDL_HINT_OVERRIDE
+            );
 #endif
 
 #if WINDOWS
@@ -702,7 +721,7 @@ namespace SpaceShooter
                 client.Host = "smtp.gmail.com"; //smtp server                    
                 client.Port = 587; //Port for TLS/STARTTLS
                 client.EnableSsl = true;
-                client.Credentials = new System.Net.NetworkCredential("bugreport@blendogames.com", "");
+                client.Credentials = new System.Net.NetworkCredential("bugreport@blendogames.com", "d2uq?baS_HUt");
 
                 client.Send(message);
             }

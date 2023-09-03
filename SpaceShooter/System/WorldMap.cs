@@ -987,6 +987,15 @@ namespace SpaceShooter
 #if WINDOWS
             if (Keyboard.GetState().IsKeyDown(Keys.Escape))
             {
+                //BC 8/24/2023 only do pausemenu if fleetmenu is not active
+                if (menuManager.menus.Count <= 0)
+                {
+                    FrameworkCore.sysMenuManager.AddMenu(new PauseMenu());
+                }
+            }
+
+            if (Keyboard.GetState().IsKeyDown(Keys.F10))
+            {
                 FrameworkCore.sysMenuManager.AddMenu(new PauseMenu());
             }
 #endif

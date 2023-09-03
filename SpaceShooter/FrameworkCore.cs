@@ -864,6 +864,15 @@ namespace SpaceShooter
 
             
 
+
+            //BC 9/1/2023 allow player to force game to windowed mode
+            if (Helpers.SAFEMODE)
+            {                
+                graphics.PreferredBackBufferWidth = 1280;
+                graphics.PreferredBackBufferHeight = 720;
+                graphics.IsFullScreen = false;
+            }
+
             
 #endif
 

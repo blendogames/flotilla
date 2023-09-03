@@ -301,8 +301,7 @@ namespace SpaceShooter
 
             if (canBeExited)
             {
-                if (inputManager.buttonBPressed ||
-                    inputManager.kbEscPressed)
+                if (inputManager.buttonBPressed || inputManager.kbEscPressed)
                 {
                     Deactivate();
                     FrameworkCore.PlayCue(sounds.click.back);

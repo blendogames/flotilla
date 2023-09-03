@@ -128,6 +128,10 @@ namespace SpaceShooter
 
         public void Draw(GameTime gameTime, Camera camera)
         {
+            if (gameTime.TotalGameTime.TotalMilliseconds < 500)
+                return;
+
+
             if (IsVisible(camera))
             {
                 float distance = (position - camera.CameraPosition).Length();
@@ -157,8 +161,8 @@ namespace SpaceShooter
                     planetSpecularIntensity.SetValue(1f);
                     planetCameraPos.SetValue(camera.CameraPosition);
                     planetHazeColor.SetValue(hazeColor);
-
-                    planetEffect.Techniques[0].Passes[0].Apply();
+                    
+                    planetEffect.Techniques[0].Passes[0].Apply();                    
 
                     GraphicsDevice.RasterizerState = RasterizerState.CullClockwise;
                     GraphicsDevice.DepthStencilState = DepthStencilState.Default;

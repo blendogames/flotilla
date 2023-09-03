@@ -17,7 +17,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Storage;
 using System.IO;
 #if XBOX
-using Microsoft.Xna.Framework.GamerServices;
+
 #endif
 #endregion
 

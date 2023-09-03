@@ -124,6 +124,10 @@ namespace SpaceShooter
 
 
             effect.Texture = FrameworkCore.TextureArray[(int)model];
+            
+            if (Helpers.CheckMatrixNans(effect.Projection) || Helpers.CheckMatrixNans(effect.World))
+                return;
+
             effect.CurrentTechnique.Passes[0].Apply();
         }
 
@@ -135,6 +139,10 @@ namespace SpaceShooter
             effect.DiffuseColor = meshColor.ToVector3();
             
             effect.World = worldMatrix;
+
+            if (Helpers.CheckMatrixNans(effect.Projection) || Helpers.CheckMatrixNans(worldMatrix))
+                return;
+
             effect.CurrentTechnique.Passes[0].Apply();
 
             FrameworkCore.Graphics.GraphicsDevice.DrawIndexedPrimitives(

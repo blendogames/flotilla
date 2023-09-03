@@ -417,6 +417,8 @@ namespace SpaceShooter
 
         public static Color ITEMCOLOR = new Color(40, 100, 230);
 
+        public static bool SAFEMODE = false;
+
         public static readonly DepthStencilState DepthWrite = new DepthStencilState()
         {
             DepthBufferEnable = false
@@ -1243,6 +1245,12 @@ namespace SpaceShooter
 #if WINDOWS
             if (FrameworkCore.options.hardwaremouse)
                 return;
+#endif
+#if SDL2
+            if (Mouse.IsRelativeMouseModeEXT)
+            {
+                return;
+            }
 #endif
 
             batch.Draw(FrameworkCore.hudSheet, pos, sprite.mouseCursor, Color.White, 0,
@@ -2539,6 +2547,33 @@ namespace SpaceShooter
 
             return string.Empty;
         } 
+
+        //BC 8/25/2023 resolve issue where Debug builds will throw an exception
+        //return TRUE if matrix has a nan
+        public static bool CheckMatrixNans(Matrix _mat)
+        {
+            if (float.IsNaN(_mat.M11) ||
+                float.IsNaN(_mat.M12) ||
+                float.IsNaN(_mat.M13) ||
+                float.IsNaN(_mat.M14) ||
+                float.IsNaN(_mat.M21) ||
+                float.IsNaN(_mat.M22) ||
+                float.IsNaN(_mat.M23) ||
+                float.IsNaN(_mat.M24) ||
+                float.IsNaN(_mat.M31) ||
+                float.IsNaN(_mat.M32) ||
+                float.IsNaN(_mat.M33) ||
+                float.IsNaN(_mat.M34) ||
+                float.IsNaN(_mat.M41) ||
+                float.IsNaN(_mat.M42) ||
+                float.IsNaN(_mat.M43) ||
+                float.IsNaN(_mat.M44))
+            {
+                return true;
+            }
+
+            return false;
+        }
     }
 
     public class Line

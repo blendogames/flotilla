@@ -131,6 +131,9 @@ namespace SpaceShooter
             basicEffect.View = camera.View;
             basicEffect.Projection = camera.Projection;
 
+            if (Helpers.CheckMatrixNans(basicEffect.Projection))
+                return;
+
             basicEffect.CurrentTechnique.Passes[0].Apply();
         }
 

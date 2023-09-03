@@ -112,10 +112,10 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="evAurora0" xml:space="preserve">
     <value>YOU DISCOVER THE {0}{1} BOREALIS, A UNIQUE CELESTIAL PHENOMENA.
@@ -224,7 +224,7 @@ LET'S GET OUTTA HERE. THAT SHIP GIVES ME THE HEEBIE JEEBIES."</value>
   <data name="evRuins0" xml:space="preserve">
     <value>WHILE EXPLORING ANCIENT RUINS, YOU ENCOUNTER CATS ON THE RUN FROM THE AUTHORITIES.
 
-"HELLO FRIEND. I AND ME BRETHREN NEED YOUR HELP."</value>
+"HELLO, FRIEND. FUN FACTORY AND I NEED YOUR HELP."</value>
   </data>
   <data name="evRuins0Help" xml:space="preserve">
     <value>HELP THE CATS ESCAPE.</value>
@@ -235,12 +235,12 @@ LET'S GET OUTTA HERE. THAT SHIP GIVES ME THE HEEBIE JEEBIES."</value>
   <data name="evRuins1Help" xml:space="preserve">
     <value>AN INTENSE CHASE ENSUES. YOU AND THE CATS ESCAPE THE AUTHORITIES.
 
-CHU-CHU MEOWS A SIGH OF RELIEF. "MUCH LOVE, MUCH RESPECT. WE SHARE OUR LOOT."</value>
+CHU-CHU MEOWS A SIGH OF RELIEF. "A NARROW MISS! WE OWE YOU. TAKE A CUT OF OUR LOOT."</value>
   </data>
   <data name="evRuins1Turnin" xml:space="preserve">
     <value>THE AUTHORITIES DRAG THE CATS AWAY.
 
-"WHERE'S THE LOVE, FRIEND?"</value>
+"BOOTLICKER!" CHU-CHU CRIES.</value>
   </data>
   <data name="evDeer0" xml:space="preserve">
     <value>"HALT, INCOMING FLOTILLA. YOU PLEBS ARE ENCROACHING ROYAL CERVIDIAN SPACE.
@@ -280,9 +280,9 @@ PREPARE TO REAP THE WHIRLWIND."</value>
   <data name="evStorm0" xml:space="preserve">
     <value>YOUR FLOTILLA IS CAUGHT IN AN ELECTRICAL STORM.
 
-"HELLO FRIENDS. MUCH RESPECT FOR HELPING US WITH THE AUTHORITIES A WHILE AGO.
+"HELLO AGAIN! MUCH RESPECT FOR HELPING US WITH THE AUTHORITIES A WHILE AGO.
 
-WHO LOVES YA? I DO."</value>
+WE NEVER FORGET A FRIEND."</value>
   </data>
   <data name="evStorm0Thanks" xml:space="preserve">
     <value>THANK YOU, CATS.</value>
@@ -290,13 +290,13 @@ WHO LOVES YA? I DO."</value>
   <data name="evStorm1" xml:space="preserve">
     <value>THE CATS HELP YOU WEATHER THE STORM.
 
-"WE LEAVE NOW, WE LEAVE A GIFT FOR YOU."</value>
+"HERE'S A LITTLE SOMETHING TO HELP YOU GET BACK ON YOUR FEET."</value>
   </data>
   <data name="evStorm1Thanks" xml:space="preserve">
-    <value>MUCH RESPECT, CATS.</value>
+    <value>YOU'RE SWELL, CATS.</value>
   </data>
   <data name="evCatCharity0" xml:space="preserve">
-    <value>"ME BRETHREN HEARD OF YOUR RUN-IN WITH THE DEER. THEY TOOK YOUR CARGO! SCOUNDRELS!
+    <value>"WE HEARD ABOUT YOUR RUN-IN WITH THE DEER. THEY TOOK YOUR CARGO! SCOUNDRELS!
 
 TAKE THIS, AND SHOW THEM A THING OR TWO."</value>
   </data>
@@ -923,9 +923,9 @@ YOUR ADVENTURE COMES TO AN END.</value>
     <value>AFTER SEVEN MONTHS, MY TERMINAL CONDITION CAUGHT UP TO ME.</value>
   </data>
   <data name="evCatGuns0" xml:space="preserve">
-    <value>"YO. I HEARD YOU HELPED ME COUSINS ESCAPE THE LAW.
+    <value>"HEY. I HEARD YOU HELPED MY COUSINS ESCAPE THE LAW.
 
-I NEED ASSISTANCE. HIDE THIS CARGO FOR ME, HEAR?"</value>
+I NEED ASSISTANCE TOO. HIDE THIS CARGO FOR ME, OKAY?"</value>
   </data>
   <data name="evCatGuns0HideGuns" xml:space="preserve">
     <value>HIDE THE HOT CARGO.</value>
@@ -1108,7 +1108,7 @@ HELP US CURE OUR DRUMMER'S BAD CASE OF BOOTY-BATS. WE'LL PAY HANDSOMELY."
   <data name="evCatGunReward0" xml:space="preserve">
     <value>LITTLE LION RETURNS FOR HIS STASHED GUNS.
 
-"RIGHTEOUS ON YA. ME COUSINS WERE RIGHT ABOUT YOU.
+"LOOKS LIKE MY COUSINS WERE RIGHT ABOUT YOU.
 
 TAKE THIS AS YOUR PAYMENT."</value>
   </data>
@@ -1121,7 +1121,7 @@ TAKE THIS AS YOUR PAYMENT."</value>
   <data name="evCatGunReward0Toucans" xml:space="preserve">
     <value>LITTLE LION RETURNS FOR HIS STASHED GUNS.
 
-"WHAT'S THIS? WHERE BE ME GUNS?!"
+"WHAT'S THIS? WHERE'S MY GUNS?!"
 
 YOU SEARCH FOR HOURS, BUT THE GUNS ARE NOWHERE TO BE FOUND. YOU HAVE A STRONG SUSPICION YOUR TOUCAN STOWAWAYS ARE INVOLVED.</value>
   </data>

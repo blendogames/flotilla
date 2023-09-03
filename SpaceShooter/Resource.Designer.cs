@@ -790,6 +790,15 @@ namespace SpaceShooter {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Laura Michet.
+        /// </summary>
+        internal static string CreditsNameLaura {
+            get {
+                return ResourceManager.GetString("CreditsNameLaura", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Neil Mehta.
         /// </summary>
         internal static string CreditsNameNeil {
@@ -3358,6 +3367,15 @@ namespace SpaceShooter {
         internal static string MenuCredits {
             get {
                 return ResourceManager.GetString("MenuCredits", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ADDITIONAL WRITING.
+        /// </summary>
+        internal static string MenuCreditsAdditionalWriting {
+            get {
+                return ResourceManager.GetString("MenuCreditsAdditionalWriting", resourceCulture);
             }
         }
         

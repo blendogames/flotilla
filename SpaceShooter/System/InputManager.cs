@@ -34,6 +34,12 @@ namespace SpaceShooter
         {
             get
             {
+#if SDL2
+                if (Mouse.IsRelativeMouseModeEXT)
+                {
+                    return relativeMousePosition;
+                }
+#endif
                 return new Vector2(mouseInfo.X, mouseInfo.Y);
             }
         }
@@ -43,6 +49,12 @@ namespace SpaceShooter
         {
             get
             {
+#if SDL2
+                if (Mouse.IsRelativeMouseModeEXT)
+                {
+                    return (mouseInfo.X != 0) || (mouseInfo.Y != 0);
+                }
+#endif
                 return (lastMouseInfo.X != mouseInfo.X ||
                     lastMouseInfo.Y != mouseInfo.Y);
             }
@@ -1027,6 +1039,7 @@ namespace SpaceShooter
         MouseState pristineMouseInfo;
         MouseState lastMouseInfo;
         MouseState mouseInfo;
+        Vector2 relativeMousePosition;
 
 
         //constructor.
@@ -1070,10 +1083,11 @@ namespace SpaceShooter
 #if WINDOWS
             if (pristineMouseInfo == null)
             {
-                if (Mouse.GetState().LeftButton == ButtonState.Released &&
-                    Mouse.GetState().RightButton == ButtonState.Released)
+                MouseState maybePristine = Mouse.GetState();
+                if (maybePristine.LeftButton == ButtonState.Released &&
+                    maybePristine.RightButton == ButtonState.Released)
                 {
-                    pristineMouseInfo = Mouse.GetState();
+                    pristineMouseInfo = maybePristine;
                 }
             }
 
@@ -1084,6 +1098,27 @@ namespace SpaceShooter
 
                 UpdateMouseInfo();
 
+#if SDL2
+                bool resetCursor = false;
+                if (Mouse.IsRelativeMouseModeEXT != mouseRightHeld)
+                {
+                    // To avoid jitter, just wipe the state entirely to benefit the next mode
+                    if (mouseRightHeld)
+                    {
+                        ResetMouseState(0, 0);
+                    }
+                    else
+                    {
+                        resetCursor = true;
+                    }
+                }
+                Mouse.IsRelativeMouseModeEXT = mouseRightHeld;
+                if (resetCursor)
+                {
+                    ForceMouseCenter();
+                }
+                FrameworkCore.Game.IsMouseVisible = FrameworkCore.options.hardwaremouse && !mouseRightHeld;
+#endif
                 if (mouseRightHeld)
                 {
                     ClampMouse(clampMouse);
@@ -1129,6 +1164,35 @@ namespace SpaceShooter
             lastMouseInfo = mouseInfo;
             mouseInfo = Mouse.GetState();
         }
+        
+        private void ResetMouseState(int x, int y)
+        {
+            mouseInfo = new MouseState(
+                x,
+                y,
+                mouseInfo.ScrollWheelValue,
+                mouseInfo.LeftButton,
+                mouseInfo.MiddleButton,
+                mouseInfo.RightButton,
+                mouseInfo.XButton1,
+                mouseInfo.XButton2
+            );
+            lastMouseInfo = new MouseState(
+                x,
+                y,
+                lastMouseInfo.ScrollWheelValue,
+                lastMouseInfo.LeftButton,
+                lastMouseInfo.MiddleButton,
+                lastMouseInfo.RightButton,
+                lastMouseInfo.XButton1,
+                lastMouseInfo.XButton2
+            );
+
+            // Also wipe the smoothing caches, otherwise previous
+            // smoothing will cause jumps in future frames
+            Array.Clear(mouseSmoothingCache, 0, mouseSmoothingCache.Length);
+            Array.Clear(mouseMovement, 0, mouseMovement.Length);
+        }
 
         public void ForceMouseCenter()
         {
@@ -1138,10 +1202,18 @@ namespace SpaceShooter
                 screenCenter.X /= 2;
 
             Mouse.SetPosition((int)screenCenter.X, (int)screenCenter.Y);
+            ResetMouseState((int)screenCenter.X, (int)screenCenter.Y);
         }
 
         private void ClampMouse(bool centerClamp)
         {
+#if SDL2
+            // With relative mouse mode, SDL does the cursor warping for us.
+            // Instead, we just get the relative state and pass that directly
+            // to the filtering/smoothing functions.
+            float deltaX = mouseInfo.X;
+            float deltaY = -mouseInfo.Y;
+#else
             int screenWidth = FrameworkCore.Graphics.GraphicsDevice.Viewport.Width;
 
             if (FrameworkCore.players.Count > 1)
@@ -1156,10 +1228,11 @@ namespace SpaceShooter
 
             if (centerClamp)
                 Mouse.SetPosition(centerX, centerY);
+#endif
 
             //mouse sensitivity.
-            deltaX *= 0.2f;
-            deltaY *= 0.2f;
+            deltaY *= 0.16f;
+            deltaX *= 0.16f;
 
             PerformMouseFiltering(deltaX, deltaY);
             PerformMouseSmoothing(mouseDifference.X, mouseDifference.Y);

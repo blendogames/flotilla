@@ -20,35 +20,62 @@ using Microsoft.Xna.Framework.GamerServices;
 
 namespace SpaceShooter
 {
+    struct ResolutionInfo
+    {
+        public Point resolution;
+        public int refreshrate;
+    }
+
     public class VideoMenu : SysMenu
     {
         int WINDOWWIDTH = 550;
 
-
-        Point[] resolutions;
-
+        ResolutionInfo[] resolutions;
 
         public VideoMenu()
         {
-            resolutions = new Point[]
+            //BC 8/30/2023 resolution list is no longer hardcoded.
+            List<ResolutionInfo> resList = new List<ResolutionInfo>();
+            int displaymodeCount = SDL2.SDL.SDL_GetNumDisplayModes(0);
+            for (int i = 0; i < displaymodeCount; i++)
             {
-                //new Point(1024, 768),
-                //new Point(1152, 864),
-                new Point(1280, 960),
-                new Point(1280, 1024),
-                new Point(1600, 1200),
+                SDL2.SDL.SDL_DisplayMode mode;
+                SDL2.SDL.SDL_GetDisplayMode(0, i, out mode);
 
-                new Point(1280, 720),
-                new Point(1280, 768),
-                new Point(1280, 800),
-                new Point(1360, 768),
-                new Point(1366, 768),
-                new Point(1440, 900),
-                new Point(1600, 900),
-                new Point(1600, 1050),
-                new Point(1920, 1080),
-                new Point(1920, 1200),
-            };
+                //1280x720 is the minimum resolution. Or else the UI elements start being weird.
+                if (mode.w < 1280 || mode.h < 720)
+                    continue;
+
+                if (/*mode.refresh_rate != 120 &&*/ mode.refresh_rate != 60)
+                    continue;
+
+                ResolutionInfo newInfo;
+                newInfo.refreshrate = mode.refresh_rate;
+                newInfo.resolution = new Point(mode.w, mode.h);
+                resList.Add(newInfo);
+            }
+
+            resolutions = resList.ToArray();
+
+            //resolutions = new Point[]
+            //{
+            //    //new Point(1024, 768),
+            //    //new Point(1152, 864),
+            //    new Point(1280, 960),
+            //    new Point(1280, 1024),
+            //    new Point(1600, 1200),
+            //
+            //    new Point(1280, 720),
+            //    new Point(1280, 768),
+            //    new Point(1280, 800),
+            //    new Point(1360, 768),
+            //    new Point(1366, 768),
+            //    new Point(1440, 900),
+            //    new Point(1600, 900),
+            //    new Point(1600, 1050),
+            //    new Point(1920, 1080),
+            //    new Point(1920, 1200),
+            //};
 
 
 
@@ -219,35 +246,34 @@ namespace SpaceShooter
         {
             SkirmishPopup popup = new SkirmishPopup(Owner);
             int itemHeight = (int)FrameworkCore.Serif.MeasureString("Sample").Y;
-            popup.screenPos = new Vector2(selectedItem.position.X + 96,
-                (resolutions.Length / 2) * itemHeight);
+
+            //BC 8/30/2023 make resolution popup better handle arbitrary amount of items.
+            const int ITEMGAP = 8; //This is the gap between items, defined in sysmenu.cs (search for "//gap between items.")            
+            int resolutionPopupPos = (int)(Helpers.GetScreenCenter().Y) - ((resolutions.Length / 2) * (itemHeight + ITEMGAP));
+            resolutionPopupPos = Math.Max(resolutionPopupPos, 20);
+
+            popup.screenPos = new Vector2(selectedItem.position.X + 96, resolutionPopupPos);
             popup.hideChildren = false;
 
             MenuItem item = null;
 
             for (int i = 0; i < resolutions.Length; i++)
             {
-                string itemName = resolutions[i].X + Resource.MenuVideoDivider + resolutions[i].Y;
-                if (resolutions[i].X * 3 <= resolutions[i].Y * 4)
-                {
-                    //4:3 aspect ratio or lower.
-                }
-                else
-                {
-                    itemName += " " + Resource.MenuVideoWidescreen;
-                }
+                string itemName = resolutions[i].resolution.X + Resource.MenuVideoDivider + resolutions[i].resolution.Y;
 
-                if (FrameworkCore.Graphics.PreferredBackBufferHeight == resolutions[i].Y &&
-                    FrameworkCore.Graphics.PreferredBackBufferWidth == resolutions[i].X)
+                //BC 8/30/2023 add refresh rate info (and remove the old obsolete 'widescreen' label)
+                //itemName += string.Format("  {0}Hz", resolutions[i].refreshrate);
+
+                if (FrameworkCore.Graphics.PreferredBackBufferHeight == resolutions[i].resolution.Y &&
+                    FrameworkCore.Graphics.PreferredBackBufferWidth == resolutions[i].resolution.X)
                 {
                     itemName += " " + Resource.MenuVideoCurrent;
                 }
 
-
                 item = new MenuItem(itemName);
                 item.Selected += OnChooseResolution;
-                item.GenericInt1 = resolutions[i].X;
-                item.GenericInt2 = resolutions[i].Y;
+                item.GenericInt1 = resolutions[i].resolution.X;
+                item.GenericInt2 = resolutions[i].resolution.Y;
                 popup.AddItem(item);
             }
 

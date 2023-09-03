@@ -17,7 +17,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Storage;
 using System.IO;
 #if XBOX
-using Microsoft.Xna.Framework.GamerServices;
+
 #endif
 #endregion
 
@@ -101,9 +101,9 @@ namespace SpaceShooter
 #else
             //PC build.
 
-            if (Transition >= 1)
+            if (Transition >= .5f)
             {
-                if (inputManager.buttonAPressed || inputManager.kbSkipScreen || inputManager.mouseLeftClick)
+                if (inputManager.buttonAPressed || inputManager.kbSkipScreen || inputManager.mouseLeftClick || inputManager.kbEscPressed)
                 {
                     OpenMainMenu();
                 }

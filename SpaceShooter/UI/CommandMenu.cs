@@ -239,7 +239,7 @@ namespace SpaceShooter
             
 
             //draw the "menu" text.
-            if (Transition < 1)
+            if (Transition < 1 && !FrameworkCore.HideHud)
             {
                 Color fontColor = Color.Lerp(Color.White, Color.Orange, commandRectTransition);
                 fontColor = Color.Lerp(fontColor, Helpers.transColor(fontColor), Transition);

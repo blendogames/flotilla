@@ -22,6 +22,9 @@ namespace SpaceShooter
 {
     public class FleetMenu : SysMenu
     {
+        const int MOUSE_SCROLLINTERVAL = 200; //when scrolling with mousewheel, delay between scrolls
+        const int SCREENEDGE_MULTIPLIER = 3; //when scrolling with mouse at screen edge, increase delay of the interval between ship scrolling.
+
         Vector2 LINESIZE;
         int GAPSIZE = 32;
 
@@ -49,6 +52,21 @@ namespace SpaceShooter
             
         }
 
+        //BC 8/24/2023 don't do edge screen scroll if mouse is out of the window.
+        private bool MouseIsInWindow()
+        {
+            Vector2 mousepos = FrameworkCore.players[0].inputmanager.mousePos;
+            Viewport window = FrameworkCore.Graphics.GraphicsDevice.Viewport;
+            if (mousepos.X >= 0 && mousepos.X <= window.Width
+                && mousepos.Y >= 0 && mousepos.Y <= window.Height)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+
         int mouseScrollTimer = 0;
 
         public override void Update(GameTime gameTime, InputManager inputManager)
@@ -73,11 +91,15 @@ namespace SpaceShooter
                 if (FrameworkCore.players.Count > 1)
                     additionalButtons = 2;
 
-                bool mouseAtLeft = FrameworkCore.players[0].inputmanager.mousePos.X < 
-                    FrameworkCore.Graphics.GraphicsDevice.Viewport.Width * 0.1f;
+                bool mouseAtLeft = (FrameworkCore.players[0].inputmanager.mousePos.X < FrameworkCore.Graphics.GraphicsDevice.Viewport.Width * 0.1f) && MouseIsInWindow() && FrameworkCore.isActive;
 
-                bool mouseAtRight = FrameworkCore.players[0].inputmanager.mousePos.X > 
-                    FrameworkCore.Graphics.GraphicsDevice.Viewport.Width * 0.9f;
+                bool mouseAtRight = (FrameworkCore.players[0].inputmanager.mousePos.X > FrameworkCore.Graphics.GraphicsDevice.Viewport.Width * 0.9f) && MouseIsInWindow() && FrameworkCore.isActive;
+
+
+                
+
+                
+
 
 #if XBOX
                 mouseAtLeft = false;
@@ -85,10 +107,12 @@ namespace SpaceShooter
 #endif
 
 
-                if (inputManager.sysMenuLeft || inputManager.mouseWheelUp ||
-                    (mouseScrollTimer <= 0 && mouseAtLeft))
+                if ((inputManager.sysMenuLeft || inputManager.mouseWheelUp || mouseAtLeft) && mouseScrollTimer <= 0)
                 {
-                    mouseScrollTimer = 500;
+                    mouseScrollTimer = MOUSE_SCROLLINTERVAL;
+
+                    if (mouseAtLeft)
+                        mouseScrollTimer *= SCREENEDGE_MULTIPLIER;
 
                     if (selectedIndex <= 0)
                         selectedIndex = FrameworkCore.players[0].campaignShips.Count - 1;
@@ -101,10 +125,12 @@ namespace SpaceShooter
                         FrameworkCore.PlayCue(sounds.click.whoosh);
                     //selectedInventoryIndex = 0;
                 }
-                if (inputManager.sysMenuRight || inputManager.mouseWheelDown ||
-                    (mouseScrollTimer <= 0 && mouseAtRight))
+                if ((inputManager.sysMenuRight || inputManager.mouseWheelDown || mouseAtRight) && mouseScrollTimer <= 0)
                 {
-                    mouseScrollTimer = 500;
+                    mouseScrollTimer = MOUSE_SCROLLINTERVAL;
+
+                    if (mouseAtRight)
+                        mouseScrollTimer *= SCREENEDGE_MULTIPLIER;
 
                     if (selectedIndex >= FrameworkCore.players[0].campaignShips.Count - 1)
                         selectedIndex = 0;
