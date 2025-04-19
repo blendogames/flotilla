@@ -1,0 +1,9 @@
+﻿# IDE-Specific Files
+.vs
+
+# Build Artifacts
+bin/
+obj/
+
+# Auto-Generated Files
+*.Designer.cs

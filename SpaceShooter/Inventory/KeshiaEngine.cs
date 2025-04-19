@@ -31,6 +31,7 @@ namespace SpaceShooter
             image = sprite.inventory.Engine;
             name = iResource.KeshiaEngine;
             description = string.Format( iResource.KeshiaEngineDescription, displayStat);
+            constructorParam = engineSpeed;
         }
     }
 }

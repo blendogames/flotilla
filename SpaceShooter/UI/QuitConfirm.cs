@@ -54,6 +54,10 @@ namespace SpaceShooter
 
         private void OnYes(object sender, EventArgs e)
         {
+            if (FrameworkCore.isCampaign)
+            {
+                FrameworkCore.storagemanager.DeleteCampaign();
+            }
             FrameworkCore.PlayCue(sounds.click.activate);
             Deactivate();
 

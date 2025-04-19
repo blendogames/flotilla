@@ -88,6 +88,125 @@ namespace SpaceShooter
         }
     }
 
+    [Serializable]
+    public class CampaignSave
+    {
+        public bool isHardcoreMode;
+        public WorldMapSave WorldMap { get; set; }
+        public PlayerCommanderSave PlayerCommander { get; set; }
+        public EventSave Event { get; set; }
+    }
+
+    public class CampaignLoad
+    {
+        public bool isHardcoreMode;
+        public WorldMap worldMap;
+        public PlayerCommanderLoad playerCommander;
+        public EventLoad eventLoad;
+    }
+
+    [Serializable]
+    public class WorldMapSave
+    {
+        public List<Location> Locations { get; set; }
+        public Location CurrentLocation { get; set; }
+
+        public WorldMapSave()
+        {
+            // default constructor for XML serialization
+        }
+
+        public WorldMapSave(WorldMap worldMap)
+        {
+            Locations = worldMap.Locations;
+            CurrentLocation = worldMap.CurrentLocation;
+        }
+    }
+
+    [Serializable]
+    public class PlayerCommanderSave
+    {
+        public List<InventoryItemSave> inventoryItems;
+        public List<FleetShipSave> campaignShips;
+        public int planetsVisited;
+        public int dangerousPlanetsVisited;
+        public int extraPoints;
+        public int commandPoints;
+    }
+
+    [Serializable]
+    public class FleetShipSave
+    {
+        public string captainName;
+        public ModelType shipType;
+        public int?[] upgradeArray;
+        public int veterancy;
+        public bool childShip;
+        public SpaceShipStats stats;
+    }
+
+    [Serializable]
+    public class EventSave
+    {
+        public bool kToucansOnboard;
+        public bool kPandaOnboard;
+        public bool kCrisiumOnBoard;
+        public bool kHaveGauntlet;
+
+        public List<InventoryItemSave> tradeItems;
+        public List<LogEvent> Logs;
+
+        public List<InventoryItemSave> inventoryPool;
+
+        public List<String> eventPool;
+        public List<String> dangerPool;
+        public List<String> wormPool;
+        public List<String> unlockableEventPool;
+    }
+
+    [Serializable]
+    public class InventoryItemSave
+    {
+        public string itemType;
+        public float? constructorParam;
+
+        public InventoryItemSave()
+        {
+            // Default constructor for XML serialization
+        }
+
+        public InventoryItemSave(InventoryItem item)
+        {
+            itemType = item.GetType().FullName;
+            constructorParam = item.constructorParam;
+        }
+    }
+
+    public class PlayerCommanderLoad
+    {
+        public List<InventoryItem> inventoryItems;
+        public List<FleetShip> campaignShips;
+        public int planetsVisited;
+        public int dangerousPlanetsVisited;
+        public int extraPoints;
+        public int commandPoints;
+    }
+
+    public class EventLoad
+    {
+        public bool kToucansOnboard;
+        public bool kPandaOnboard;
+        public bool kCrisiumOnBoard;
+        public bool kHaveGauntlet;
+
+        public List<InventoryItem> tradeItems;
+        public List<LogEvent> Logs;
+        public List<InventoryItem> inventoryPool;
+        public List<Event> eventPool;
+        public List<Event> dangerPool;
+        public List<Event> wormPool;
+        public List<Event> unlockableEventPool;
+    }
     public static class StorageXNA4
     {
         public static StorageContainer OpenContainer(this StorageDevice device, string displayName)
@@ -103,6 +222,7 @@ namespace SpaceShooter
         static public readonly string SAVEFILE= "saveinfo.dat";
         static public readonly string SCOREFILE = "scores.dat";
         static public readonly string PCFILE = "settings.xml";
+        static public readonly string CAMPAIGNFILE = "adventure.xml";
 
         /// <summary>
         /// Location of the player profile's save area.
@@ -632,14 +752,328 @@ namespace SpaceShooter
 
         }
 
+        public bool CampaignFileExists()
+        {
+            if (device == null)
+                return false;
+            using (StorageContainer container = device.OpenContainer(GAMENAME))
+            {
+                return container.FileExists(CAMPAIGNFILE);
+            }
+        }
 
+        public void DeleteCampaign()
+        {
+            if (device == null)
+                return;
+            using (StorageContainer container = device.OpenContainer(GAMENAME))
+            {
+                if (container.FileExists(CAMPAIGNFILE))
+                {
+                    container.DeleteFile(CAMPAIGNFILE);
+                }
+            }
+        }
+        public void SaveCampaign(WorldMap worldMap, PlayerCommander player)
+        {
+            FNALoggerEXT.LogInfo("Saving Adventure");
+            if (device == null)
+                return;
+            using (StorageContainer container = device.OpenContainer(GAMENAME))
+            {
+                using (Stream stream = container.OpenFile(CAMPAIGNFILE, FileMode.Create))
+                {
+                    try
+                    {
+                        CampaignSave campaignSave = new CampaignSave()
+                        {
+                            isHardcoreMode = FrameworkCore.isHardcoreMode,
+                            WorldMap = new WorldMapSave(worldMap),
+                            PlayerCommander = CreatePlayerCommanderSave(player),
+                            Event = CreateEventSave(worldMap),
+                        };
 
+                        XmlSerializer serializer = new XmlSerializer(typeof(CampaignSave));
+                        serializer.Serialize(stream, campaignSave);
+                    }
+                    catch (InvalidOperationException ex)
+                    {
+                        FNALoggerEXT.LogError("Serialization error: " + ex.Message);
+                        if (ex.InnerException != null)
+                        {
+                            FNALoggerEXT.LogError("Inner exception: " + ex.InnerException.Message);
+                        }
+                        throw ex;
+                    }
+                    catch (Exception ex)
+                    {
+                        FNALoggerEXT.LogError(ex.Message);
+                        FNALoggerEXT.LogError(ex.StackTrace);
+                    }
+                }
+            }
+        }
 
+        private static PlayerCommanderSave CreatePlayerCommanderSave(PlayerCommander player)
+        {
+            List<InventoryItem> inventoryItems = player.inventoryItems;
+            List<FleetShipSave> campaignShips = new List<FleetShipSave>();
+            foreach (FleetShip fleetShip in player.campaignShips)
+            {
+                campaignShips.Add(CreateFleetShipSave(fleetShip, inventoryItems));
+            }
 
+            PlayerCommanderSave playerCommanderSave = new PlayerCommanderSave
+            {
+                inventoryItems = CreateInventoryItemSaveList(inventoryItems),
+                campaignShips = campaignShips,
+                planetsVisited = player.planetsVisited,
+                dangerousPlanetsVisited = player.dangerousPlanetsVisited,
+                extraPoints = player.extraPoints,
+                commandPoints = player.commandPoints,
+            };
+            return playerCommanderSave;
+        }
 
+        private static FleetShipSave CreateFleetShipSave(FleetShip fleetShip, List<InventoryItem> inventoryItems)
+        {
+            FleetShipSave fleetShipSave = new FleetShipSave()
+            {
+                captainName = fleetShip.captainName,
+                shipType = fleetShip.shipData.modelname,
+                upgradeArray = CreateUpgradeArray(fleetShip.upgradeArray, inventoryItems),
+                veterancy = fleetShip.veterancy,
+                childShip = fleetShip.childShip,
+                stats = fleetShip.stats,
+            };
+            return fleetShipSave;
+        }
 
+        private static List<InventoryItemSave> CreateInventoryItemSaveList(List<InventoryItem> inventoryItems)
+        {
+            List<InventoryItemSave> inventoryItemSaveList = new List<InventoryItemSave>();
+            foreach (InventoryItem item in inventoryItems)
+            {
+                inventoryItemSaveList.Add(new InventoryItemSave(item));
+            }
+            return inventoryItemSaveList;
+        }
 
+        public static int?[] CreateUpgradeArray(InventoryItem[] upgradeArray, List<InventoryItem> inventoryItems)
+        {
+            int inventoryItemArrayLength = upgradeArray.Length;
+            int?[] upgradeSaveArray = new int?[inventoryItemArrayLength];
+            for (int i = 0; i < inventoryItemArrayLength; i++)
+            {
+                InventoryItem item = upgradeArray[i];
+                if (item != null)
+                {
+                    int? index = inventoryItems.IndexOf(item);
+                    // if the item is not found in the inventoryItems list, set index to null
+                    upgradeSaveArray[i] = (index != -1) ? index : null;
+                }
+            }
 
-        
+            return upgradeSaveArray;
+        }
+
+        private static EventSave CreateEventSave(WorldMap worldMap)
+        {
+            EventManager eventManager = worldMap.evManager;
+            EventSave eventSave = new EventSave
+            {
+                kToucansOnboard = eventManager.kToucansOnboard,
+                kPandaOnboard = eventManager.kPandaOnboard,
+                kCrisiumOnBoard = eventManager.kCrisiumOnBoard,
+                kHaveGauntlet = eventManager.kHaveGauntlet,
+                tradeItems = CreateInventoryItemSaveList(eventManager.tradeItems),
+                Logs = eventManager.Logs,
+                inventoryPool = CreateInventoryItemSaveList(eventManager.inventoryPool),
+                eventPool = CreateEventPoolSave(eventManager.eventPool),
+                dangerPool = CreateEventPoolSave(eventManager.dangerPool),
+                wormPool = CreateEventPoolSave(eventManager.wormPool),
+                unlockableEventPool = CreateEventPoolSave(eventManager.unlockableEventPool),
+            };
+            return eventSave;
+        }
+
+        public static List<String> CreateEventPoolSave(List<Event> eventPool)
+        {
+            List<String> eventPoolSave = new List<String>();
+            foreach (Event ev in eventPool)
+            {
+                eventPoolSave.Add(ev.GetType().FullName);
+            }
+            return eventPoolSave;
+        }
+
+        // Load the campaign data from adventure.xml
+        public CampaignLoad LoadCampaign()
+        {
+            using (StorageContainer container = device.OpenContainer(GAMENAME))
+            {
+                using (Stream stream = container.OpenFile(CAMPAIGNFILE, FileMode.Open))
+                {
+                    try
+                    {
+                        XmlSerializer serializer = new XmlSerializer(typeof(CampaignSave));
+                        CampaignSave campaignSave = (CampaignSave)serializer.Deserialize(stream);
+                        return new CampaignLoad
+                        {
+                            isHardcoreMode = campaignSave.isHardcoreMode,
+                            worldMap = RestoreWorldMap(campaignSave.WorldMap),
+                            playerCommander = RestorePlayerCommander(campaignSave.PlayerCommander),
+                            eventLoad = RestoreEvent(campaignSave.Event)
+                        };
+                    }
+                    catch (InvalidOperationException ex)
+                    {
+                        if (ex.InnerException != null)
+                        {
+                            FNALoggerEXT.LogError("Deserialization error. Inner exception: " + ex.InnerException.Message);
+                        }
+                        throw ex;
+                    }
+                    catch (Exception ex)
+                    {
+                        FNALoggerEXT.LogError(ex.Message);
+                        FNALoggerEXT.LogError(ex.StackTrace);
+                        throw ex;
+                    }
+                }
+            }
+        }
+        private WorldMap RestoreWorldMap(WorldMapSave worldMapSave)
+        {
+            WorldMap worldMap = new WorldMap();
+            worldMap.Locations = worldMapSave.Locations;
+            worldMap.CurrentLocation = worldMapSave.CurrentLocation;
+
+            return worldMap;
+        }
+
+        private PlayerCommanderLoad RestorePlayerCommander(PlayerCommanderSave playerCommanderSave)
+        {
+            List<InventoryItem> inventoryItems = new List<InventoryItem>();
+            foreach (InventoryItemSave itemSave in playerCommanderSave.inventoryItems)
+            {
+                inventoryItems.Add(RestoreInventoryItem(itemSave));
+            }
+            List<FleetShip> campaignShips = new List<FleetShip>();
+            foreach (FleetShipSave fleetShipSave in playerCommanderSave.campaignShips)
+            {
+                campaignShips.Add(RestoreFleetShip(fleetShipSave, inventoryItems));
+            }
+            return new PlayerCommanderLoad()
+            {
+                inventoryItems = inventoryItems,
+                campaignShips = campaignShips,
+                planetsVisited = playerCommanderSave.planetsVisited,
+                dangerousPlanetsVisited = playerCommanderSave.dangerousPlanetsVisited,
+                extraPoints = playerCommanderSave.extraPoints,
+                commandPoints = playerCommanderSave.commandPoints,
+            };
+        }
+
+        private InventoryItem RestoreInventoryItem(InventoryItemSave itemSave)
+        {
+            Type itemType = Type.GetType(itemSave.itemType);
+            if (itemType != null)
+            {
+                InventoryItem item;
+                float? constructorParam = itemSave.constructorParam;
+                if (constructorParam.HasValue)
+                {
+                    item = (InventoryItem)Activator.CreateInstance(itemType, constructorParam.Value);
+                }
+                else
+                {
+                    item = (InventoryItem)Activator.CreateInstance(itemType);
+                }
+
+                return item;
+            }
+            return null;
+        }
+
+        private FleetShip RestoreFleetShip(FleetShipSave fleetShipSave, List<InventoryItem> inventoryItems)
+        {
+            FleetShip fleetShip = new FleetShip
+            {
+                captainName = fleetShipSave.captainName,
+                shipData = shipTypes.GetShipDataByModelType(fleetShipSave.shipType),
+                upgradeArray = RestoreUpgradeArray(fleetShipSave.upgradeArray, inventoryItems),
+                veterancy = fleetShipSave.veterancy,
+                childShip = fleetShipSave.childShip,
+                stats = fleetShipSave.stats
+            };
+            return fleetShip;
+        }
+
+        private InventoryItem[] RestoreUpgradeArray(int?[] upgradeArraySave, List<InventoryItem> inventoryItems)
+        {
+            int upgradeArrayLength = upgradeArraySave.Length;
+            InventoryItem[] upgradeArray = new InventoryItem[upgradeArrayLength];
+            for (int i = 0; i < upgradeArrayLength; i++)
+            {
+                int? index = upgradeArraySave[i];
+                if (index != null)
+                {
+                    upgradeArray[i] = inventoryItems[(int) index];
+                }
+            }
+            return upgradeArray;
+        }
+
+        private EventLoad RestoreEvent(EventSave eventSave)
+        {
+            EventLoad eventLoad = new EventLoad
+            {
+                kToucansOnboard = eventSave.kToucansOnboard,
+                kPandaOnboard = eventSave.kPandaOnboard,
+                kCrisiumOnBoard = eventSave.kCrisiumOnBoard,
+                kHaveGauntlet = eventSave.kHaveGauntlet,
+
+                tradeItems = RestoreInventoryPool(eventSave.tradeItems),
+                Logs = eventSave.Logs,
+                inventoryPool = RestoreInventoryPool(eventSave.inventoryPool),
+                eventPool = RestoreEventPool(eventSave.eventPool),
+                dangerPool = RestoreEventPool(eventSave.dangerPool),
+                wormPool = RestoreEventPool(eventSave.wormPool),
+                unlockableEventPool = RestoreEventPool(eventSave.unlockableEventPool)
+            };
+
+            return eventLoad;
+        }
+
+        public List<InventoryItem> RestoreInventoryPool(List<InventoryItemSave> inventoryPool)
+        {
+            List<InventoryItem> items = new List<InventoryItem>();
+            foreach (InventoryItemSave itemSave in inventoryPool)
+            {
+                InventoryItem item = RestoreInventoryItem(itemSave);
+                if (item != null)
+                {
+                    items.Add(item);
+                }
+            }
+            return items;
+        }
+
+        public List<Event> RestoreEventPool(List<String> eventPoolSave)
+        {
+            List<Event> eventPool = new List<Event>();
+            foreach (string eventTypeName in eventPoolSave)
+            {
+                Type eventType = Type.GetType(eventTypeName);
+                if (eventType != null)
+                {
+                    Event ev = (Event)Activator.CreateInstance(eventType);
+                    eventPool.Add(ev);
+                }
+            }
+            return eventPool;
+        }
+
     }
 }

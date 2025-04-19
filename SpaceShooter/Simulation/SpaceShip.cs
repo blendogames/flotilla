@@ -62,6 +62,7 @@ namespace SpaceShooter
         public Collideable targetShip;
     }
 
+    [Serializable]
     public class SpaceShipStats
     {
         public int kills = 0;

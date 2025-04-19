@@ -32,6 +32,7 @@ namespace SpaceShooter
             name = iResource.RashadFireCon;
             description = string.Format( iResource.RashadFireConDescription,
                 displayStat);
+            constructorParam = fireSpeed;
         }
     }
 }

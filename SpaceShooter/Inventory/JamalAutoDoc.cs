@@ -32,6 +32,7 @@ namespace SpaceShooter
             name = iResource.JamalAutoDoc;
             description = string.Format( iResource.JamalAutoDocDescription,
                 displayStat);
+            constructorParam = healSpeed;
         }
     }
 }

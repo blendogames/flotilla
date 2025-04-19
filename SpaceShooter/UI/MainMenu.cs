@@ -27,10 +27,20 @@ namespace SpaceShooter
         public MainMenu()
         {
             canBeExited = false;
+            MenuItem item;
 
-            MenuItem item = new MenuItem(string.Format(Resource.MenuCampaign, FrameworkCore.adventureNumber));
-            item.Selected += OnSelectCampaign;
-            base.AddItem(item);
+            if (FrameworkCore.storagemanager.CampaignFileExists())
+            {
+                item = new MenuItem(string.Format(Resource.MenuCampaignContinue, FrameworkCore.adventureNumber));
+                item.Selected += OnSelectContinueCampaign;
+                base.AddItem(item);
+            }
+            else
+            {
+                item = new MenuItem(string.Format(Resource.MenuCampaign, FrameworkCore.adventureNumber));
+                item.Selected += OnSelectCampaign;
+                base.AddItem(item);
+            }
 
             item = new MenuItem(Resource.MenuHighScoresTitle);
             item.Selected += OnSelectHighScores;
@@ -93,6 +103,10 @@ namespace SpaceShooter
             Owner.AddMenu(new HighScoreMenu());
         }
 
+        private void OnSelectContinueCampaign(object sender, EventArgs e)
+        {
+            CampaignManager.ContinueCampaign();
+        }
         private void OnSelectCampaign(object sender, EventArgs e)
         {
             Owner.AddMenu(new CampaignMenu());

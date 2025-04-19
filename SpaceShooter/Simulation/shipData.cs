@@ -351,6 +351,26 @@ namespace SpaceShooter
             public static Rectangle Dorado = new Rectangle(0, 0, 64, 64);
         }
         */
+
+        private static readonly Dictionary<ModelType, ShipData> ShipDataByName = new Dictionary<ModelType, ShipData>
+        {
+            { ModelType.shipBeamFrigate, BeamFrigate },
+            { ModelType.shipBeamGunship, BeamGunship },
+            { ModelType.shipCapitalShip, Battleship },
+            { ModelType.shipDestroyer, Destroyer },
+            { ModelType.shipGunship, Gunship },
+            { ModelType.shipDreadnought, Dreadnought },
+            { ModelType.shipFighter, Fighter }
+        };
+
+        public static ShipData GetShipDataByModelType(ModelType modelType)
+        {
+            if (ShipDataByName.TryGetValue(modelType, out var shipData))
+            {
+                return shipData;
+            }
+            throw new ArgumentException($"Ship type '{modelType}' not found.");
+        }
     }
 
     public static class DamageTypes

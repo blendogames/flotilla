@@ -36,6 +36,7 @@ namespace SpaceShooter
             name = iResource.RoachShield;
             description = string.Format(iResource.RoachShieldDescription,
                 displayStat);
+            constructorParam = amount;
         }
     }
 }

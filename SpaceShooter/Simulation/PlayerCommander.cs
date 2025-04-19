@@ -4096,7 +4096,7 @@ namespace SpaceShooter
 
         }
 
-        int commandPoints = 2000;
+        public int commandPoints = 2000;
         Vector2 expBarPos = new Vector2(150, 515);
         bool expBarHover = false;
         bool smitePowerActive = false;

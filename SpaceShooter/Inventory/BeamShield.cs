@@ -35,6 +35,7 @@ namespace SpaceShooter
             name = iResource.BeamArmor;
             description = string.Format(iResource.BeamArmorDescription,
                 displayStat);
+            constructorParam = amount;
         }
     }
 }

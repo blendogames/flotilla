@@ -35,6 +35,7 @@ namespace SpaceShooter
             name = iResource.BotosShield;
             description = string.Format(iResource.BotosShieldDescription,
                 displayStat);
+            constructorParam = amount;
         }
     }
 }

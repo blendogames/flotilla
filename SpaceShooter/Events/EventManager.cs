@@ -64,28 +64,29 @@ namespace SpaceShooter
         public List<LogEvent> Logs
         {
             get { return log; }
+            set { log = value; }
         }
 
 
-        List<InventoryItem> inventoryPool;
-        List<Event> eventPool;
+        public List<InventoryItem> inventoryPool;
+        public List<Event> eventPool;
 
-        List<Event> dangerPool;
+        public List<Event> dangerPool;
         public int dangerPoolCount
         {
             get { return dangerPool.Count; }
         }
 
 
-        List<Event> wormPool;
+        public List<Event> wormPool;
         public int wormPoolCount
         {
             get { return wormPool.Count; }
         }
 
 
-        List<Event> unlockableEventPool;
-        SysMenuManager menuManager;
+        public List<Event> unlockableEventPool;
+        public SysMenuManager menuManager;
 
 
 
@@ -544,11 +545,17 @@ namespace SpaceShooter
         }
     }
 
+    [Serializable]
     public class LogEvent
     {
         public Rectangle image;
         public string description;
 
+        public LogEvent()
+        {
+            this.image = Rectangle.Empty;
+            this.description = "";
+        }
         public LogEvent(Rectangle img, string txt)
         {
             this.image = img;

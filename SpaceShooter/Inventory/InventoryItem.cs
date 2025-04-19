@@ -19,6 +19,7 @@ namespace SpaceShooter
     /// <summary>
     /// A carryable item.
     /// </summary>
+    [Serializable]
     public class InventoryItem
     {
         public Rectangle image = Rectangle.Empty;
@@ -26,5 +27,8 @@ namespace SpaceShooter
         public string description = "Default Description";
 
         public GameEffect gameEffect;
+
+        // Used to keep effect value for serialization
+        public float? constructorParam = null;
     }
 }

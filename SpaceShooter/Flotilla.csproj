@@ -301,6 +301,7 @@
     <Compile Include="System\Level.cs" />
     <Compile Include="System\Options.cs" />
     <Compile Include="System\StorageManager.cs" />
+    <Compile Include="System\CampaignManager.cs" />
     <Compile Include="UI\BasePopup.cs" />
     <Compile Include="UI\CampaignMenu.cs" />
     <Compile Include="UI\CommandMenu.cs" />

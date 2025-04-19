@@ -33,6 +33,7 @@ namespace SpaceShooter
             name = iResource.BlesoRailChamber;
             description = string.Format(iResource.BlesoRailChamberDescription,
                 displayStat);
+            constructorParam = bulletSpeed;
         }
     }
 }

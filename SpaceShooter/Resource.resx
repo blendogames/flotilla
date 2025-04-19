@@ -610,7 +610,7 @@ SIGN IN NOW?</value>
     <value>PAUSED</value>
   </data>
   <data name="MenuCampaign" xml:space="preserve">
-    <value>ADVENTURE {0}</value>
+    <value>START ADVENTURE {0}</value>
   </data>
   <data name="MenuQuit" xml:space="preserve">
     <value>QUIT</value>
@@ -2463,5 +2463,11 @@ THIS CELESTIAL WEAPON</value>
   </data>
   <data name="MenuCreditsAdditionalWriting" xml:space="preserve">
     <value>ADDITIONAL WRITING</value>
+  </data>
+  <data name="MenuCampaignContinue" xml:space="preserve">
+    <value>CONTINUE ADVENTURE {0}</value>
+  </data>
+  <data name="MenuReturnToMain" xml:space="preserve">
+    <value>SAVE AND RETURN TO MAIN MENU</value>
   </data>
 </root>

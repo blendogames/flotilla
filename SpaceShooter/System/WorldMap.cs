@@ -27,6 +27,8 @@ using Microsoft.Xna.Framework.Storage;
 
 namespace SpaceShooter
 {
+ 
+    [Serializable]
     public class Location
     {
         public string name;
@@ -139,9 +141,9 @@ namespace SpaceShooter
         }
 
 
-        CloudManager cloudManager;
+        public CloudManager cloudManager;
 
-        SysMenuManager menuManager;
+        public SysMenuManager menuManager;
         public SysMenuManager MenuManager
         {
             get { return menuManager; }
@@ -158,6 +160,7 @@ namespace SpaceShooter
         public List<Location> Locations
         {
             get { return locations; }
+            set { locations = value; }
         }
 
         SkyBox skyBox;
@@ -383,6 +386,11 @@ namespace SpaceShooter
         }
 
         Location currentLocation = null;
+        public Location CurrentLocation
+        {
+            get { return currentLocation; }
+            set { currentLocation = value; }
+        }
         Location destinationLocation = null;
         Vector3 currentPosition = Vector3.Zero;
 
@@ -541,7 +549,8 @@ namespace SpaceShooter
         public void EndGame()
         {
             fadeUpTransition = 0;
-
+            // delete saved campaign file
+            FrameworkCore.storagemanager.DeleteCampaign();
             //game over!
             menuManager.AddMenu(new GameOverMenu());
         }
