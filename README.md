@@ -15,7 +15,7 @@ Flotilla originally used the [XNA framework](https://en.wikipedia.org/wiki/Micro
 ## Compiling and running
 - Flotilla's code is written in C# and a .sln solution for Visual Studio 2015 is provided.
 - The solution expects to find a folder containing the [FNA source code](https://github.com/FNA-XNA/FNA). Place the FNA source code folder next to your Flotilla project folder (do not put FNA inside your Flotilla folder).
-- Download [FNA's native libraries](http://fna.flibitijibibo.com/archive/fnalibs.tar.bz2) and place them in the folder containing your project binaries.
+- Download [FNA's native libraries](https://github.com/FNA-XNA/fnalibs-dailies) and place them in the folder containing your project binaries.
 - To run the game, you'll need the game assets from a purchased version of Flotilla. Copy Flotilla's **Content** and **WindowsContent** folders into the folder containing your project binaries. (Flotilla can be purchased from [itch.io](https://blendogames.itch.io/flotilla) or [Steam](http://store.steampowered.com/app/55000))
 
 ## License
@@ -33,8 +33,7 @@ Please note this license only applies to Flotilla's source code. Flotilla's game
 ### Libraries used
 
 - [FNA](https://fna-xna.github.io)
-- [SDL2](https://www.libsdl.org)
+- [SDL3](https://www.libsdl.org)
 - [MojoShader](https://icculus.org/mojoshader)
 - [FAudio](https://github.com/FNA-XNA/FAudio)
-- [SDL_image](https://www.libsdl.org/projects/SDL_image)
 - [libtheorafile](https://www.theora.org)

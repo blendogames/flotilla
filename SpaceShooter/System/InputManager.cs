@@ -34,7 +34,7 @@ namespace SpaceShooter
         {
             get
             {
-#if SDL2
+#if SDL3
                 if (Mouse.IsRelativeMouseModeEXT)
                 {
                     return relativeMousePosition;
@@ -49,7 +49,7 @@ namespace SpaceShooter
         {
             get
             {
-#if SDL2
+#if SDL3
                 if (Mouse.IsRelativeMouseModeEXT)
                 {
                     return (mouseInfo.X != 0) || (mouseInfo.Y != 0);
@@ -1098,7 +1098,7 @@ namespace SpaceShooter
 
                 UpdateMouseInfo();
 
-#if SDL2
+#if SDL3
                 bool resetCursor = false;
                 if (Mouse.IsRelativeMouseModeEXT != mouseRightHeld)
                 {
@@ -1207,7 +1207,7 @@ namespace SpaceShooter
 
         private void ClampMouse(bool centerClamp)
         {
-#if SDL2
+#if SDL3
             // With relative mouse mode, SDL does the cursor warping for us.
             // Instead, we just get the relative state and pass that directly
             // to the filtering/smoothing functions.

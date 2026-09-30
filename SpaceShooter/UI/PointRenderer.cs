@@ -53,7 +53,7 @@ namespace SpaceShooter
             );
         }
 
-#if SDL2
+#if SDL3
         public unsafe void Draw(Vector3 startVec, float Size, Color color)
         {
             if (pointCount >= NUMPOINTS)

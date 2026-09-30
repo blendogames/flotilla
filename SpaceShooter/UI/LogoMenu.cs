@@ -20,8 +20,8 @@ using Microsoft.Xna.Framework.Storage;
 
 
 #if WINDOWS
-#if SDL2
-using SDL2;
+#if SDL3
+using SDL3;
 #else
 using System.Windows.Forms;
 using Microsoft.Win32;
@@ -255,7 +255,7 @@ namespace SpaceShooter
             }
             catch
             {
-#if SDL2
+#if SDL3
                 SDL.SDL_ShowSimpleMessageBox(
                     SDL.SDL_MessageBoxFlags.SDL_MESSAGEBOX_INFORMATION,
                     "Flotilla Patch",

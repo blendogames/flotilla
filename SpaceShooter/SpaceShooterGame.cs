@@ -606,7 +606,7 @@ namespace SpaceShooter
             }
 
 
-#if SDL2
+#if SDL3
             string baseFolder = GetStorageRoot();
             string oldFolder = System.IO.Path.Combine(baseFolder, "AllPlayers");
             string newFolder = System.IO.Path.Combine(baseFolder, "Flotilla", "AllPlayers");
@@ -633,8 +633,8 @@ namespace SpaceShooter
                 }
                 catch
                 {
-                    SDL2.SDL.SDL_ShowSimpleMessageBox(
-                        SDL2.SDL.SDL_MessageBoxFlags.SDL_MESSAGEBOX_ERROR,
+                    SDL3.SDL.SDL_ShowSimpleMessageBox(
+                        SDL3.SDL.SDL_MessageBoxFlags.SDL_MESSAGEBOX_ERROR,
                         "XNA3->XNA4 Migration Failed!",
                         "We just tried to copy your old XNA3 saves over to the new location,\n" +
                         "but something caused it to fail. We don't know what though.\n\n" +
@@ -648,10 +648,10 @@ namespace SpaceShooter
 
             // D3D11 doesn't support point sprites.
             // TODO: Remove when FNA3D moves to SDL_gpu
-            SDL2.SDL.SDL_SetHintWithPriority(
+            SDL3.SDL.SDL_SetHintWithPriority(
                 "FNA3D_FORCE_DRIVER",
                 "OpenGL",
-                SDL2.SDL.SDL_HintPriority.SDL_HINT_OVERRIDE
+                SDL3.SDL.SDL_HintPriority.SDL_HINT_OVERRIDE
             );
 #endif
 
@@ -679,7 +679,7 @@ namespace SpaceShooter
 
                 string finalString = registered + " version " + userVersion + "\n\n" + e.ToString();
 
-#if SDL2
+#if SDL3
                 Console.WriteLine(finalString);
                 if (YesNoPopup.Show("Flotilla Critical Error", "Flotilla has encountered a catastrophic error:\n\n" + finalString + "\n\n\nSend this crash report to BlendoGames.com?"))
                 {
@@ -731,7 +731,7 @@ namespace SpaceShooter
 #endif
         }
 
-#if SDL2
+#if SDL3
         private static string GetStorageRoot()
         {
             // Generate the path of the game's savefolder
@@ -740,7 +740,7 @@ namespace SpaceShooter
             ).Replace(".vshost", "");
 
             // Get the OS save folder, append the EXE name
-            string OSVersion = SDL2.SDL.SDL_GetPlatform();
+            string OSVersion = SDL3.SDL.SDL_GetPlatform();
             if (OSVersion.Equals("Windows"))
             {
                 return System.IO.Path.Combine(
@@ -788,7 +788,7 @@ namespace SpaceShooter
              * the game folder is made early!
              * -flibit
              */
-            return SDL2.SDL.SDL_GetPrefPath(null, exeName);
+            return SDL3.SDL.SDL_GetPrefPath(null, exeName);
         }
 #endif
     }

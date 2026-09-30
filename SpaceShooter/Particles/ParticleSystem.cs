@@ -394,7 +394,7 @@ namespace SpaceShooter
                     {
                         particleEffect.CurrentTechnique.Passes[i].Apply();
 
-#if SDL2
+#if SDL3
                         if (firstActiveParticle < firstFreeParticle)
                         {
                             // If the active particles are all in one consecutive range,

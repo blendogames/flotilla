@@ -14,8 +14,8 @@ using Microsoft.Xna.Framework.Storage;
 using Microsoft.Xna.Framework.GamerServices;
 #endif
 
-#if SDL2
-using SDL2;
+#if SDL3
+using SDL3;
 #elif WINDOWS
 using System.Windows.Forms;
 #endif
@@ -1095,7 +1095,7 @@ namespace SpaceShooter
             }
             catch
             {
-#if SDL2
+#if SDL3
                 if (!YesNoPopup.Show(
                     "Audio Error",
                     "There was a problem initializing the audio engine.\n\nTo resolve this:\n1. Right-click on your volume control.\n2. Select \"Playback devices\"\n3. Right-click on \"Digital Output\"\n4. Select \"Set as Default Device\"\n\nDo you want to continue with sound disabled?"))
@@ -1384,7 +1384,7 @@ namespace SpaceShooter
                     //open the browser.
                     Process.Start("http://www.blendogames.com/flotilla");
 
-#if SDL2
+#if SDL3
                     SDL.SDL_MinimizeWindow(FrameworkCore.game.Window.Handle);
 #else
                     //minimize the game.

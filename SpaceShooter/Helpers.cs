@@ -27,36 +27,49 @@ namespace SpaceShooter
         public static Color TransparentBlack = new Color(0, 0, 0, 0);
     }
 
-#if SDL2
+#if SDL3
     public static class YesNoPopup
     {
-        public static bool Show(string title, string message)
+        public static unsafe bool Show(string title, string message)
         {
-            SDL2.SDL.SDL_MessageBoxData mbd = new SDL2.SDL.SDL_MessageBoxData();
-            mbd.flags = SDL2.SDL.SDL_MessageBoxFlags.SDL_MESSAGEBOX_ERROR;
-            mbd.window = IntPtr.Zero;
-            mbd.title = title;
-            mbd.message = message;
-            mbd.numbuttons = 2;
-            mbd.buttons = new SDL2.SDL.SDL_MessageBoxButtonData[]
+            byte[] titleUTF8 = System.Text.Encoding.UTF8.GetBytes(title);
+            byte[] messageUTF8 = System.Text.Encoding.UTF8.GetBytes(message);
+            byte[] yesUTF8 = System.Text.Encoding.UTF8.GetBytes("Yes");
+            byte[] noUTF8 = System.Text.Encoding.UTF8.GetBytes("No");
+            SDL3.SDL.SDL_MessageBoxButtonData[] buttons = new SDL3.SDL.SDL_MessageBoxButtonData[]
             {
-                new SDL2.SDL.SDL_MessageBoxButtonData()
+                new SDL3.SDL.SDL_MessageBoxButtonData()
                 {
-                    buttonid = 0,
-                    flags = SDL2.SDL.SDL_MessageBoxButtonFlags.SDL_MESSAGEBOX_BUTTON_RETURNKEY_DEFAULT,
-                    text = "Yes"
+                    buttonID = 0,
+                    flags = SDL3.SDL.SDL_MessageBoxButtonFlags.SDL_MESSAGEBOX_BUTTON_RETURNKEY_DEFAULT
                 },
-                new SDL2.SDL.SDL_MessageBoxButtonData()
+                new SDL3.SDL.SDL_MessageBoxButtonData()
                 {
-                    buttonid = 1,
-                    flags = SDL2.SDL.SDL_MessageBoxButtonFlags.SDL_MESSAGEBOX_BUTTON_ESCAPEKEY_DEFAULT,
-                    text = "No"
+                    buttonID = 1,
+                    flags = SDL3.SDL.SDL_MessageBoxButtonFlags.SDL_MESSAGEBOX_BUTTON_ESCAPEKEY_DEFAULT
                 },
             };
-            mbd.colorScheme = null;
-            int button;
-            SDL2.SDL.SDL_ShowMessageBox(ref mbd, out button);
-            return button == 0;
+            fixed (byte* titlePtr = &titleUTF8[0])
+            fixed (byte* messagePtr = &messageUTF8[0])
+            fixed (byte* yesPtr = &yesUTF8[0])
+            fixed (byte* noPtr = &noUTF8[0])
+            fixed (SDL3.SDL.SDL_MessageBoxButtonData* buttonsPtr = &buttons[0])
+            {
+                buttonsPtr[0].text = yesPtr;
+                buttonsPtr[1].text = noPtr;
+
+                SDL3.SDL.SDL_MessageBoxData mbd = new SDL3.SDL.SDL_MessageBoxData();
+                mbd.flags = SDL3.SDL.SDL_MessageBoxFlags.SDL_MESSAGEBOX_ERROR;
+                mbd.window = IntPtr.Zero;
+                mbd.title = titlePtr;
+                mbd.message = messagePtr;
+                mbd.numbuttons = 2;
+                mbd.buttons = buttonsPtr;
+                mbd.colorScheme = null;
+                int button;
+                SDL3.SDL.SDL_ShowMessageBox(ref mbd, out button);
+                return button == 0;
+            }
         }
     }
 #endif
@@ -1246,7 +1259,7 @@ namespace SpaceShooter
             if (FrameworkCore.options.hardwaremouse)
                 return;
 #endif
-#if SDL2
+#if SDL3
             if (Mouse.IsRelativeMouseModeEXT)
             {
                 return;

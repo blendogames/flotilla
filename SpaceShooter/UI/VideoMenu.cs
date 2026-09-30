@@ -36,22 +36,16 @@ namespace SpaceShooter
         {
             //BC 8/30/2023 resolution list is no longer hardcoded.
             List<ResolutionInfo> resList = new List<ResolutionInfo>();
-            int displaymodeCount = SDL2.SDL.SDL_GetNumDisplayModes(0);
-            for (int i = 0; i < displaymodeCount; i++)
+            DisplayModeCollection modes = GraphicsAdapter.DefaultAdapter.SupportedDisplayModes;
+            foreach (DisplayMode mode in modes)
             {
-                SDL2.SDL.SDL_DisplayMode mode;
-                SDL2.SDL.SDL_GetDisplayMode(0, i, out mode);
-
                 //1280x720 is the minimum resolution. Or else the UI elements start being weird.
-                if (mode.w < 1280 || mode.h < 720)
-                    continue;
-
-                if (/*mode.refresh_rate != 120 &&*/ mode.refresh_rate != 60)
+                if (mode.Width < 1280 || mode.Height < 720)
                     continue;
 
                 ResolutionInfo newInfo;
-                newInfo.refreshrate = mode.refresh_rate;
-                newInfo.resolution = new Point(mode.w, mode.h);
+                newInfo.refreshrate = 60; // TargetElapsedTime is always 60, so just go with this -flibit
+                newInfo.resolution = new Point(mode.Width, mode.Height);
                 resList.Add(newInfo);
             }
 

@@ -194,7 +194,7 @@ namespace SpaceShooter
                     {
                         starEffect.CurrentTechnique.Passes[i].Apply();
 
-#if SDL2
+#if SDL3
                         GraphicsDevice.DrawPrimitives(PrimitiveType.PointListEXT, 0, starCount);
 #endif
                     }

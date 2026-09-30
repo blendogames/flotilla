@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Storage;
+using Microsoft.Xna.Framework.Graphics;
 using System.IO;
 using System.Xml.Serialization;
 #if XBOX
@@ -546,10 +547,9 @@ namespace SpaceShooter
                         OptionsData newData = new OptionsData();
 
                         //choose desktop resolution.
-                        SDL2.SDL.SDL_DisplayMode mode;
-                        SDL2.SDL.SDL_GetCurrentDisplayMode(0, out mode);
-                        newData.VideoWidth = mode.w;
-                        newData.VideoHeight = mode.h;
+                        DisplayMode mode = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode;
+                        newData.VideoWidth = mode.Width;
+                        newData.VideoHeight = mode.Height;
 
 
                         using (Stream stream = container.OpenFile(PCFILE, FileMode.Create))
